@@ -109,12 +109,12 @@ export default function Home() {
       </div>
 
       <header className="site-header">
-        <a className="brand" href="#" aria-label="Síntese">
+        <a className="brand" href="#" aria-label="Its Time">
           <span className="brand-mark" aria-hidden="true">
             <span />
             <span />
           </span>
-          <span className="brand-word">SÍNTESE</span>
+          <span className="brand-word">Its Time</span>
         </a>
 
         <div className="brand-divider" aria-hidden="true" />
@@ -318,8 +318,8 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="trusted-strip" aria-label="Empresas que escalam com a Síntese">
-        <p>EMPRESAS QUE ESCALAM COM A SÍNTESE</p>
+      <section className="trusted-strip" aria-label="Empresas que escalam com a Its Time">
+        <p>EMPRESAS QUE ESCALAM COM A ITS TIME</p>
         <div className="company-row">
           {companyLogos.map((logo, index) => (
             <span key={logo}>
