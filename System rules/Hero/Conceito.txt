@@ -1,0 +1,178 @@
+Direção Visual da Hero
+Conceito
+
+“Inteligência comercial organizada.”
+
+A hero deve transmitir:
+
+automação inteligente
+precisão estratégica
+escala organizada
+IA como sistema operacional comercial
+
+Não parecer:
+
+app comum
+dashboard genérico SaaS
+cyberpunk neon
+
+Precisa parecer:
+
+uma infraestrutura comercial do futuro.
+
+Estrutura Visual da Hero
+Fundo
+Branco infinito editorial
+
+Cor:
+
+#F5F3EF
+
+Com:
+
+gradientes quase invisíveis
+fade suave
+profundidade minimalista
+Elemento Central
+Mockup do celular flutuando
+
+iPhone premium:
+
+frontal
+levemente inclinado
+centralizado
+elegante
+floating
+
+Tela:
+
+conversa SDR IA
+mensagens inteligentes
+lead sendo qualificado
+confirmação de agendamento
+badges de conversão
+pipeline miniatura
+Sistema de Projeções
+
+Saindo do celular:
+
+Elementos flutuantes modulares
+
+Cards minimalistas:
+
+WhatsApp
+CRM
+IA
+Pipeline
+Agendamento
+Conversão
+Follow-up
+Estilo dos cards
+floating UI
+sombras suaves
+borda fina
+fundo off-white
+detalhes em laranja estratégico
+Composição do Fundo
+Partículas modulares
+
+Inspiradas diretamente na referência:
+
+quadrados pixelados
+grids
+micro dots
+módulos organizados
+Fluxo visual
+
+O lado esquerdo:
+
+caos organizado
+leads
+mensagens
+inputs
+
+O lado direito:
+
+estrutura
+automação
+agendamento
+pipeline
+
+Exatamente como a lógica da imagem enviada:
+
+desorganização → sistema inteligente
+
+Paleta
+Base
+#0A0A0A
+#F5F3EF
+#D9D6D1
+#8D8A86
+Accent
+#FF5A1F
+#FF4D6D
+#FF7AA2
+Tipografia Hero
+Headline
+
+Grande.
+Forte.
+Editorial.
+
+Exemplo:
+
+IA não responde leads.
+Direção responde.
+
+ou
+
+Automação não escala vendas.
+Estratégia escala.
+Subheadline
+Agentes de IA, SDR automatizado e funis inteligentes
+operando como um sistema comercial contínuo.
+Movimento
+Motion Design
+
+Tudo deve:
+
+flutuar lentamente
+respirar
+mover suavemente
+
+Micro motion:
+
+partículas
+blur modular
+cards orbitando
+linhas conectando sistemas
+Sensação Geral
+
+Mistura de:
+
+Apple keynote
+Linear
+Stripe
+OpenAI
+Notion AI
+editorial suíço
+Prompt Cinematográfico Completo
+Ultra premium futuristic SaaS hero section background, infinite soft white environment, floating iPhone mockup in center, elegant SDR AI conversation on screen, abstract modular interface projections emerging from the device, floating CRM cards, automation workflows, pipeline system, WhatsApp AI assistant UI, strategic orange and coral accents, swiss editorial design, minimal tech aesthetic, modular particles and pixel grids floating around, structured intelligence visual language, cinematic soft lighting, glass precision, extremely clean composition, Apple + Linear + OpenAI inspired, subtle depth, premium startup branding, organized data flow from chaos to intelligent system, white infinite background, elegant shadows, futuristic business automation atmosphere, ultra detailed, sophisticated motion design feeling, 16:9
+Regras IMPORTANTES pra manter a estética
+NÃO usar
+neon cyberpunk
+azul exagerado
+holograma sci-fi
+excesso de glow
+dashboard poluído
+gradientes fortes
+elementos gamer
+SEMPRE usar
+espaço negativo
+modularidade
+micro detalhes
+grids
+editorial tech
+composição respirando
+contraste refinado
+sofisticação silenciosa
