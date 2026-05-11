@@ -397,7 +397,7 @@ a {
   width: 100%;
   height: auto;
   filter: drop-shadow(0 82px 56px rgba(0, 0, 0, 0.2));
-  animation: phoneFloat 8.5s ease-in-out infinite;
+  animation: phoneFloat 13.5s ease-in-out infinite;
 }
 
 .phone-shadow {
@@ -462,7 +462,7 @@ a {
   background: rgba(255, 255, 255, 0.8);
   box-shadow: var(--shadow-soft);
   backdrop-filter: blur(22px);
-  animation: floatCard 8s ease-in-out infinite;
+  animation: floatCard 12.5s ease-in-out infinite;
 }
 
 .event-card-one {
@@ -547,17 +547,18 @@ a {
 
 .dashboard-stack {
   position: absolute;
-  left: 57.5%;
-  top: 49.5%;
+  left: 52.7%;
+  top: 50.8%;
   z-index: 18;
-  width: 390px;
-  transform: translateY(-50%) perspective(1050px) rotateY(-4deg) rotateZ(1.35deg);
+  width: 410px;
+  transform: translateY(-50%) perspective(1100px) rotateY(-4.5deg) rotateZ(1.25deg);
   transform-origin: 16% 52%;
 }
 
 .dashboard-grid {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
+  align-items: stretch;
   gap: 24px;
 }
 
@@ -565,16 +566,16 @@ a {
   position: relative;
   overflow: hidden;
   border: 1px solid rgba(0, 0, 0, 0.045);
-  border-radius: 14px;
-  background: rgba(255, 255, 255, 0.79);
+  border-radius: 13px;
+  background: rgba(255, 255, 255, 0.82);
   box-shadow:
-    0 18px 44px rgba(20, 18, 16, 0.075),
-    0 4px 15px rgba(20, 18, 16, 0.04);
+    0 19px 42px rgba(20, 18, 16, 0.073),
+    0 4px 14px rgba(20, 18, 16, 0.038);
   backdrop-filter: blur(24px);
 }
 
 .float-card {
-  animation: floatCard 8.8s ease-in-out infinite;
+  animation: floatCard 13s ease-in-out infinite;
 }
 
 .dashboard-grid .float-card:nth-child(2) {
@@ -591,8 +592,9 @@ a {
 
 .funnel-card,
 .metric-card {
-  min-height: 150px;
-  padding: 18px 20px 16px;
+  height: 176px;
+  min-height: 0;
+  padding: 17px 20px 16px;
 }
 
 .metric-card {
@@ -615,47 +617,69 @@ a {
 }
 
 .bar-chart {
+  position: relative;
   display: flex;
   align-items: flex-end;
-  gap: 9px;
-  height: 64px;
-  margin-top: 23px;
+  gap: 8px;
+  height: 66px;
+  margin-top: 18px;
 }
 
 .bar-chart span {
   position: relative;
   flex: 1;
+  height: 100%;
   min-width: 0;
   border-radius: 1px 1px 0 0;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.9), rgba(245, 242, 238, 0.54));
+  box-shadow:
+    inset 0 0 0 1px rgba(255, 255, 255, 0.42),
+    0 6px 12px rgba(255, 90, 31, 0.06);
 }
 
-.bar-chart span::before {
+.bar-chart span::after {
   content: "";
   position: absolute;
-  inset: -18px 0 auto;
-  height: 22px;
-  background: linear-gradient(180deg, rgba(255, 255, 255, 0.9), transparent);
+  right: 0;
+  bottom: 0;
+  left: 0;
+  height: var(--fill);
+  border-radius: 1px 1px 0 0;
+  background: linear-gradient(180deg, var(--bar-top), var(--bar-bottom));
+  transform: scaleY(0.18);
+  transform-origin: bottom;
+  animation: barFill 620ms cubic-bezier(0.22, 1, 0.36, 1) forwards;
+  animation-delay: var(--bar-delay, 0ms);
 }
 
 .accent-bar {
-  background: linear-gradient(180deg, #ff7a33 0%, #ff4d6d 100%);
+  --bar-top: #ff8a54;
+  --bar-bottom: #ff451a;
+}
+
+.accent-bar:nth-child(3),
+.accent-bar:nth-child(4) {
+  --bar-top: #ff8a63;
+  --bar-bottom: #e82463;
 }
 
 .dark-bar {
-  background: linear-gradient(180deg, #77746e 0%, #111 100%);
+  --bar-top: #77746e;
+  --bar-bottom: #101010;
 }
 
 .chart-base {
-  height: 9px;
-  margin-top: 9px;
-  background: linear-gradient(90deg, #ccc8c2, #dfdcd7);
+  height: 8px;
+  margin-top: 8px;
+  background: linear-gradient(90deg, #d0ccc6, #e3dfda);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.42);
 }
 
 .value-row {
   display: flex;
   align-items: center;
-  gap: 11px;
-  margin-top: 31px;
+  gap: 12px;
+  margin-top: 16px;
 }
 
 .value-row strong {
@@ -686,52 +710,83 @@ a {
 
 .metric-card > small {
   display: block;
-  margin-top: 7px;
+  margin-top: 5px;
   color: #77736e;
   font-size: 10.5px;
 }
 
 .trend-line {
+  display: block;
+  flex: 0 0 48px;
+  align-self: stretch;
   width: 100%;
-  height: 33px;
-  margin-top: auto;
+  min-width: 100%;
+  height: 48px;
+  margin-top: 4px;
   color: var(--accent);
+}
+
+.trend-area {
+  fill: rgba(255, 90, 31, 0.15);
+  opacity: 0.45;
+  transform: scaleX(0.35) translateY(4px);
+  transform-box: fill-box;
+  transform-origin: left bottom;
+  animation: trendAreaIn 420ms ease-out 180ms forwards;
+}
+
+.trend-guide {
+  stroke: rgba(255, 90, 31, 0.34);
+  stroke-width: 1.8;
+}
+
+.trend-path {
+  transform: scaleX(0.35);
+  transform-box: fill-box;
+  transform-origin: left center;
+  animation: trendDraw 620ms cubic-bezier(0.22, 1, 0.36, 1) 80ms forwards;
 }
 
 .dot-strip {
   display: grid;
-  grid-template-columns: repeat(28, 3px);
-  justify-content: end;
-  gap: 2px 3px;
+  grid-template-columns: repeat(34, 3.25px);
+  justify-content: start;
+  gap: 2.5px 3.25px;
   margin-top: auto;
-  padding-top: 17px;
+  padding-top: 20px;
 }
 
 .dot-strip span {
-  width: 3px;
-  height: 3px;
+  width: 3.25px;
+  height: 3.25px;
   border-radius: 999px;
-  background: rgba(255, 90, 31, 0.24);
+  opacity: var(--dot-opacity);
+  transform: scale(0.55);
+  animation: dotLoad 700ms ease-out forwards;
 }
 
-.dot-strip span:nth-child(n + 31):nth-child(-n + 58) {
-  background: rgba(255, 90, 31, 0.72);
+.dot-soft {
+  background: #ff8a52;
+}
+
+.dot-hot {
+  background: #ff4d1f;
 }
 
 .agents-card {
-  width: 326px;
+  width: 342px;
   min-height: 164px;
   margin-top: 28px;
   margin-left: 0;
-  padding: 18px 22px;
+  padding: 19px 22px 18px;
 }
 
 .agent-content {
   display: grid;
-  grid-template-columns: minmax(0, 1fr) 68px;
+  grid-template-columns: minmax(0, 1fr) 74px;
   align-items: end;
-  gap: 16px;
-  margin-top: 18px;
+  gap: 18px;
+  margin-top: 19px;
 }
 
 .agent-list {
@@ -743,10 +798,10 @@ a {
 
 .agent-row {
   display: grid;
-  grid-template-columns: 21px minmax(0, 1fr) 38px;
+  grid-template-columns: 22px minmax(0, 1fr) 42px;
   align-items: center;
-  gap: 7px;
-  min-height: 24px;
+  gap: 8px;
+  min-height: 26px;
   border-bottom: 1px solid rgba(10, 10, 10, 0.07);
 }
 
@@ -766,7 +821,7 @@ a {
 
 .agent-row strong {
   overflow: hidden;
-  font-size: 9.5px;
+  font-size: 10.5px;
   font-weight: 700;
   text-overflow: ellipsis;
   white-space: nowrap;
@@ -774,13 +829,13 @@ a {
 
 .agent-row small {
   color: #7a7772;
-  font-size: 9.5px;
+  font-size: 10px;
 }
 
 .agent-matrix {
   display: grid;
   grid-template-columns: repeat(7, 6px);
-  gap: 4px;
+  gap: 5px;
   align-self: end;
   margin-bottom: 2px;
 }
@@ -789,16 +844,18 @@ a {
   width: 6px;
   height: 6px;
   border-radius: 999px;
+}
+
+.matrix-o {
+  background: #ff4d1f;
+}
+
+.matrix-w {
+  background: #8f2a18;
+}
+
+.matrix-d {
   background: #111;
-}
-
-.agent-matrix span:nth-child(3n),
-.agent-matrix span:nth-child(4n) {
-  background: var(--accent);
-}
-
-.agent-matrix span:nth-child(5n) {
-  background: var(--accent-hot);
 }
 
 .spark-card {
@@ -815,7 +872,7 @@ a {
   background: rgba(255, 255, 255, 0.78);
   box-shadow: var(--shadow-soft);
   backdrop-filter: blur(22px);
-  animation: floatCard 7.5s ease-in-out infinite;
+  animation: floatCard 12.5s ease-in-out infinite;
 }
 
 .trusted-strip {
@@ -860,7 +917,32 @@ a {
   }
 
   50% {
-    translate: 0 -10px;
+    translate: 0 -3px;
+  }
+}
+
+@keyframes barFill {
+  to {
+    transform: scaleY(1);
+  }
+}
+
+@keyframes trendDraw {
+  to {
+    transform: scaleX(1);
+  }
+}
+
+@keyframes trendAreaIn {
+  to {
+    opacity: 1;
+    transform: scaleX(1) translateY(0);
+  }
+}
+
+@keyframes dotLoad {
+  to {
+    transform: scale(1);
   }
 }
 
@@ -871,7 +953,7 @@ a {
   }
 
   50% {
-    translate: 0 -14px;
+    translate: 0 -4px;
   }
 }
 

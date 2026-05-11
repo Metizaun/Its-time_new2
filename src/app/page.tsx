@@ -1,4 +1,5 @@
 import Image from "next/image";
+import type { CSSProperties } from "react";
 import {
   ArrowUpRight,
   BarChart3,
@@ -244,7 +245,12 @@ export default function Home() {
                   {[72, 60, 78, 54, 82, 42].map((height, index) => (
                     <span
                       key={height + index}
-                      style={{ height: `${height}%` }}
+                      style={
+                        {
+                          "--fill": `${height}%`,
+                          "--bar-delay": `${index * 45}ms`,
+                        } as CSSProperties
+                      }
                       className={index < 4 ? "accent-bar" : "dark-bar"}
                     />
                   ))}
@@ -265,7 +271,7 @@ export default function Home() {
               <article className="dashboard-card metric-card float-card">
                 <CardHeading title="Pipeline Gerado" subtitle="Este mês" />
                 <div className="value-row wide-value">
-                  <strong>R$ 620.000</strong>
+                  <strong>620k</strong>
                   <span>+18%</span>
                 </div>
                 <small>vs mês anterior</small>
@@ -301,11 +307,7 @@ export default function Home() {
                     );
                   })}
                 </div>
-                <div className="agent-matrix" aria-hidden="true">
-                  {Array.from({ length: 70 }).map((_, index) => (
-                    <span key={index} />
-                  ))}
-                </div>
+                <AgentMatrix />
               </div>
             </article>
 
@@ -346,11 +348,21 @@ function CardHeading({ title, subtitle }: { title: string; subtitle: string }) {
 
 function TrendLine() {
   return (
-    <svg className="trend-line" viewBox="0 0 210 44" fill="none" aria-hidden="true">
+    <svg className="trend-line" viewBox="0 0 210 50" fill="none" aria-hidden="true">
       <path
-        d="M2 31 C18 20 31 33 47 28 C62 23 75 31 90 24 C106 16 121 34 137 22 C151 11 166 12 181 18 C193 23 201 19 208 11"
+        className="trend-area"
+        d="M2 35 C17 25 30 33 44 31 C59 29 70 25 84 32 C100 41 110 23 126 29 C141 34 150 13 168 16 C185 18 194 30 208 17 L208 50 L2 50 Z"
+      />
+      <path
+        className="trend-guide"
+        d="M2 35 C17 25 30 33 44 31 C59 29 70 25 84 32 C100 41 110 23 126 29 C141 34 150 13 168 16 C185 18 194 30 208 17"
+        strokeLinecap="round"
+      />
+      <path
+        className="trend-path"
+        d="M2 35 C17 25 30 33 44 31 C59 29 70 25 84 32 C100 41 110 23 126 29 C141 34 150 13 168 16 C185 18 194 30 208 17"
         stroke="currentColor"
-        strokeWidth="2.2"
+        strokeWidth="2.55"
         strokeLinecap="round"
       />
     </svg>
@@ -358,11 +370,57 @@ function TrendLine() {
 }
 
 function DotStrip() {
+  const columns = 34;
+  const rows = 5;
+
   return (
     <div className="dot-strip" aria-hidden="true">
-      {Array.from({ length: 78 }).map((_, index) => (
-        <span key={index} />
-      ))}
+      {Array.from({ length: columns * rows }).map((_, index) => {
+        const column = index % columns;
+        const row = Math.floor(index / columns);
+        const center = 24;
+        const horizontalStrength = Math.max(0, 1 - Math.abs(column - center) / 17);
+        const rowStrength = 1 - Math.abs(row - 2) * 0.14;
+        const opacity = 0.1 + horizontalStrength * rowStrength * 0.72;
+        const isHot = column > 18 && column < 32;
+
+        return (
+          <span
+            key={index}
+            style={
+              {
+                "--dot-opacity": opacity.toFixed(2),
+              } as CSSProperties
+            }
+            className={isHot ? "dot-hot" : "dot-soft"}
+          />
+        );
+      })}
+    </div>
+  );
+}
+
+function AgentMatrix() {
+  const pattern = [
+    "ooooodd",
+    "ooooodd",
+    "ooooood",
+    "oooodod",
+    "ooooddd",
+    "ooowddd",
+    "oowdddd",
+    "owddddd",
+    "wdddddd",
+    "ddddddd",
+  ] as const;
+
+  return (
+    <div className="agent-matrix" aria-hidden="true">
+      {pattern.flatMap((row, rowIndex) =>
+        row.split("").map((tone, columnIndex) => (
+          <span className={`matrix-${tone}`} key={`${rowIndex}-${columnIndex}`} />
+        )),
+      )}
     </div>
   );
 }
