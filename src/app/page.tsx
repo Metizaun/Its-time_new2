@@ -3,10 +3,7 @@ import {
   ArrowUpRight,
   BarChart3,
   Bot,
-  Camera,
   CheckCircle2,
-  Mail,
-  MessageCircle,
   Play,
   Sparkles,
   Target,
@@ -19,29 +16,25 @@ const leftEvents = [
   {
     title: "Novo lead",
     subtitle: "Site - Landing page",
-    icon: Sparkles,
-    tone: "orange",
+    iconSrc: "/assets/hero/icons/leads-calendar_icon.png",
     className: "event-card-one",
   },
   {
     title: "Mensagem recebida",
     subtitle: "WhatsApp",
-    icon: MessageCircle,
-    tone: "green",
+    iconSrc: "/assets/hero/icons/WhatsApp_icon.png",
     className: "event-card-two",
   },
   {
     title: "Interação",
     subtitle: "Instagram",
-    icon: Camera,
-    tone: "pink",
+    iconSrc: "/assets/hero/icons/Instagram_icon.png",
     className: "event-card-three",
   },
   {
     title: "E-mail aberto",
     subtitle: "Sequência 2",
-    icon: Mail,
-    tone: "soft",
+    iconSrc: "/assets/hero/icons/email_icon.png",
     className: "event-card-four",
   },
 ] as const;
@@ -206,16 +199,20 @@ export default function Home() {
 
           <div className="event-stack" aria-label="Eventos de entrada">
             {leftEvents.map((event, index) => {
-              const Icon = event.icon;
-
               return (
                 <article
                   className={`event-card ${event.className}`}
                   key={event.title}
                   style={{ animationDelay: `${index * 0.8}s` }}
                 >
-                  <span className={`event-icon event-icon-${event.tone}`}>
-                    <Icon size={22} strokeWidth={2.35} />
+                  <span className="event-icon">
+                    <Image
+                      src={event.iconSrc}
+                      alt=""
+                      width={42}
+                      height={42}
+                      aria-hidden="true"
+                    />
                   </span>
                   <span>
                     <strong>{event.title}</strong>
@@ -275,7 +272,7 @@ export default function Home() {
                 <TrendLine />
               </article>
 
-              <article className="dashboard-card metric-card float-card">
+              <article className="dashboard-card metric-card conversion-card float-card">
                 <CardHeading title="Taxa de Conversão" subtitle="Qualificados -> Reunião" />
                 <div className="value-row">
                   <strong>26,7%</strong>
@@ -288,25 +285,27 @@ export default function Home() {
 
             <article className="dashboard-card agents-card float-card">
               <CardHeading title="Automações Ativas" subtitle="Agentes trabalhando 24/7" />
-              <div className="agent-list">
-                {agents.map((agent) => {
-                  const Icon = agent.icon;
+              <div className="agent-content">
+                <div className="agent-list">
+                  {agents.map((agent) => {
+                    const Icon = agent.icon;
 
-                  return (
-                    <div className="agent-row" key={agent.name}>
-                      <span className="agent-icon">
-                        <Icon size={13} strokeWidth={2.4} />
-                      </span>
-                      <strong>{agent.name}</strong>
-                      <small>Ativo</small>
-                    </div>
-                  );
-                })}
-              </div>
-              <div className="agent-matrix" aria-hidden="true">
-                {Array.from({ length: 70 }).map((_, index) => (
-                  <span key={index} />
-                ))}
+                    return (
+                      <div className="agent-row" key={agent.name}>
+                        <span className="agent-icon">
+                          <Icon size={13} strokeWidth={2.4} />
+                        </span>
+                        <strong>{agent.name}</strong>
+                        <small>Ativo</small>
+                      </div>
+                    );
+                  })}
+                </div>
+                <div className="agent-matrix" aria-hidden="true">
+                  {Array.from({ length: 70 }).map((_, index) => (
+                    <span key={index} />
+                  ))}
+                </div>
               </div>
             </article>
 
