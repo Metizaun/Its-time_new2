@@ -1,10 +1,10 @@
 import Image from "next/image";
 import type { CSSProperties } from "react";
+import { CrescerSection } from "@/components/CrescerSection";
+import { FeatureSection } from "@/components/FeatureSlides/FeatureSection";
 import {
   ArrowUpRight,
-  BarChart3,
   Bot,
-  CheckCircle2,
   Play,
   Sparkles,
   Target,
@@ -46,7 +46,31 @@ const bottomMetrics = [
   { value: "+97%", label: "Aumento de pipeline" },
 ] as const;
 
-const companyLogos = ["Constructec", "InnovaCorp", "Appsul", "DataFlow", "Solutionx"];
+const companyLogos = [
+  {
+    name: "Arquem",
+    src: "/assets/hero/Brands/Logo-Arquem.png",
+    width: 1024,
+    height: 1024,
+    className: "company-logo--arquem",
+  },
+  {
+    name: "Thais Kislim",
+    src: "/assets/hero/Brands/Thais%20Kislim.png",
+    width: 1024,
+    height: 1024,
+    className: "company-logo--thais-kislim",
+  },
+  {
+    name: "Lumiar",
+    src: "/assets/hero/Brands/Lumiar.png",
+    width: 2149,
+    height: 732,
+    className: "company-logo--lumiar",
+  },
+] as const;
+
+const companyLogoLoopCount = 4;
 
 const agents = [
   { name: "Agente Qualificador", icon: Target },
@@ -81,32 +105,33 @@ const particles = [
 
 export default function Home() {
   return (
-    <main className="hero-page">
-      <Image
-        className="hero-background"
-        src="/assets/hero/background.png"
-        alt=""
-        fill
-        priority
-        sizes="100vw"
-      />
+    <main className="site-page">
+      <section className="hero-page">
+        <Image
+          className="hero-background"
+          src="/assets/hero/background.png"
+          alt=""
+          fill
+          priority
+          sizes="100vw"
+        />
 
-      <div className="ambient-gradient" aria-hidden="true" />
-      <div className="particle-field" aria-hidden="true">
-        {particles.map(([left, top, size, tone], index) => (
-          <span
-            className={`particle particle-${tone}`}
-            key={`${left}-${top}-${index}`}
-            style={{
-              left: `${left}%`,
-              top: `${top}%`,
-              width: size,
-              height: size,
-              animationDelay: `${index * 0.45}s`,
-            }}
-          />
-        ))}
-      </div>
+        <div className="ambient-gradient" aria-hidden="true" />
+        <div className="particle-field" aria-hidden="true">
+          {particles.map(([left, top, size, tone], index) => (
+            <span
+              className={`particle particle-${tone}`}
+              key={`${left}-${top}-${index}`}
+              style={{
+                left: `${left}%`,
+                top: `${top}%`,
+                width: size,
+                height: size,
+                animationDelay: `${index * 0.45}s`,
+              }}
+            />
+          ))}
+        </div>
 
       <header className="site-header">
         <a className="brand" href="#" aria-label="Its Time">
@@ -321,18 +346,32 @@ export default function Home() {
       <section className="trusted-strip" aria-label="Empresas que escalam com a Its Time">
         <p>EMPRESAS QUE ESCALAM COM A ITS TIME</p>
         <div className="company-row">
-          {companyLogos.map((logo, index) => (
-            <span key={logo}>
-              {index % 2 === 0 ? (
-                <BarChart3 size={28} strokeWidth={2.4} />
-              ) : (
-                <CheckCircle2 size={28} strokeWidth={2.4} />
-              )}
-              {logo}
-            </span>
-          ))}
+          <div className="company-track">
+            {Array.from({ length: companyLogoLoopCount }).map((_, groupIndex) => (
+              <div
+                className="company-set"
+                key={`company-set-${groupIndex}`}
+                aria-hidden={groupIndex > 0 ? true : undefined}
+              >
+                {companyLogos.map((logo) => (
+                  <span className="company-logo-slot" key={`${groupIndex}-${logo.name}`}>
+                    <Image
+                      className={`company-logo ${logo.className}`}
+                      src={logo.src}
+                      alt={groupIndex === 0 ? logo.name : ""}
+                      width={logo.width}
+                      height={logo.height}
+                    />
+                  </span>
+                ))}
+              </div>
+            ))}
+          </div>
         </div>
       </section>
+      </section>
+      <FeatureSection />
+      <CrescerSection />
     </main>
   );
 }

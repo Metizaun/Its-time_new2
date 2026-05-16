@@ -894,20 +894,83 @@ a {
 }
 
 .company-row {
+  --company-gap: clamp(38px, 6vw, 64px);
+  contain: layout paint;
+  overflow: clip;
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 60px;
-  flex-wrap: wrap;
+  width: min(100%, 980px);
+  height: 56px;
+  -webkit-mask-image: linear-gradient(90deg, transparent, #000 9%, #000 91%, transparent);
+  mask-image: linear-gradient(90deg, transparent, #000 9%, #000 91%, transparent);
 }
 
-.company-row span {
-  display: inline-flex;
+.company-track {
+  position: absolute;
+  left: 0;
+  top: 0;
+  display: flex;
   align-items: center;
-  gap: 9px;
-  color: rgba(10, 10, 10, 0.38);
-  font-size: 18px;
-  font-weight: 800;
+  height: 100%;
+  width: 100%;
+  overflow: clip;
+  contain: paint;
+  animation: companyCarousel 28s linear infinite;
+  will-change: transform;
+}
+
+.company-set {
+  display: flex;
+  flex: 0 0 auto;
+  align-items: center;
+  gap: var(--company-gap);
+  padding-right: var(--company-gap);
+}
+
+.company-logo-slot {
+  display: grid;
+  flex: 0 0 150px;
+  place-items: center;
+  width: 150px;
+  height: 56px;
+  overflow: hidden;
+}
+
+.company-logo {
+  width: 100%;
+  height: 100%;
+  max-width: none;
+  max-height: none;
+  object-fit: contain;
+  object-position: center;
+  filter: grayscale(1) contrast(1.08) brightness(0.86);
+  opacity: 0.58;
+}
+
+.company-logo--arquem {
+  width: 184px;
+  height: 184px;
+}
+
+.company-logo--thais-kislim {
+  width: 66px;
+  height: 66px;
+}
+
+.company-logo--lumiar {
+  width: 150px;
+  height: auto;
+  filter: invert(1) grayscale(1) contrast(3.4) brightness(1.05);
+  opacity: 0.34;
+  mix-blend-mode: darken;
+}
+
+@keyframes companyCarousel {
+  to {
+    transform: translate3d(-25%, 0, 0);
+  }
 }
 
 @keyframes floatCard {
@@ -1262,7 +1325,7 @@ a {
   }
 
   .connection-lines {
-    opacity: 0.45;
+    display: none;
   }
 
   .trusted-strip p {
@@ -1272,11 +1335,44 @@ a {
   }
 
   .company-row {
-    gap: 22px;
+    --company-gap: 28px;
+    width: min(100%, 420px);
+    height: 46px;
   }
 
-  .company-row span {
-    font-size: 14px;
+  .company-track {
+    position: relative;
+    justify-content: center;
+    animation: none;
+    transform: none;
+  }
+
+  .company-set {
+    padding-right: 0;
+  }
+
+  .company-set:not(:first-child) {
+    display: none;
+  }
+
+  .company-logo-slot {
+    flex-basis: 118px;
+    width: 118px;
+    height: 46px;
+  }
+
+  .company-logo--arquem {
+    width: 150px;
+    height: 150px;
+  }
+
+  .company-logo--thais-kislim {
+    width: 56px;
+    height: 56px;
+  }
+
+  .company-logo--lumiar {
+    width: 118px;
   }
 }
 
@@ -1382,6 +1478,29 @@ a {
   .trusted-strip {
     margin-top: 22px;
   }
+
+  .company-row {
+    --company-gap: 18px;
+  }
+
+  .company-logo-slot {
+    flex-basis: 92px;
+    width: 92px;
+  }
+
+  .company-logo--arquem {
+    width: 118px;
+    height: 118px;
+  }
+
+  .company-logo--thais-kislim {
+    width: 48px;
+    height: 48px;
+  }
+
+  .company-logo--lumiar {
+    width: 92px;
+  }
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -1392,5 +1511,10 @@ a {
     animation-duration: 0.01ms !important;
     animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
+  }
+
+  .company-track {
+    animation: none !important;
+    transform: none;
   }
 }

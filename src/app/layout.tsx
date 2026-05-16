@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import { Chakra_Petch, Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import "../styles/feature-section.css";
+import "../styles/crescer-section.css";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -20,7 +22,7 @@ const display = Chakra_Petch({
 });
 
 export const metadata: Metadata = {
-  title: "Síntese - IA que organiza, estratégia que multiplica",
+  title: "Its Time IA - IA que organiza, estratégia que multiplica",
   description:
     "Hero page premium para automação de SDR com IA, funis inteligentes e pipeline comercial vivo.",
 };
