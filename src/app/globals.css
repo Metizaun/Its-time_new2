@@ -1503,6 +1503,149 @@ a {
   }
 }
 
+.trusted-strip .company-row {
+  --company-gap: clamp(38px, 6vw, 64px);
+  contain: layout paint;
+  overflow: clip;
+  position: relative;
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: center;
+  gap: 0;
+  width: min(100%, 980px);
+  height: 56px;
+  -webkit-mask-image: linear-gradient(90deg, transparent, #000 9%, #000 91%, transparent);
+  mask-image: linear-gradient(90deg, transparent, #000 9%, #000 91%, transparent);
+}
+
+.trusted-strip .company-track {
+  position: absolute;
+  inset: 0 auto auto 0;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  overflow: clip;
+  contain: paint;
+  animation: companyCarousel 28s linear infinite;
+  will-change: transform;
+}
+
+.trusted-strip .company-set {
+  display: flex;
+  flex: 0 0 auto;
+  align-items: center;
+  gap: var(--company-gap);
+  padding-right: var(--company-gap);
+}
+
+.trusted-strip .company-set:not(:first-child) {
+  display: flex;
+}
+
+.trusted-strip .company-logo-slot {
+  display: grid;
+  flex: 0 0 150px;
+  place-items: center;
+  width: 150px;
+  height: 56px;
+  overflow: hidden;
+}
+
+.trusted-strip .company-logo {
+  display: block;
+  width: 100%;
+  height: 100%;
+  max-width: none;
+  max-height: none;
+  object-fit: contain;
+  object-position: center;
+}
+
+.trusted-strip .company-logo--arquem {
+  width: 184px;
+  height: 184px;
+}
+
+.trusted-strip .company-logo--thais-kislim {
+  width: 66px;
+  height: 66px;
+}
+
+.trusted-strip .company-logo--lumiar {
+  width: 150px;
+  height: auto;
+}
+
+@media (max-width: 820px) {
+  .trusted-strip .company-row {
+    --company-gap: 28px;
+    width: min(100%, 420px);
+    height: 46px;
+  }
+
+  .trusted-strip .company-track {
+    position: relative;
+    justify-content: center;
+    animation: none;
+    transform: none;
+  }
+
+  .trusted-strip .company-set {
+    padding-right: 0;
+  }
+
+  .trusted-strip .company-set:not(:first-child) {
+    display: none;
+  }
+
+  .trusted-strip .company-logo-slot {
+    flex-basis: 118px;
+    width: 118px;
+    height: 46px;
+  }
+
+  .trusted-strip .company-logo--arquem {
+    width: 150px;
+    height: 150px;
+  }
+
+  .trusted-strip .company-logo--thais-kislim {
+    width: 56px;
+    height: 56px;
+  }
+
+  .trusted-strip .company-logo--lumiar {
+    width: 118px;
+  }
+}
+
+@media (max-width: 560px) {
+  .trusted-strip .company-row {
+    --company-gap: 18px;
+  }
+
+  .trusted-strip .company-logo-slot {
+    flex-basis: 92px;
+    width: 92px;
+  }
+
+  .trusted-strip .company-logo--arquem {
+    width: 118px;
+    height: 118px;
+  }
+
+  .trusted-strip .company-logo--thais-kislim {
+    width: 48px;
+    height: 48px;
+  }
+
+  .trusted-strip .company-logo--lumiar {
+    width: 92px;
+  }
+}
+
 @media (prefers-reduced-motion: reduce) {
   *,
   *::before,

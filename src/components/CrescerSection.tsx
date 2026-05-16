@@ -1,6 +1,25 @@
 import Image from "next/image";
 import { ArrowUpRight } from "lucide-react";
 
+const lowerItems = [
+  {
+    title: "CAOS",
+    body: "Informações dispersas e processos manuais.",
+  },
+  {
+    title: "ATRITO",
+    body: "Perda de tempo, erros e retrabalho.",
+  },
+  {
+    title: "SISTEMA",
+    body: "Automação inteligente e padronização.",
+  },
+  {
+    title: "ESCALA",
+    body: "Operação previsível e crescimento contínuo.",
+  },
+] as const;
+
 export function CrescerSection() {
   return (
     <section
@@ -39,6 +58,16 @@ export function CrescerSection() {
           Agendar demonstração
           <ArrowUpRight size={18} strokeWidth={2.2} />
         </a>
+      </div>
+
+      <div className="crescer-lower-grid" aria-label="Evolução operacional">
+        {lowerItems.map((item) => (
+          <article className="crescer-lower-item" key={item.title}>
+            <span aria-hidden="true" />
+            <h3>{item.title}</h3>
+            <p>{item.body}</p>
+          </article>
+        ))}
       </div>
     </section>
   );

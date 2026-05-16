@@ -167,6 +167,10 @@ test("crescer section appears after features with background, copy, and CTA", as
     await expect(section.getByRole("heading", { name: /crescer errado pode custar caro/i })).toBeVisible();
     await expect(section.getByText("Processos frágeis não quebram de repente.", { exact: false })).toBeVisible();
     await expect(section.getByRole("link", { name: /agendar demonstração/i })).toBeVisible();
+    await expect(section.getByRole("heading", { name: "CAOS" })).toBeVisible();
+    await expect(section.getByRole("heading", { name: "ATRITO" })).toBeVisible();
+    await expect(section.getByRole("heading", { name: "SISTEMA" })).toBeVisible();
+    await expect(section.getByRole("heading", { name: "ESCALA" })).toBeVisible();
 
     const featureComesBefore = await page.evaluate(() => {
       const feature = document.querySelector("[data-feature-section]");
@@ -199,6 +203,34 @@ test("crescer section appears after features with background, copy, and CTA", as
     });
     expect(headlineLines).toBeLessThanOrEqual(3);
   }
+});
+
+test("trusted logos carousel stays clipped and compact on narrow screens", async ({ page }) => {
+  await page.setViewportSize({ width: 470, height: 980 });
+  await gotoHome(page);
+  await expectNoHorizontalOverflow(page);
+
+  const carouselState = await page.locator(".trusted-strip .company-row").evaluate((row) => {
+    const rowRect = row.getBoundingClientRect();
+    const track = row.querySelector(".company-track");
+    const slots = Array.from(row.querySelectorAll(".company-logo-slot"));
+
+    return {
+      rowHeight: rowRect.height,
+      rowWidth: rowRect.width,
+      overflow: getComputedStyle(row).overflow,
+      trackDisplay: track ? getComputedStyle(track).display : "",
+      slotHeights: slots.map((slot) => slot.getBoundingClientRect().height),
+      slotWidths: slots.map((slot) => slot.getBoundingClientRect().width),
+    };
+  });
+
+  expect(carouselState.rowHeight).toBeLessThanOrEqual(60);
+  expect(carouselState.rowWidth).toBeLessThanOrEqual(430);
+  expect(carouselState.overflow).toBe("clip");
+  expect(carouselState.trackDisplay).toBe("flex");
+  expect(carouselState.slotHeights.every((height) => height <= 60)).toBe(true);
+  expect(carouselState.slotWidths.every((width) => width <= 120)).toBe(true);
 });
 
 test("sticky scroll keeps one operational slide active across the full section", async ({ page }) => {
@@ -308,13 +340,6 @@ test("assets, DOM budget, animation properties, and scroll long tasks stay healt
   const nodeCount = await page.locator("[data-feature-section] *").count();
   expect(nodeCount).toBeLessThan(1_600);
 
-  const brokenImages = await page.locator("[data-feature-section] img").evaluateAll((images) =>
-    (images as HTMLImageElement[])
-      .filter((image) => !image.complete || image.naturalWidth === 0)
-      .map((image) => image.currentSrc || image.src),
-  );
-  expect(brokenImages).toEqual([]);
-
   const motionStyles = await page.locator("[data-feature-slide]").evaluateAll((slides) =>
     slides.map((slide) => {
       const styles = getComputedStyle(slide);
@@ -331,6 +356,13 @@ test("assets, DOM budget, animation properties, and scroll long tasks stay healt
   for (let index = 0; index < slideIds.length; index += 1) {
     await scrollToSlide(page, index);
   }
+
+  const brokenImages = await page.locator("[data-feature-section] img").evaluateAll((images) =>
+    (images as HTMLImageElement[])
+      .filter((image) => !image.complete || image.naturalWidth === 0)
+      .map((image) => image.currentSrc || image.src),
+  );
+  expect(brokenImages).toEqual([]);
 
   const longTasks = await page.evaluate(
     () => (window as unknown as { __featureLongTasks?: number[] }).__featureLongTasks ?? [],
