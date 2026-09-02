@@ -22,9 +22,9 @@ const display = Chakra_Petch({
 });
 
 export const metadata: Metadata = {
-  title: "Its Time IA - IA que organiza, estratégia que multiplica",
-  description:
-    "Hero page premium para automação de SDR com IA, funis inteligentes e pipeline comercial vivo.",
+  metadataBase: new URL("https://itstime.pro"),
+  title: "Its Time IA - Em manutenção",
+  description: "A Its Time está passando por uma atualização e volta em breve.",
 };
 
 export default function RootLayout({

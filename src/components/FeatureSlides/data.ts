@@ -105,7 +105,7 @@ export const featureSlides: FeatureSlide[] = [
   {
     id: "scale",
     kicker: "07",
-    headline: ["Crescimento sem", "caos operacional."],
+    headline: ["Crescimento", "operacional", "Sem caos"],
     body: "Uma arquitetura sólida garante performance, rastreabilidade e governança para escalar com confiança.",
     variant: "scale",
     backgroundSrc: "/assets/Scroll_slide/Referencias/Referencia_slide-6-background.png",

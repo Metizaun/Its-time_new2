@@ -2,7 +2,6 @@ import Image from "next/image";
 import { Globe2, Send } from "lucide-react";
 import { featureSlides } from "./data";
 import {
-  ConnectorLines,
   CoreCube,
   FeatureSlideFrame,
   OrbitRings,
@@ -69,7 +68,6 @@ export function SlideOmnichannel() {
             />
           ))}
         </div>
-        <ConnectorLines variant="channels" />
         <div className="channel-core-wrap">
           <OrbitRings count={5} />
           <CoreCube className="channel-core" />

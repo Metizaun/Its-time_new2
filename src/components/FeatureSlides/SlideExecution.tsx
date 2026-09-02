@@ -5,6 +5,7 @@ import {
   Filter,
   UserRound,
 } from "lucide-react";
+import type { CSSProperties } from "react";
 import { featureSlides } from "./data";
 import { FeatureSlideFrame } from "./shared";
 
@@ -57,10 +58,10 @@ export function SlideExecution() {
         </div>
         {pipelineStages.map((stage, index) => (
           <article
-            className={`pipeline-card pipeline-card--${index + 1}`}
-            data-motion-card
+            className="pipeline-card"
             data-required-element={stage.marker}
             key={stage.marker}
+            style={{ "--stage-index": index } as CSSProperties}
           >
             <span className="pipeline-icon" aria-hidden="true">
               {stage.icon}

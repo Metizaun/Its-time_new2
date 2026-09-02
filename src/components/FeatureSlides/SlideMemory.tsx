@@ -7,7 +7,6 @@ import {
 } from "lucide-react";
 import { featureSlides } from "./data";
 import {
-  ConnectorLines,
   CoreCube,
   FeatureSlideFrame,
   OrbitRings,
@@ -21,7 +20,6 @@ export function SlideMemory() {
     <FeatureSlideFrame slide={slide} visualClassName="feature-visual--context">
       <div className="context-system">
         <OrbitRings count={5} />
-        <ConnectorLines variant="context" />
         <CoreCube className="context-core" />
         <TechCard
           className="context-card context-card--lead"
