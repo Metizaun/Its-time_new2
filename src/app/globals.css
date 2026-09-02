@@ -2298,19 +2298,20 @@ a {
 }
 
 .update-modal-list li {
-  position: relative;
-  padding-left: var(--space-6);
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-3);
+  color: var(--color-gray-700);
+}
+
+.update-modal-list li svg {
+  flex: 0 0 auto;
+  margin-top: 0.15rem;
+  color: var(--color-primary-500);
 }
 
 .update-modal-list li::before {
-  position: absolute;
-  top: 0.55em;
-  left: 2px;
-  width: var(--space-2);
-  height: var(--space-2);
-  border-radius: 50%;
-  background: var(--color-primary-500);
-  content: "";
+  display: none;
 }
 
 .update-modal-footer {
@@ -2364,6 +2365,33 @@ a {
   transform: translateY(-2px);
 }
 
+.update-modal-actions {
+  display: flex;
+  gap: var(--space-3);
+}
+
+.update-modal-progress {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-right: auto;
+}
+
+.update-modal-progress span {
+  display: block;
+  width: 6px;
+  height: 6px;
+  border-radius: 999px;
+  background: var(--color-gray-300);
+  transition: width var(--duration-default) var(--ease-out),
+    background-color var(--duration-default) ease;
+}
+
+.update-modal-progress span.is-active {
+  width: 20px;
+  background: var(--color-primary-500);
+}
+
 @keyframes update-modal-fade-in {
   from { opacity: 0; }
   to { opacity: 1; }
@@ -2405,6 +2433,14 @@ a {
   .update-modal-secondary,
   .update-modal-primary {
     width: 100%;
+  }
+
+  .update-modal-actions {
+    width: 100%;
+  }
+
+  .update-modal-progress {
+    margin: 0 auto var(--space-2);
   }
 }
 
