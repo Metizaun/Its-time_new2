@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import { LegalLinks } from "@/components/LegalLinks";
 import { UpdateAnnouncementModal } from "@/components/UpdateAnnouncementModal";
 
@@ -97,7 +98,10 @@ export default function Home() {
           <span className="maintenance-footer-divider" aria-hidden="true" />
           <span>IA que organiza. Estratégia que multiplica.</span>
         </div>
-        <LegalLinks />
+        <div className="maintenance-footer-links">
+          <Link href="/updates">Atualizações</Link>
+          <LegalLinks />
+        </div>
       </footer>
 
       <UpdateAnnouncementModal />
