@@ -1,0 +1,139 @@
+openapi: 3.1.0
+info:
+  title: Its Time Lead Webhook
+  version: 1.0.0
+  description: >-
+    Contrato de entrada de leads no CRM Its Time. O roteamento para empresa,
+    agente, instância e etapa é definido pela conexão pública.
+servers:
+  - url: https://api.itstime.pro
+    description: Produção
+tags:
+  - name: Leads
+    description: Recebimento idempotente de leads
+paths:
+  /api/integrations/leads/v1/connections/{publicConnectionId}/events:
+    post:
+      tags: [Leads]
+      summary: Receber ou atualizar um lead
+      operationId: receiveLeadEvent
+      parameters:
+        - $ref: '#/components/parameters/PublicConnectionId'
+        - $ref: '#/components/parameters/IdempotencyKey'
+        - $ref: '#/components/parameters/LeadsTimestamp'
+        - $ref: '#/components/parameters/LeadsSignature'
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/LeadEvent'
+            example:
+              name: Maria Silva
+              phone: '5511999999999'
+              email: maria@example.com
+              observation: Tem interesse em lentes multifocais.
+              tags: [multifocal, campanha-maio]
+      responses:
+        '202':
+          description: Evento aceito ou já processado de forma idempotente
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/LeadAcceptedResponse'
+        '400':
+          description: Payload ou cabeçalho inválido
+        '401':
+          description: Timestamp, segredo ou assinatura inválidos
+        '404':
+          description: Conexão pública não encontrada
+        '409':
+          description: Chave idempotente já usada com outro corpo
+        '422':
+          description: Agente, instância ou etapa da conexão inválidos
+        '429':
+          description: Limite de requisições excedido
+        '503':
+          description: Conexão pausada ou temporariamente indisponível
+components:
+  parameters:
+    PublicConnectionId:
+      name: publicConnectionId
+      in: path
+      required: true
+      description: Identificador público da conexão de leads.
+      schema:
+        type: string
+        format: uuid
+    IdempotencyKey:
+      name: Idempotency-Key
+      in: header
+      required: true
+      description: Identificador estável do evento para retentativas seguras.
+      schema:
+        type: string
+        minLength: 1
+        maxLength: 200
+    LeadsTimestamp:
+      name: X-Leads-Timestamp
+      in: header
+      required: true
+      description: Unix timestamp usado na assinatura HMAC.
+      schema:
+        type: string
+    LeadsSignature:
+      name: X-Leads-Signature
+      in: header
+      required: true
+      description: 'sha256= seguido do HMAC-SHA256 de timestamp.rawBody.'
+      schema:
+        type: string
+        pattern: '^sha256=[a-f0-9]{64}$'
+  schemas:
+    LeadEvent:
+      type: object
+      additionalProperties: false
+      required: [name, phone]
+      properties:
+        name:
+          type: string
+          minLength: 1
+          maxLength: 160
+        phone:
+          type: string
+          minLength: 8
+          maxLength: 32
+          description: Telefone em formato aceito pelo normalizador do Its Time.
+        email:
+          type: string
+          format: email
+          maxLength: 254
+        observation:
+          type: string
+          maxLength: 10000
+        tags:
+          type: array
+          uniqueItems: true
+          maxItems: 50
+          items:
+            type: string
+            minLength: 1
+            maxLength: 80
+    LeadAcceptedResponse:
+      type: object
+      required: [accepted, duplicate, leadId, ignored_tags]
+      properties:
+        accepted:
+          type: boolean
+          const: true
+        duplicate:
+          type: boolean
+        leadId:
+          type: string
+          format: uuid
+        created:
+          type: boolean
+        ignored_tags:
+          type: array
+          items:
+            type: string

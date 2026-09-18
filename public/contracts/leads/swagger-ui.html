@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Webhook de leads · Swagger UI</title>
+    <link rel="stylesheet" href="../agenda/swagger-ui.css" />
+    <style>
+      :root { color-scheme: light; }
+      body { margin: 0; background: #fff; color: #11100f; font-family: Arial, Helvetica, sans-serif; }
+      .swagger-ui .topbar { display: none; }
+      .swagger-ui .information-container { padding: 24px 0 0; }
+      .swagger-ui .wrapper { max-width: none; padding: 0 20px; }
+      .swagger-ui .scheme-container { box-shadow: none; padding: 20px 0; }
+      .swagger-ui .opblock-summary-method { min-width: 84px; }
+    </style>
+  </head>
+  <body>
+    <div id="swagger-ui"></div>
+    <script src="../agenda/swagger-ui-bundle.js"></script>
+    <script>
+      window.ui = SwaggerUIBundle({
+        url: "./lead-webhook-v1.openapi.yaml",
+        dom_id: "#swagger-ui",
+        deepLinking: true,
+        docExpansion: "list",
+        displayOperationId: false,
+        defaultModelsExpandDepth: 1,
+        supportedSubmitMethods: [],
+        persistAuthorization: false,
+      });
+    </script>
+  </body>
+</html>

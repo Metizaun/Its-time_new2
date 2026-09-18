@@ -1,0 +1,11 @@
+node_modules
+.next
+.git
+.gitignore
+*.log
+analysis-*.png
+verification-*.png
+Icon
+System rules
+design_rules_swiss_editorial_ai_system.md
+ChatGPT Image *.png

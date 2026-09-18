@@ -12,6 +12,7 @@ const eslintConfig = defineConfig([
     "build/**",
     "playwright-report/**",
     "test-results/**",
+    "public/contracts/agenda/swagger-ui-bundle.js",
     "next-env.d.ts",
   ]),
 ]);
