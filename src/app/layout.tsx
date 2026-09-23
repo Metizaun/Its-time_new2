@@ -25,6 +25,14 @@ export const metadata: Metadata = {
   metadataBase: new URL("https://itstime.pro"),
   title: "Its Time IA - Em manutenção",
   description: "A Its Time está passando por uma atualização e volta em breve.",
+  openGraph: {
+    siteName: "Its Time",
+    locale: "pt_BR",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+  },
 };
 
 export default function RootLayout({
