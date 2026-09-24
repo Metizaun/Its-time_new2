@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Chakra_Petch, Geist, Geist_Mono } from "next/font/google";
+import Script from "next/script";
 import "./globals.css";
 import "../styles/feature-section.css";
 import "../styles/crescer-section.css";
@@ -37,7 +38,15 @@ export default function RootLayout({
       lang="pt-BR"
       className={`${geistSans.variable} ${geistMono.variable} ${display.variable} h-full antialiased`}
     >
-      <body className="min-h-full flex flex-col">{children}</body>
+      <body className="min-h-full flex flex-col">
+        {children}
+        <Script
+          src="https://app.itstime.pro/widget.js"
+          data-widget-key="sGN8WHpExmKo1LBtGudzZA5sejoxEYQt"
+          data-api="https://api.itstime.pro"
+          strategy="afterInteractive"
+        />
+      </body>
     </html>
   );
 }
