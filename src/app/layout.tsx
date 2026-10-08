@@ -4,6 +4,7 @@ import Script from "next/script";
 import "./globals.css";
 import "../styles/feature-section.css";
 import "../styles/crescer-section.css";
+import "../styles/agent-ecosystem.css";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
