@@ -3,88 +3,66 @@ import type { Page } from "@playwright/test";
 
 const slideIds = [
   "intro",
-  "memory",
-  "multiagents",
-  "execution",
-  "omnichannel",
-  "commercial-intel",
-  "scale",
-  "result",
+  "recovery",
+  "conversation",
+  "collections",
+  "handoff",
+  "performance",
+  "operation",
 ] as const;
 
 const requiredMarkers = [
   "intro-grid",
-  "intro-particles",
   "intro-glow",
-  "historico-lead",
-  "contexto-empresa",
-  "ultimas-conversas",
-  "comportamento-engajamento",
-  "preferencias-interesses",
-  "agente-sdr",
-  "agente-qualificador",
-  "agente-follow-up",
-  "agente-nutricao",
-  "agente-reativacao",
-  "agente-closer",
-  "lead-capturado",
-  "qualificado",
-  "proposta-enviada",
-  "reuniao-agendada",
-  "negocio-ganho",
-  "whatsapp",
-  "instagram",
-  "telegram",
-  "site",
-  "conversao-pipeline",
-  "origem-leads",
-  "lucro-gerado",
-  "heatmap-grid",
-  "infraestrutura-escalavel",
-  "dados-seguros",
-  "governanca-logs",
-  "performance-tempo-real",
-  "rede-consolidada",
-  "resultados",
-  "cta-final",
+  "journey-hub",
+  "journey-now",
+  "recovery-pipeline",
+  "recovery-hub",
+  "recovery-panel",
+  "chat-crm",
+  "chat-hub",
+  "cc-lanes",
+  "cc-hub",
+  "handoff-inbox",
+  "handoff-units",
+  "handoff-hub",
+  "perf-kpis",
+  "perf-funnel",
+  "perf-units",
+  "perf-opportunity",
+  "operation-clock",
+  "operation-now",
+  "operation-counters",
+  "operation-timeline",
 ] as const;
 
 const requiredTexts = [
   "Inteligência que opera.",
   "Estratégia que escala.",
-  "Memória contextual",
-  "Histórico",
-  "Contexto da",
-  "Últimas",
-  "Preferências",
-  "Multiagentes",
-  "Agente SDR",
-  "Agente Qualificador",
-  "Agente Follow-up",
-  "Agente Nutrição",
-  "Agente Reativação",
-  "Agente Closer",
-  "A IA não só responde.",
-  "Lead",
-  "Qualificado",
-  "Proposta",
-  "Reunião",
-  "Negócio",
-  "WhatsApp",
+  "Orçamento parado",
+  "vira receita.",
+  "Onde trava",
+  "Por que parou",
+  "Reativação",
+  "Cada conversa",
+  "caminha para a venda.",
+  "Recomenda",
+  "Dinheiro que entra",
+  "sozinho.",
+  "Cobrança",
+  "Acompanhamento",
+  "A IA não trabalha sozinha.",
+  "Ela faz parte da sua equipe.",
+  "Unidade certa",
   "Instagram",
-  "Telegram",
-  "Site",
-  "Conversas viram dados.",
-  "Conversão de Pipeline",
-  "Origem de Leads",
-  "Lucro Gerado",
-  "Crescimento sem",
-  "Infraestrutura",
-  "Dados seguros",
-  "Governança",
-  "Performance",
-  "Operação organizada.",
-  "Crescimento previsível.",
+  "Veja de onde vem o dinheiro.",
+  "E onde ele ainda está parado.",
+  "Receita por unidade",
+  "Funil",
+  "Enquanto você cuida dos clientes,",
+  "a Its Time cuida da operação.",
+  "Horários confirmados",
+  "Equipe",
 ] as const;
 
 async function gotoHome(page: Page) {
@@ -133,7 +111,7 @@ test("feature section exposes the corrected slide order and all required PRD ele
   await gotoHome(page);
 
   const section = page.locator("[data-feature-section]");
-  await expect(section.locator("[data-feature-slide]")).toHaveCount(8);
+  await expect(section.locator("[data-feature-slide]")).toHaveCount(7);
 
   const ids = await section.locator("[data-feature-slide]").evaluateAll((slides) =>
     slides.map((slide) => slide.getAttribute("data-slide-id")),
@@ -205,32 +183,40 @@ test("crescer section appears after features with background, copy, and CTA", as
   }
 });
 
-test("trusted logos carousel stays clipped and compact on narrow screens", async ({ page }) => {
-  await page.setViewportSize({ width: 470, height: 980 });
+test("trusted strip shows only its line of text while the client logos are hidden", async ({ page }) => {
+  for (const viewport of [
+    { width: 470, height: 980 },
+    { width: 1440, height: 900 },
+  ]) {
+    await page.setViewportSize(viewport);
+    await gotoHome(page);
+    await expectNoHorizontalOverflow(page);
+
+    await expect(page.locator(".trusted-strip p")).toHaveText("EMPRESAS QUE ESCALAM CONTAM COM A ITS TIME.");
+    await expect(page.locator(".trusted-strip .company-row")).toHaveCount(0);
+  }
+});
+
+test("hero menu and every demo button point to the right places", async ({ page }) => {
+  await page.setViewportSize({ width: 1440, height: 900 });
   await gotoHome(page);
-  await expectNoHorizontalOverflow(page);
 
-  const carouselState = await page.locator(".trusted-strip .company-row").evaluate((row) => {
-    const rowRect = row.getBoundingClientRect();
-    const track = row.querySelector(".company-track");
-    const slots = Array.from(row.querySelectorAll(".company-logo-slot"));
+  const nav = page.locator(".main-nav a:not(.demo-button)");
+  await expect(nav).toHaveText(["Soluções", "Login"]);
+  await expect(nav.nth(0)).toHaveAttribute("href", "#como-funciona");
+  await expect(nav.nth(1)).toHaveAttribute("href", "https://app.itstime.pro");
 
-    return {
-      rowHeight: rowRect.height,
-      rowWidth: rowRect.width,
-      overflow: getComputedStyle(row).overflow,
-      trackDisplay: track ? getComputedStyle(track).display : "",
-      slotHeights: slots.map((slot) => slot.getBoundingClientRect().height),
-      slotWidths: slots.map((slot) => slot.getBoundingClientRect().width),
-    };
-  });
+  // every "agendar demonstração" opens the commercial WhatsApp with the message already written
+  for (const selector of [".demo-button-header", ".primary-cta", ".crescer-cta", ".od-cta"]) {
+    const link = page.locator(selector).first();
+    await expect(link, selector).toHaveAttribute("href", /^https:\/\/wa\.me\/554196081781\?text=/);
+    await expect(link, selector).toHaveAttribute("target", "_blank");
+  }
 
-  expect(carouselState.rowHeight).toBeLessThanOrEqual(60);
-  expect(carouselState.rowWidth).toBeLessThanOrEqual(430);
-  expect(carouselState.overflow).toBe("clip");
-  expect(carouselState.trackDisplay).toBe("flex");
-  expect(carouselState.slotHeights.every((height) => height <= 60)).toBe(true);
-  expect(carouselState.slotWidths.every((width) => width <= 120)).toBe(true);
+  // the hero no longer mentions e-mail, and the site lead comes from Nya
+  await expect(page.locator(".hero-page")).not.toContainText(/e-?mail/i);
+  await expect(page.locator(".event-card").first().locator("img")).toHaveAttribute("src", /nya\.webp/);
+  await expect(page.locator(".event-card")).toHaveCount(4);
 });
 
 test("sticky scroll keeps one operational slide active across the full section", async ({ page }) => {
@@ -259,9 +245,9 @@ test("desktop visual composition remains non-overlapping and screenshotable @vis
 }, testInfo) => {
   const checkpoints = [
     { index: 0, name: "intro" },
-    { index: 2, name: "multiagents" },
-    { index: 5, name: "analytics" },
-    { index: 7, name: "result" },
+    { index: 2, name: "conversation" },
+    { index: 5, name: "performance" },
+    { index: 6, name: "operation" },
   ] as const;
 
   for (const viewport of [

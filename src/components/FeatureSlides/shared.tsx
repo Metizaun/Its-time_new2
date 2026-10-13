@@ -1,19 +1,20 @@
 import Image from "next/image";
-import type { CSSProperties, ReactNode } from "react";
+import type { ReactNode } from "react";
 import type { FeatureSlide } from "./data";
-
-const cubeSrc = "/assets/Scroll_slide/Referencias/Referencia_slide-2_Cube-icon-png.png";
 
 export function FeatureSlideFrame({
   slide,
   children,
   className = "",
   visualClassName = "",
+  background,
 }: {
   slide: FeatureSlide;
   children: ReactNode;
   className?: string;
   visualClassName?: string;
+  /** Extra full-bleed layers for this slide's background (no box, so nothing can show an edge). */
+  background?: ReactNode;
 }) {
   return (
     <section
@@ -22,7 +23,7 @@ export function FeatureSlideFrame({
       data-slide-id={slide.id}
       aria-labelledby={`feature-${slide.id}-title`}
     >
-      <FeatureBackground src={slide.backgroundSrc} />
+      <FeatureBackground src={slide.backgroundSrc}>{background}</FeatureBackground>
       <div className="feature-slide-inner">
         <div className="feature-copy" data-motion-item>
           <span className="feature-kicker">{slide.kicker}</span>
@@ -41,7 +42,7 @@ export function FeatureSlideFrame({
   );
 }
 
-export function FeatureBackground({ src }: { src?: string }) {
+export function FeatureBackground({ src, children }: { src?: string; children?: ReactNode }) {
   return (
     <div className="feature-background" aria-hidden="true">
       {src ? (
@@ -53,186 +54,8 @@ export function FeatureBackground({ src }: { src?: string }) {
           sizes="100vw"
         />
       ) : null}
+      {children}
       <div className="feature-background-vignette" />
-      <div className="feature-background-grid" />
     </div>
-  );
-}
-
-export function CoreCube({
-  className = "",
-  marker = "core-cube",
-}: {
-  className?: string;
-  marker?: string;
-}) {
-  return (
-    <div className={`feature-core-cube ${className}`} data-required-element={marker}>
-      <Image
-        src={cubeSrc}
-        alt=""
-        width={500}
-        height={500}
-        sizes="(max-width: 820px) 180px, 260px"
-        aria-hidden="true"
-      />
-      <span className="feature-core-pulse" aria-hidden="true" />
-    </div>
-  );
-}
-
-export function OrbitRings({ count = 4 }: { count?: number }) {
-  return (
-    <div className="feature-orbit-rings" aria-hidden="true">
-      {Array.from({ length: count }).map((_, index) => (
-        <span key={index} style={{ "--ring-index": index } as CSSProperties} />
-      ))}
-    </div>
-  );
-}
-
-export function PixelField({ dense = false }: { dense?: boolean }) {
-  const dots = dense ? 76 : 42;
-
-  return (
-    <div className={`feature-pixel-field ${dense ? "feature-pixel-field--dense" : ""}`} aria-hidden="true">
-      {Array.from({ length: dots }).map((_, index) => {
-        const x = (index * 37) % 100;
-        const y = (index * 53) % 100;
-        const size = 3 + ((index * 7) % 9);
-        const tone = index % 7 === 0 ? "hot" : index % 5 === 0 ? "soft" : "dim";
-
-        return (
-          <span
-            className={`feature-pixel feature-pixel--${tone}`}
-            key={index}
-            style={
-              {
-                "--pixel-x": `${x}%`,
-                "--pixel-y": `${y}%`,
-                "--pixel-size": `${size}px`,
-                "--pixel-delay": `${index * 78}ms`,
-            } as CSSProperties
-            }
-          />
-        );
-      })}
-    </div>
-  );
-}
-
-export function TechCard({
-  icon,
-  title,
-  subtitle,
-  marker,
-  className = "",
-  online = false,
-}: {
-  icon: ReactNode;
-  title: string;
-  subtitle?: string;
-  marker: string;
-  className?: string;
-  online?: boolean;
-}) {
-  return (
-    <article
-      className={`feature-tech-card ${className}`}
-      data-motion-card
-      data-required-element={marker}
-    >
-      <span className="feature-tech-icon" aria-hidden="true">
-        {icon}
-      </span>
-      <span className="feature-tech-copy">
-        <strong>{title}</strong>
-        {online ? (
-          <small>
-            <span className="feature-online-dot" aria-hidden="true" />
-            Online
-          </small>
-        ) : subtitle ? (
-          <small>{subtitle}</small>
-        ) : null}
-      </span>
-    </article>
-  );
-}
-
-export function ConnectorLines({
-  variant = "radial",
-  className = "",
-}: {
-  variant?: "radial" | "context" | "channels";
-  className?: string;
-}) {
-  const paths =
-    variant === "context"
-      ? [
-          "M95 118 C212 118 214 218 344 218",
-          "M244 48 C308 48 328 124 416 124",
-          "M546 48 C478 48 462 124 416 124",
-          "M666 226 C542 226 530 218 408 218",
-          "M118 348 C246 348 252 238 344 238",
-        ]
-      : variant === "channels"
-        ? [
-            "M80 82 C238 82 234 168 398 168",
-            "M80 180 C236 180 234 204 398 204",
-            "M80 278 C236 278 234 238 398 238",
-            "M80 376 C238 376 234 268 398 268",
-          ]
-        : [
-            "M380 112 C380 140 380 156 380 180",
-            "M380 408 C380 380 380 364 380 336",
-            "M236 176 C286 176 300 212 328 230",
-            "M236 344 C286 344 300 306 328 288",
-            "M524 176 C474 176 460 212 432 230",
-            "M524 344 C474 344 460 306 432 288",
-          ];
-
-  return (
-    <svg
-      className={`feature-connector-lines feature-connector-lines--${variant} ${className}`}
-      viewBox={variant === "radial" ? "0 0 760 520" : "0 0 760 430"}
-      fill="none"
-      aria-hidden="true"
-    >
-      {paths.map((path, index) => (
-        <path className="feature-line-path" d={path} key={path} style={{ "--path-index": index } as CSSProperties} />
-      ))}
-      {paths.map((_, index) => {
-        const radialNodes = [
-          [380, 112],
-          [380, 408],
-          [236, 176],
-          [236, 344],
-          [524, 176],
-          [524, 344],
-        ];
-        const contextNodes = [
-          [95, 118],
-          [244, 48],
-          [546, 48],
-          [666, 226],
-          [118, 348],
-        ];
-        const channelNodes = [
-          [80, 82],
-          [80, 180],
-          [80, 278],
-          [80, 376],
-        ];
-        const [cx, cy] =
-          variant === "radial"
-            ? radialNodes[index]
-            : variant === "channels"
-              ? channelNodes[index]
-              : contextNodes[index];
-
-        return <circle className="feature-line-node" cx={cx} cy={cy} r="4" key={`node-${index}`} />;
-      })}
-    </svg>
   );
 }

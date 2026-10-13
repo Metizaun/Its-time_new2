@@ -64,8 +64,20 @@ export function useFeatureScroll() {
 
       const context = gsap.context(() => {
         const slides = gsap.utils.toArray<HTMLElement>("[data-feature-slide]", wrapperElement);
-        const cards = gsap.utils.toArray<HTMLElement>("[data-motion-card]", wrapperElement);
-        const linePaths = gsap.utils.toArray<SVGPathElement>(".feature-line-path", wrapperElement);
+        const bars = gsap.utils.toArray<HTMLElement>("[data-progress-slide]", wrapperElement);
+
+        // The side bar follows the timeline playhead (already smoothed by scrub), so it changes together with the crossfade.
+        let activeBar = -1;
+        const paintBars = (time: number) => {
+          const active = Math.min(slides.length - 1, Math.max(0, Math.floor(time - 0.1)));
+          if (active === activeBar) {
+            return;
+          }
+          activeBar = active;
+          bars.forEach((bar, index) => {
+            bar.dataset.state = index === active ? "active" : index < active ? "done" : "idle";
+          });
+        };
 
         gsap.set(slides, {
           autoAlpha: 0,
@@ -80,20 +92,6 @@ export function useFeatureScroll() {
           yPercent: 0,
         });
 
-        gsap.set(cards, {
-          autoAlpha: 0,
-          y: 24,
-        });
-
-        linePaths.forEach((path) => {
-          const length = path.getTotalLength();
-
-          gsap.set(path, {
-            strokeDasharray: length,
-            strokeDashoffset: length,
-          });
-        });
-
         const timeline = gsap.timeline({
           defaults: { ease: "none" },
           scrollTrigger: {
@@ -105,12 +103,11 @@ export function useFeatureScroll() {
           },
         });
 
+        timeline.eventCallback("onUpdate", () => paintBars(timeline.time()));
+        paintBars(0);
+
         slides.forEach((slide, index) => {
           const segment = index;
-          const slideCards = slide.querySelectorAll("[data-motion-card]");
-          const slideLines = slide.querySelectorAll(".feature-line-path");
-          const slidePixels = slide.querySelectorAll(".feature-pixel");
-
           if (index > 0) {
             timeline.to(
               slides[index - 1],
@@ -137,32 +134,6 @@ export function useFeatureScroll() {
                 yPercent: 0,
               },
               segment,
-            );
-          }
-
-          if (slideCards.length > 0) {
-            timeline.fromTo(
-              slideCards,
-              { autoAlpha: 0, y: 24 },
-              { autoAlpha: 1, duration: 0.55, stagger: 0.07, y: 0 },
-              segment + 0.06,
-            );
-          }
-
-          if (slideLines.length > 0) {
-            timeline.to(
-              slideLines,
-              { duration: 0.7, strokeDashoffset: 0, stagger: 0.04 },
-              segment + 0.18,
-            );
-          }
-
-          if (slidePixels.length > 0) {
-            timeline.fromTo(
-              slidePixels,
-              { autoAlpha: 0, scale: 0.7 },
-              { autoAlpha: 1, duration: 0.5, scale: 1, stagger: 0.01 },
-              segment + 0.12,
             );
           }
         });

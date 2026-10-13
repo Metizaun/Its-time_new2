@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { ArrowUpRight } from "lucide-react";
+import { whatsappLinkProps } from "@/lib/whatsapp";
 
 const lowerItems = [
   {
@@ -54,7 +55,7 @@ export function CrescerSection() {
           reorganiza a operação antes que o caos vire custo invisível.
         </p>
 
-        <a className="crescer-cta" href="#">
+        <a className="crescer-cta" {...whatsappLinkProps()}>
           Agendar demonstração
           <ArrowUpRight size={18} strokeWidth={2.2} />
         </a>

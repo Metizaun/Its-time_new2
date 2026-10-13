@@ -3,23 +3,22 @@
 import { useFeatureScroll } from "@/hooks/useFeatureScroll";
 import { featureSlides } from "./data";
 import { Intro } from "./Intro";
-import { SlideCommercialIntel } from "./SlideCommercialIntel";
-import { SlideExecution } from "./SlideExecution";
-import { SlideMemory } from "./SlideMemory";
-import { SlideMultiAgents } from "./SlideMultiAgents";
-import { SlideOmnichannel } from "./SlideOmnichannel";
-import { SlideResult } from "./SlideResult";
-import { SlideScale } from "./SlideScale";
+import { LeadFlow } from "./LeadFlow";
+import { SlideCollections } from "./SlideCollections";
+import { SlideConversation } from "./SlideConversation";
+import { SlideHandoff } from "./SlideHandoff";
+import { SlideOperation } from "./SlideOperation";
+import { SlidePerformance } from "./SlidePerformance";
+import { SlideRecovery } from "./SlideRecovery";
 
 const slideComponents = [
   Intro,
-  SlideMemory,
-  SlideMultiAgents,
-  SlideExecution,
-  SlideOmnichannel,
-  SlideCommercialIntel,
-  SlideScale,
-  SlideResult,
+  SlideRecovery,
+  SlideConversation,
+  SlideCollections,
+  SlideHandoff,
+  SlidePerformance,
+  SlideOperation,
 ] as const;
 
 export function FeatureSection() {
@@ -28,14 +27,16 @@ export function FeatureSection() {
   return (
     <section
       className="feature-section-wrapper"
+      id="como-funciona"
       data-feature-section
       ref={wrapperRef}
       aria-label="Infraestrutura operacional de IA"
     >
       <div className="feature-sticky-container">
+        <LeadFlow />
         <div className="feature-slide-progress" aria-hidden="true">
-          {featureSlides.map((slide) => (
-            <span data-progress-slide={slide.id} key={slide.id} />
+          {featureSlides.map((slide, index) => (
+            <span data-progress-slide={slide.id} data-state={index === 0 ? "active" : "idle"} key={slide.id} />
           ))}
         </div>
         {slideComponents.map((Slide, index) => (
