@@ -1,17 +1,26 @@
-import { AgentEcosystem } from "./AgentEcosystem";
+import dynamic from "next/dynamic";
 import { featureSlides } from "./data";
-import { FeatureSlideFrame, PixelField } from "./shared";
+import { FeatureSlideFrame } from "./shared";
+import { StagePlaceholder } from "./StagePlaceholder";
+
+// Loaded after hydration so the pinned scroll section stays light on first load.
+const CustomerJourney = dynamic(() => import("./CustomerJourney").then((module) => module.CustomerJourney), {
+  ssr: false,
+  loading: () => <StagePlaceholder ratio="760 / 640" />,
+});
 
 const slide = featureSlides[0];
 
 export function Intro() {
   return (
-    <FeatureSlideFrame slide={slide} className="feature-slide--center" visualClassName="feature-visual--intro">
+    <FeatureSlideFrame
+      slide={slide}
+      className="feature-slide--center"
+      visualClassName="feature-visual--intro"
+      background={<div className="intro-glow" data-required-element="intro-glow" aria-hidden="true" />}
+    >
       <div className="intro-system" data-required-element="intro-grid">
-        <PixelField dense />
-        <div className="intro-glow" data-required-element="intro-glow" aria-hidden="true" />
-        <div className="intro-grid-lines" aria-hidden="true" />
-        <AgentEcosystem />
+        <CustomerJourney />
       </div>
     </FeatureSlideFrame>
   );

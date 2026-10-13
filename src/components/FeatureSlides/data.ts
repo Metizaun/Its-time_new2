@@ -1,22 +1,20 @@
 export type FeatureSlideId =
   | "intro"
-  | "memory"
-  | "multiagents"
-  | "execution"
-  | "omnichannel"
-  | "commercial-intel"
-  | "scale"
-  | "result";
+  | "recovery"
+  | "conversation"
+  | "collections"
+  | "handoff"
+  | "performance"
+  | "operation";
 
 export type FeatureSlideVariant =
   | "intro"
-  | "context"
-  | "agents"
-  | "pipeline"
-  | "channels"
-  | "analytics"
-  | "scale"
-  | "result";
+  | "recovery"
+  | "conversation"
+  | "collections"
+  | "handoff"
+  | "performance"
+  | "operation";
 
 export type FeatureSlide = {
   id: FeatureSlideId;
@@ -31,98 +29,58 @@ export type FeatureSlide = {
 export const featureSlides: FeatureSlide[] = [
   {
     id: "intro",
-    kicker: "FEATURES",
+    kicker: "01",
     headline: ["Inteligência que opera.", "Estratégia que escala."],
-    body: "Uma infraestrutura de automação e IA construída para vender mais, com menos esforço e com mais previsibilidade.",
+    body: "Do primeiro \"oi\" ao cliente que volta: a IA atende, vende, organiza, encaminha e cuida do relacionamento, tudo conectado e rodando sozinho.",
     variant: "intro",
-    elements: ["intro-grid", "intro-particles", "intro-glow"],
+    elements: ["intro-grid", "intro-glow", "journey-hub", "journey-now"],
   },
   {
-    id: "memory",
+    id: "recovery",
     kicker: "02",
-    headline: ["Memória contextual", "que entende tudo"],
-    body: "A IA lembra, interpreta e conecta informações para personalizar cada interação e aumentar as chances de conversão.",
-    variant: "context",
-    backgroundSrc:
-      "/assets/Scroll_slide/Referencias/REFERENCIA-FEATURE 2 REAL - BACKGROUND.png",
-    elements: [
-      "historico-lead",
-      "contexto-empresa",
-      "ultimas-conversas",
-      "comportamento-engajamento",
-      "preferencias-interesses",
-      "core-cube",
-    ],
+    headline: ["Orçamento parado", "vira receita."],
+    body: "A IA descobre por que o lead não avançou e reativa com a abordagem certa, no momento certo. Dinheiro parado volta para o seu caixa.",
+    variant: "recovery",
+    elements: ["recovery-pipeline", "recovery-hub", "recovery-panel"],
   },
   {
-    id: "multiagents",
+    id: "conversation",
     kicker: "03",
-    headline: ["Multiagentes", "especializados"],
-    body: "Agentes de IA que assumem funções, conversam, qualificam, agendam e conduzem negociações como um time de alta performance.",
-    variant: "agents",
-    elements: [
-      "agente-sdr",
-      "agente-qualificador",
-      "agente-follow-up",
-      "agente-nutricao",
-      "agente-reativacao",
-      "agente-closer",
-      "core-cube",
-    ],
+    headline: ["Cada conversa", "caminha para a venda."],
+    body: "A IA atende, lê a receita, indica a armação certa, salva cada informação no CRM, agenda a visita e ainda faz o acompanhamento na hora certa.",
+    variant: "conversation",
+    elements: ["chat-crm", "chat-hub"],
   },
   {
-    id: "execution",
+    id: "collections",
     kicker: "04",
-    headline: ["A IA não só responde.", "Ela movimenta a operação."],
-    body: "Ações automáticas atualizam etapas, enviam propostas, agendam reuniões e mantêm o funil sempre em movimento.",
-    variant: "pipeline",
-    elements: [
-      "lead-capturado",
-      "qualificado",
-      "proposta-enviada",
-      "reuniao-agendada",
-      "negocio-ganho",
-    ],
+    headline: ["Dinheiro que entra", "sozinho."],
+    body: "A Sofia lembra, cobra, acompanha e chama de volta quem sumiu. Você ganha tempo, o caixa enche e ninguém precisa se lembrar de fazer o acompanhamento.",
+    variant: "collections",
+    elements: ["cc-lanes", "cc-hub"],
   },
   {
-    id: "omnichannel",
+    id: "handoff",
     kicker: "05",
-    headline: ["WhatsApp.", "Instagram.", "Site.", "Tudo conectado."],
-    body: "Todos os canais convergem para um núcleo operacional único, centralizando conversas, dados e oportunidades.",
-    variant: "channels",
-    backgroundSrc: "/assets/Scroll_slide/Referencias/Referencia_slide-4-background.png",
-    elements: ["whatsapp", "instagram", "telegram", "site", "core-cube"],
+    headline: ["A IA não trabalha sozinha.", "Ela faz parte da sua equipe."],
+    body: "Ela atende no WhatsApp, Instagram e site, sabe a hora de chamar uma pessoa e leva o lead para a unidade certa, com resumo pronto. A equipe assume sem repetir nada e a IA continua ao lado.",
+    variant: "handoff",
+    elements: ["handoff-inbox", "handoff-units", "handoff-hub"],
   },
   {
-    id: "commercial-intel",
+    id: "performance",
     kicker: "06",
-    headline: ["Conversas viram dados.", "Dados viram direção."],
-    body: "Dashboards inteligentes revelam conversão, origem, lucro e desempenho por agente, campanha ou canal.",
-    variant: "analytics",
-    backgroundSrc: "/assets/Scroll_slide/Referencias/Referencia_slide-5-background.png",
-    elements: ["conversao-pipeline", "origem-leads", "lucro-gerado", "heatmap-grid"],
+    headline: ["Veja de onde vem o dinheiro.", "E onde ele ainda está parado."],
+    body: "Receita, conversão e desempenho de cada unidade em um só painel. E o que ficou parado vira a próxima oportunidade.",
+    variant: "performance",
+    elements: ["perf-kpis", "perf-funnel", "perf-units", "perf-opportunity"],
   },
   {
-    id: "scale",
+    id: "operation",
     kicker: "07",
-    headline: ["Crescimento", "operacional", "Sem caos"],
-    body: "Uma arquitetura sólida garante performance, rastreabilidade e governança para escalar com confiança.",
-    variant: "scale",
-    backgroundSrc: "/assets/Scroll_slide/Referencias/Referencia_slide-6-background.png",
-    elements: [
-      "infraestrutura-escalavel",
-      "dados-seguros",
-      "governanca-logs",
-      "performance-tempo-real",
-    ],
-  },
-  {
-    id: "result",
-    kicker: "RESULTADO",
-    headline: ["Operação organizada.", "Crescimento previsível."],
-    body: "A infraestrutura inteira estabiliza em um sistema comercial autônomo, conectado e pronto para transformar previsibilidade em escala.",
-    variant: "result",
-    backgroundSrc: "/assets/Scroll_slide/Referencias/Referencia_slide-Background..png",
-    elements: ["rede-consolidada", "resultados", "cta-final"],
+    headline: ["Enquanto você cuida dos clientes,", "a Its Time cuida da operação."],
+    body: "Atendimento, cobrança e acompanhamento rodando o dia inteiro, dentro e fora do horário da sua equipe. Você só entra quando a decisão é sua.",
+    variant: "operation",
+    elements: ["operation-clock", "operation-now", "operation-counters", "operation-timeline"],
   },
 ];

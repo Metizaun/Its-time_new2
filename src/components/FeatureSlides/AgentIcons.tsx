@@ -53,12 +53,10 @@ export function ForwardingGlyph() {
   );
 }
 
-export function VisagismGlyph() {
+export function AudioGlyph() {
   return (
     <Glyph>
-      <circle cx="7.5" cy="12" r="4" />
-      <circle cx="16.5" cy="12" r="4" />
-      <path d="M11.5 12h1M3.5 10.5 2 9.75M20.5 10.5 22 9.75" />
+      <path d="M4 10v4M7.2 7.5v9M10.4 4.5v15M13.6 6v12M16.8 8v8M20 10v4" />
     </Glyph>
   );
 }

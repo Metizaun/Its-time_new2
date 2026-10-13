@@ -4,7 +4,13 @@ import Script from "next/script";
 import "./globals.css";
 import "../styles/feature-section.css";
 import "../styles/crescer-section.css";
-import "../styles/agent-ecosystem.css";
+import "../styles/customer-journey.css";
+import "../styles/revenue-recovery.css";
+import "../styles/chat-journey.css";
+import "../styles/cash-flow.css";
+import "../styles/handoff-map.css";
+import "../styles/performance-panel.css";
+import "../styles/operation-day.css";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",

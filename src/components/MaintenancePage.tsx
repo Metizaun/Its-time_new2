@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { LegalLinks } from "@/components/LegalLinks";
+import { whatsappLink } from "@/lib/whatsapp";
 
 export function MaintenancePage() {
   return (
@@ -76,7 +77,7 @@ export function MaintenancePage() {
 
           <a
             className="maintenance-contact-button"
-            href="https://wa.me/554196081781?text=Ol%C3%A1%21%20Vim%20pelo%20site%20e%20quero%20conhecer%20a%20Its%20Time%20Pro."
+            href={whatsappLink("Olá! Vim pelo site e quero conhecer a Its Time Pro.")}
             target="_blank"
             rel="noreferrer"
           >

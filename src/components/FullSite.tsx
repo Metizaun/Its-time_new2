@@ -2,6 +2,7 @@ import Image from "next/image";
 import type { CSSProperties } from "react";
 import { CrescerSection } from "@/components/CrescerSection";
 import { FeatureSection } from "@/components/FeatureSlides/FeatureSection";
+import { whatsappLinkProps } from "@/lib/whatsapp";
 import {
   ArrowUpRight,
   Bot,
@@ -151,7 +152,7 @@ export function FullSite() {
               {item}
             </a>
           ))}
-          <a className="demo-button demo-button-header" href="#">
+          <a className="demo-button demo-button-header" {...whatsappLinkProps()}>
             Agendar Demo
             <ArrowUpRight size={17} strokeWidth={2.2} />
           </a>
@@ -179,11 +180,11 @@ export function FullSite() {
           </p>
 
           <div className="hero-actions">
-            <a className="primary-cta" href="#">
+            <a className="primary-cta" {...whatsappLinkProps()}>
               Agendar uma demonstração
               <ArrowUpRight size={18} strokeWidth={2.2} />
             </a>
-            <a className="secondary-cta" href="#">
+            <a className="secondary-cta" href="#como-funciona">
               <Play size={15} fill="currentColor" strokeWidth={0} />
               Ver como funciona
             </a>
