@@ -12,13 +12,17 @@ import {
   Workflow,
 } from "lucide-react";
 
-const navItems = ["Recursos", "Soluções", "Preços", "Login"];
+const navItems = [
+  { label: "Soluções", href: "#como-funciona" }, // the animated section
+  { label: "Login", href: "https://app.itstime.pro" },
+] as const;
 
 const leftEvents = [
   {
     title: "Novo lead",
     subtitle: "Site - Landing page",
-    iconSrc: "/assets/hero/icons/leads-calendar_icon.png",
+    iconSrc: "/assets/brand/nya.webp",
+    iconClassName: "event-icon--nya",
     className: "event-card-one",
   },
   {
@@ -32,12 +36,6 @@ const leftEvents = [
     subtitle: "Instagram",
     iconSrc: "/assets/hero/icons/Instagram_icon.png",
     className: "event-card-three",
-  },
-  {
-    title: "E-mail aberto",
-    subtitle: "Sequência 2",
-    iconSrc: "/assets/hero/icons/email_icon.png",
-    className: "event-card-four",
   },
 ] as const;
 
@@ -148,8 +146,8 @@ export function FullSite() {
 
         <nav className="main-nav" aria-label="Navegacao principal">
           {navItems.map((item) => (
-            <a href="#" key={item}>
-              {item}
+            <a href={item.href} key={item.label}>
+              {item.label}
             </a>
           ))}
           <a className="demo-button demo-button-header" {...whatsappLinkProps()}>
@@ -232,7 +230,7 @@ export function FullSite() {
                   key={event.title}
                   style={{ animationDelay: `${index * 0.8}s` }}
                 >
-                  <span className="event-icon">
+                  <span className={`event-icon${"iconClassName" in event ? ` ${event.iconClassName}` : ""}`}>
                     <Image
                       src={event.iconSrc}
                       alt=""
