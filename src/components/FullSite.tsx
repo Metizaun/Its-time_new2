@@ -2,6 +2,7 @@ import Image from "next/image";
 import type { CSSProperties } from "react";
 import { CrescerSection } from "@/components/CrescerSection";
 import { FeatureSection } from "@/components/FeatureSlides/FeatureSection";
+import { LeadFlow } from "@/components/FeatureSlides/LeadFlow";
 import { whatsappLinkProps } from "@/lib/whatsapp";
 import {
   ArrowUpRight,
@@ -37,7 +38,16 @@ const leftEvents = [
     iconSrc: "/assets/hero/icons/Instagram_icon.png",
     className: "event-card-three",
   },
+  {
+    title: "Horário agendado",
+    subtitle: "Agenda",
+    iconSrc: "/assets/hero/icons/leads-calendar_icon.png",
+    className: "event-card-four",
+  },
 ] as const;
+
+// The carousel of client logos is hidden for now; flip this to bring it back (the logos and styles are kept).
+const showClientLogos = false;
 
 const bottomMetrics = [
   { value: "+2.8M", label: "Conversas automatizadas" },
@@ -116,6 +126,8 @@ export function FullSite() {
         />
 
         <div className="ambient-gradient" aria-hidden="true" />
+        {/* contacts flow in from the left, line up and a few convert (same story as the animated section) */}
+        <LeadFlow variant="hero" className="hero-flow" />
         <div className="particle-field" aria-hidden="true">
           {particles.map(([left, top, size, tone], index) => (
             <span
@@ -336,14 +348,24 @@ export function FullSite() {
             </article>
 
             <div className="spark-card" aria-hidden="true">
-              <Sparkles size={40} strokeWidth={1.8} />
+              {/* the gradient lives in the icon's own coordinate space so every stroke of the sparkle takes it */}
+              <svg width="0" height="0" focusable="false" style={{ position: "absolute" }}>
+                <defs>
+                  <linearGradient id="spark-gradient" gradientUnits="userSpaceOnUse" x1="3" y1="21" x2="21" y2="3">
+                    <stop offset="0" stopColor="#ff5a1f" />
+                    <stop offset="1" stopColor="#ff4d6d" />
+                  </linearGradient>
+                </defs>
+              </svg>
+              <Sparkles size={40} strokeWidth={1.8} stroke="url(#spark-gradient)" />
             </div>
           </div>
         </div>
       </section>
 
       <section className="trusted-strip" aria-label="Empresas que escalam com a Its Time">
-        <p>EMPRESAS QUE ESCALAM COM A ITS TIME</p>
+        <p>EMPRESAS QUE ESCALAM CONTAM COM A ITS TIME.</p>
+        {showClientLogos ? (
         <div className="company-row">
           <div className="company-track">
             {Array.from({ length: companyLogoLoopCount }).map((_, groupIndex) => (
@@ -367,6 +389,7 @@ export function FullSite() {
             ))}
           </div>
         </div>
+        ) : null}
       </section>
       </section>
       <FeatureSection />

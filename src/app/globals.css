@@ -152,6 +152,16 @@ a {
   pointer-events: none;
 }
 
+/* Contacts flowing in from the left, lining up and converting (LeadFlow). Sits above the soft wash, below everything else. */
+.hero-flow {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
 .particle {
   position: absolute;
   display: block;
@@ -535,6 +545,13 @@ a {
   left: 0;
   width: 182px;
   transform: rotate(2.5deg);
+}
+
+.event-card-four {
+  top: 322px;
+  left: 8px;
+  width: 174px;
+  transform: rotate(4deg);
 }
 
 .event-icon {
@@ -1266,23 +1283,36 @@ a {
     font-size: 22px;
   }
 
+  /* The system is a normal column here: each block takes its own height, so nothing can sit on top of the next. */
+  .hero-flow {
+    display: none;
+  }
+
   .hero-system {
-    min-height: 920px;
-    margin-top: 18px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 22px;
+    min-height: 0;
+    margin-top: 34px;
   }
 
   .phone-stage {
-    left: 50%;
-    top: 31%;
-    width: min(78vw, 350px);
+    position: relative;
+    left: auto;
+    top: auto;
+    width: min(82%, 350px);
+    transform: none;
   }
 
   .event-stack {
-    left: 50%;
-    top: 65%;
-    width: min(90vw, 430px);
-    height: 240px;
-    transform: translateX(-50%);
+    position: relative;
+    left: auto;
+    top: auto;
+    flex: 0 0 auto;
+    width: min(100%, 430px);
+    height: 216px;
+    transform: none;
   }
 
   .event-card {
@@ -1292,7 +1322,8 @@ a {
 
   .event-card-one,
   .event-card-two,
-  .event-card-three {
+  .event-card-three,
+  .event-card-four {
     left: auto;
     right: auto;
     top: auto;
@@ -1314,11 +1345,17 @@ a {
     top: 112px;
   }
 
+  .event-card-four {
+    right: 0;
+    top: 146px;
+  }
+
   .dashboard-stack {
-    left: 50%;
-    top: 83%;
-    width: min(92vw, 460px);
-    transform: translate(-50%, -50%);
+    position: relative;
+    left: auto;
+    top: auto;
+    width: min(100%, 460px);
+    transform: none;
   }
 
   .dashboard-grid {
@@ -1471,11 +1508,13 @@ a {
   }
 
   .hero-system {
-    min-height: 990px;
+    width: calc(100vw - 40px);
+    max-width: none;
+    margin-left: calc(50% - (100vw - 40px) / 2);
   }
 
   .event-stack {
-    top: 61%;
+    height: 292px;
   }
 
   .event-card {
@@ -1494,8 +1533,10 @@ a {
     top: 150px;
   }
 
-  .dashboard-stack {
-    top: 85%;
+  .event-card-four {
+    left: 0;
+    right: auto;
+    top: 225px;
   }
 
   .dashboard-grid {

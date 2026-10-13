@@ -3,19 +3,69 @@
 import { useEffect, useRef } from "react";
 
 /**
- * Background of the animated section. It tells the product story in the smallest possible way, on the free
- * side of the slide (the headline column), so it never competes with the scenes:
- * contacts drift in scattered and grey, line up into rows (the AI organises them), a few turn orange with a
- * short gradient trail (they converted) and all of them are absorbed at the edge of the stage.
- * The cursor lines up the pixels near it.
+ * Animated background that tells the product story in the smallest possible way: contacts drift in from the
+ * left scattered and grey, line up into rows (the AI organises them), a few turn orange with a short gradient
+ * trail (they converted) and all of them are absorbed further to the right. The cursor lines up the pixels
+ * near it.
  *
- * One canvas, ~40 squares, 30 fps, only while the section is on screen. It never reacts by pausing.
+ * Two profiles:
+ * - "section": the dark animated section; the flow lives on the free side of the slide (the headline column).
+ * - "hero": the light first page; the flow crosses the whole page, quiet behind the headline and clearer
+ *   around the phone and the dashboard.
+ *
+ * One canvas, ~40 squares, 30 fps, only while it is on screen. It never reacts by pausing.
  */
 
+type Profile = {
+  reach: number; // the flow lives in the first `reach` of the width
+  order: [number, number]; // x range (fraction of width) where scattered pixels snap into rows
+  convert: [number, number]; // x range where a converting pixel turns orange
+  fadeOut: [number, number]; // x range where everything is absorbed
+  presenceBase: number;
+  presenceFrom: number;
+  presenceTo: number;
+  base: readonly number[]; // colour of an ordinary contact
+  alpha: [number, number];
+  speed: [number, number]; // px per second
+  maxCount: number;
+  perPx: number; // one pixel every `perPx` px of width
+  convertLimit: number;
+};
+
+const PROFILES: Record<"section" | "hero", Profile> = {
+  section: {
+    reach: 0.56,
+    order: [0.06, 0.3],
+    convert: [0.3, 0.38],
+    fadeOut: [0.4, 0.54],
+    presenceBase: 0.55,
+    presenceFrom: 0.1,
+    presenceTo: 0.34,
+    base: [245, 238, 228],
+    alpha: [0.18, 0.34],
+    speed: [18, 36],
+    maxCount: 44,
+    perPx: 34,
+    convertLimit: 5,
+  },
+  hero: {
+    reach: 1,
+    order: [0.04, 0.34],
+    convert: [0.46, 0.54],
+    fadeOut: [0.88, 1],
+    presenceBase: 0.62,
+    presenceFrom: 0.28,
+    presenceTo: 0.5,
+    base: [62, 55, 48],
+    alpha: [0.34, 0.6],
+    speed: [30, 56],
+    maxCount: 56,
+    perPx: 27,
+    convertLimit: 7,
+  },
+};
+
 const GRID = 44; // same pitch as the CSS grid behind it
-const REACH = 0.56; // the flow lives in the first REACH of the width; the stage owns the rest
-const CONVERT_LIMIT = 5; // never more than this many converting pixels alive at once
-const GRAY = [245, 238, 228] as const;
 const ORANGE = [255, 90, 31] as const;
 const PINK = [255, 77, 109] as const;
 
@@ -40,33 +90,34 @@ const smooth = (a: number, b: number, v: number) => {
 const mix = (a: readonly number[], b: readonly number[], t: number) => a.map((v, i) => Math.round(v + (b[i] - v) * t));
 const rgba = (c: readonly number[], alpha: number) => `rgba(${c[0]}, ${c[1]}, ${c[2]}, ${alpha.toFixed(3)})`;
 
-function makePixel(x: number, convertingNow: number): Pixel {
+function makePixel(profile: Profile, x: number, convertingNow: number): Pixel {
   return {
     x,
     fy: Math.random(),
-    vx: rand(18, 36),
+    vx: rand(profile.speed[0], profile.speed[1]),
     size: [3, 4, 4, 5, 6][Math.floor(Math.random() * 5)],
-    alpha: rand(0.18, 0.34),
+    alpha: rand(profile.alpha[0], profile.alpha[1]),
     seed: rand(0, Math.PI * 2),
-    converts: convertingNow < CONVERT_LIMIT && Math.random() < 0.16,
-    convertAt: rand(0.3, 0.38),
+    converts: convertingNow < profile.convertLimit && Math.random() < 0.16,
+    convertAt: rand(profile.convert[0], profile.convert[1]),
     pinged: false,
     ping: null,
   };
 }
 
-export function LeadFlow() {
+export function LeadFlow({ variant = "section", className }: { variant?: "section" | "hero"; className?: string }) {
   const canvasRef = useRef<HTMLCanvasElement>(null);
 
   useEffect(() => {
     const canvas = canvasRef.current;
     const host = canvas?.parentElement;
     if (!canvas || !host) return;
-    // Compact flow and reduced motion keep the plain grid: no canvas at all.
+    // Compact flow and reduced motion keep the plain page: no canvas at all.
     if (window.matchMedia("(max-width: 980px), (prefers-reduced-motion: reduce)").matches) return;
     const ctx = canvas.getContext("2d");
     if (!ctx) return;
 
+    const profile = PROFILES[variant];
     let width = 0;
     let height = 0;
     let pixels: Pixel[] = [];
@@ -90,8 +141,8 @@ export function LeadFlow() {
       ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
 
       if (!pixels.length) {
-        const count = Math.round(Math.min(44, Math.max(24, width / 34)));
-        for (let i = 0; i < count; i += 1) pixels.push(makePixel(rand(0, width * REACH), converting()));
+        const count = Math.round(Math.min(profile.maxCount, Math.max(24, width / profile.perPx)));
+        for (let i = 0; i < count; i += 1) pixels.push(makePixel(profile, rand(0, width * profile.reach), converting()));
       } else {
         pixels.forEach((p) => {
           p.x *= ratio;
@@ -112,17 +163,18 @@ export function LeadFlow() {
 
       for (const p of pixels) {
         p.x += p.vx * dt;
-        if (p.x > width * REACH) {
-          Object.assign(p, makePixel(-12, converting(p)));
+        if (p.x > width * profile.reach) {
+          Object.assign(p, makePixel(profile, -12, converting(p)));
           continue;
         }
 
         const nx = p.x / width;
-        const scatteredY = p.fy * height + Math.sin(t * 0.5 + p.seed) * 10 * (1 - smooth(0.06, 0.3, nx));
+        const scatteredY =
+          p.fy * height + Math.sin(t * 0.5 + p.seed) * 10 * (1 - smooth(profile.order[0], profile.order[1], nx));
         const rowY = (Math.floor((p.fy * height) / GRID) + 0.5) * GRID;
 
-        // chaos -> order: scattered on entry, locked into the grid rows a third of the way across
-        let order = smooth(0.06, 0.3, nx);
+        // chaos -> order: scattered on entry, locked into the grid rows further along
+        let order = smooth(profile.order[0], profile.order[1], nx);
         let near = 0;
         if (pointer.power > 0) {
           const d = Math.hypot(p.x - pointer.x, scatteredY - pointer.y);
@@ -131,16 +183,17 @@ export function LeadFlow() {
         }
         const y = scatteredY + (rowY - scatteredY) * order;
 
-        // soft at both ends: it appears from the margin and is absorbed at the edge of the stage
-        const edge = smooth(0, 0.04, nx) * (1 - smooth(0.4, 0.54, nx));
-        const presence = (0.55 + 0.45 * smooth(0.1, 0.34, nx)) * edge;
+        // soft at both ends: it appears from the margin and is absorbed at the far end
+        const edge = smooth(0, 0.04, nx) * (1 - smooth(profile.fadeOut[0], profile.fadeOut[1], nx));
+        const presence =
+          (profile.presenceBase + (1 - profile.presenceBase) * smooth(profile.presenceFrom, profile.presenceTo, nx)) * edge;
         const baseAlpha = p.alpha * presence * (1 + 1.1 * near);
 
-        let color: readonly number[] = GRAY;
+        let color: readonly number[] = profile.base;
         let alpha = baseAlpha;
         const converted = p.converts ? smooth(p.convertAt, p.convertAt + 0.03, nx) : 0;
         if (converted > 0) {
-          color = mix(GRAY, ORANGE, converted);
+          color = mix(profile.base, ORANGE, converted);
           alpha = baseAlpha + (0.7 * edge - baseAlpha) * converted;
           if (!p.pinged) {
             p.pinged = true;
@@ -211,7 +264,7 @@ export function LeadFlow() {
       document.removeEventListener("visibilitychange", sync);
       pixels = [];
     };
-  }, []);
+  }, [variant]);
 
-  return <canvas className="feature-flow" ref={canvasRef} aria-hidden="true" />;
+  return <canvas className={className ?? "feature-flow"} ref={canvasRef} aria-hidden="true" />;
 }

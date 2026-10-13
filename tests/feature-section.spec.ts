@@ -183,32 +183,40 @@ test("crescer section appears after features with background, copy, and CTA", as
   }
 });
 
-test("trusted logos carousel stays clipped and compact on narrow screens", async ({ page }) => {
-  await page.setViewportSize({ width: 470, height: 980 });
+test("trusted strip shows only its line of text while the client logos are hidden", async ({ page }) => {
+  for (const viewport of [
+    { width: 470, height: 980 },
+    { width: 1440, height: 900 },
+  ]) {
+    await page.setViewportSize(viewport);
+    await gotoHome(page);
+    await expectNoHorizontalOverflow(page);
+
+    await expect(page.locator(".trusted-strip p")).toHaveText("EMPRESAS QUE ESCALAM CONTAM COM A ITS TIME.");
+    await expect(page.locator(".trusted-strip .company-row")).toHaveCount(0);
+  }
+});
+
+test("hero menu and every demo button point to the right places", async ({ page }) => {
+  await page.setViewportSize({ width: 1440, height: 900 });
   await gotoHome(page);
-  await expectNoHorizontalOverflow(page);
 
-  const carouselState = await page.locator(".trusted-strip .company-row").evaluate((row) => {
-    const rowRect = row.getBoundingClientRect();
-    const track = row.querySelector(".company-track");
-    const slots = Array.from(row.querySelectorAll(".company-logo-slot"));
+  const nav = page.locator(".main-nav a:not(.demo-button)");
+  await expect(nav).toHaveText(["Soluções", "Login"]);
+  await expect(nav.nth(0)).toHaveAttribute("href", "#como-funciona");
+  await expect(nav.nth(1)).toHaveAttribute("href", "https://app.itstime.pro");
 
-    return {
-      rowHeight: rowRect.height,
-      rowWidth: rowRect.width,
-      overflow: getComputedStyle(row).overflow,
-      trackDisplay: track ? getComputedStyle(track).display : "",
-      slotHeights: slots.map((slot) => slot.getBoundingClientRect().height),
-      slotWidths: slots.map((slot) => slot.getBoundingClientRect().width),
-    };
-  });
+  // every "agendar demonstração" opens the commercial WhatsApp with the message already written
+  for (const selector of [".demo-button-header", ".primary-cta", ".crescer-cta", ".od-cta"]) {
+    const link = page.locator(selector).first();
+    await expect(link, selector).toHaveAttribute("href", /^https:\/\/wa\.me\/554196081781\?text=/);
+    await expect(link, selector).toHaveAttribute("target", "_blank");
+  }
 
-  expect(carouselState.rowHeight).toBeLessThanOrEqual(60);
-  expect(carouselState.rowWidth).toBeLessThanOrEqual(430);
-  expect(carouselState.overflow).toBe("clip");
-  expect(carouselState.trackDisplay).toBe("flex");
-  expect(carouselState.slotHeights.every((height) => height <= 60)).toBe(true);
-  expect(carouselState.slotWidths.every((width) => width <= 120)).toBe(true);
+  // the hero no longer mentions e-mail, and the site lead comes from Nya
+  await expect(page.locator(".hero-page")).not.toContainText(/e-?mail/i);
+  await expect(page.locator(".event-card").first().locator("img")).toHaveAttribute("src", /nya\.webp/);
+  await expect(page.locator(".event-card")).toHaveCount(4);
 });
 
 test("sticky scroll keeps one operational slide active across the full section", async ({ page }) => {
