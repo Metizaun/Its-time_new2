@@ -6,6 +6,12 @@ COPY package.json ./
 RUN npm install --include=optional --no-audit --no-fund
 
 COPY . .
+
+# SHOW_FULL_SITE is read while the home page is built (the route is static), so it is a build-time switch:
+#   docker build --build-arg SHOW_FULL_SITE=true .   publishes the full site
+# Without the argument the maintenance page is what ships. Env files are not part of the build context.
+ARG SHOW_FULL_SITE=""
+ENV SHOW_FULL_SITE=$SHOW_FULL_SITE
 RUN npm run build
 RUN npm prune --omit=dev
 

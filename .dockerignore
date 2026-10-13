@@ -2,6 +2,10 @@ node_modules
 .next
 .git
 .gitignore
+# Local env files never enter the image: they hold secrets, and a stray SHOW_FULL_SITE=true would be baked into the build.
+.env
+.env.*
+!.env.example
 *.log
 analysis-*.png
 verification-*.png
