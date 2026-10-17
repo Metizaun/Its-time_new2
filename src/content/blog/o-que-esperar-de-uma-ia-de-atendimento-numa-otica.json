@@ -1,0 +1,156 @@
+{
+  "slug": "o-que-esperar-de-uma-ia-de-atendimento-numa-otica",
+  "title": "O que esperar de uma IA de atendimento numa ótica",
+  "excerpt": "Resposta em segundos, receita lida, exame agendado e orçamento retomado: veja o que uma IA de atendimento resolve sozinha numa ótica, e as regras que protegem a margem da loja.",
+  "category": "Atendimento com IA",
+  "date": "2026-10-17",
+  "author": "Livia",
+  "art": "conversation",
+  "takeaway": "Uma boa IA de atendimento absorve o trabalho repetitivo da ótica, do primeiro contato ao orçamento, com regras fixas que protegem margem e estoque.",
+  "cover": {
+    "src": "/blog/o-que-esperar-de-uma-ia-de-atendimento-numa-otica/cover-f7824fcf.webp",
+    "alt": "Pessoa de costas na calçada olhando a vitrine de uma ótica com o celular na mão",
+    "caption": ""
+  },
+  "blocks": [
+    {
+      "type": "text",
+      "id": "o-que-ela-resolve",
+      "title": "O que uma boa IA resolve sozinha?",
+      "paragraphs": [
+        "Cinco trabalhos que hoje ocupam a equipe da ótica, em WhatsApp, site, Instagram e Messenger."
+      ],
+      "subsections": [
+        {
+          "title": "Responde fora do horário",
+          "paragraphs": [
+            "A mensagem das 22h recebe resposta em segundos. A IA entende o que o cliente procura e faz as perguntas certas, a partir do histórico da conversa."
+          ]
+        },
+        {
+          "title": "Qualifica a pergunta de preço",
+          "paragraphs": [
+            "Se o óculos é de grau, pede a receita. Se é de sol, pede a foto do modelo. De manhã, o vendedor abre uma conversa já qualificada."
+          ]
+        },
+        {
+          "title": "Lê a receita",
+          "paragraphs": [
+            "Extrai esférico, cilíndrico e eixo da foto e monta um resumo para a equipe e para o cliente."
+          ]
+        },
+        {
+          "title": "Marca o exame e lembra",
+          "paragraphs": [
+            "Quando a conta está configurada, agenda conferindo a disponibilidade. O lembrete sai 1 hora antes, pelo WhatsApp."
+          ]
+        },
+        {
+          "title": "Retoma o orçamento parado",
+          "paragraphs": [
+            "Uma lembrança 2 horas depois e um reforço 4 horas depois, com o nome do cliente. A sequência para quando ele responde."
+          ]
+        }
+      ]
+    },
+    {
+      "type": "table",
+      "id": "antes-e-depois",
+      "title": "O mesmo dia numa ótica, sem e com a IA",
+      "columns": [
+        "Situação",
+        "Sem a IA",
+        "Com a IA"
+      ],
+      "rows": [
+        [
+          "Mensagem às 22h",
+          "Espera até de manhã e esfria",
+          "Resposta em segundos, conversa qualificada"
+        ],
+        [
+          "Receita por foto",
+          "Digitada à mão, com risco de erro",
+          "Esférico, cilíndrico e eixo lidos e resumidos"
+        ],
+        [
+          "Orçamento enviado na sexta",
+          "Depende da memória do vendedor",
+          "Lembrança e reforço automáticos"
+        ],
+        [
+          "Três lojas, três celulares",
+          "Cada balcão com a sua conversa",
+          "Uma fila, com o histórico de cada cliente"
+        ]
+      ],
+      "caption": "Descrição das funções, sem resultado de cliente."
+    },
+    {
+      "type": "text",
+      "id": "ela-responde-generico",
+      "title": "Ela responde genérico?",
+      "paragraphs": [
+        "Depende do cadastro. Com lentes, médicos, horários e valores preenchidos, a IA responde com dado real. Sem isso, a resposta fica genérica, e nenhuma IA muda isso. Uma ótica com 2 unidades cadastra o endereço e o horário de cada uma.",
+        "Para a equipe que atende tudo à mão, há um caminho menor: o funil lê as conversas e organiza as etapas, mesmo sem agente respondendo. O resultado aparece na lista dos leads parados dos últimos 30 dias."
+      ]
+    },
+    {
+      "type": "callout",
+      "title": "Regras que protegem a margem",
+      "text": "Uma IA bem desenhada segue regras fixas, as mesmas para toda ótica: nunca oferece desconto que ninguém autorizou e nunca confirma estoque sem consultar uma fonte válida. O preço fechado e a validação do pagamento ficam com o vendedor, que entra com o contexto pronto. Isso não significa abrir mão do controle: o dono define o tom, a voz e o cadastro.",
+      "tone": "note"
+    },
+    {
+      "type": "text",
+      "id": "quem-entrega-isso",
+      "title": "Quem entrega isso hoje",
+      "paragraphs": [
+        "A Its Time foi construída para esse trabalho: responde em segundos nos quatro canais, qualifica, lê a receita, agenda e retoma o orçamento, e deixa a ótica inteira numa fila só. A equipe de 3 lojas, no WhatsApp ou no Instagram, volta a gastar o tempo no balcão."
+      ]
+    },
+    {
+      "type": "cta",
+      "title": "Veja o que a IA resolveria na sua ótica",
+      "text": "Converse com a Its Time pelo WhatsApp e veja um dia de atendimento da sua ótica com a IA trabalhando.",
+      "label": "Conversar no WhatsApp"
+    },
+    {
+      "type": "faq",
+      "id": "duvidas",
+      "title": "Mais perguntas de dono de ótica",
+      "items": [
+        {
+          "question": "Minha equipe atende tudo na mão. Serve?",
+          "answer": "Serve. O funil se organiza pela leitura das conversas, mesmo sem agente de IA respondendo."
+        },
+        {
+          "question": "Posso testar sem mexer no funil principal?",
+          "answer": "Pode. Um funil separado de campanha ou teste é a prática recomendada, e os leads migram depois sem perder o histórico."
+        },
+        {
+          "question": "A IA substitui minha equipe?",
+          "answer": "Não. Ela absorve o volume repetitivo e a equipe usa o tempo para fechar vendas e atender quem está na loja."
+        }
+      ]
+    }
+  ],
+  "authorProfile": {
+    "name": "Livia",
+    "role": "Redatora",
+    "bio": "Redação da Its Time sobre atendimento, CRM e jornadas comerciais.",
+    "kind": "Person",
+    "url": "/"
+  },
+  "archetype": "explicador",
+  "tags": [
+    "ia",
+    "atendimento",
+    "otica"
+  ],
+  "relatedSlugs": [
+    "atendimento-em-varios-canais-a-ia-absorve-o-volume-da-otica",
+    "black-friday-para-otica-como-explicar-a-ia-e-os-dados"
+  ],
+  "editorialNote": "Texto montado a partir do banco de funcionalidades do produto, sem dados de clientes. Os exemplos são ilustrativos."
+}
