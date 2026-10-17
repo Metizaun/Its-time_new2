@@ -1,0 +1,106 @@
+{
+  "slug": "black-friday-para-otica-retome-orcamentos-com-motivo",
+  "title": "Black Friday para ótica: retome orçamentos com motivo",
+  "excerpt": "Orçamento enviado e esquecido é venda parada. Veja três retomadas, com o motivo certo para cada uma, antes que o cliente compare em outra loja na Black Friday.",
+  "category": "Estratégia comercial",
+  "date": "2026-10-17",
+  "author": "Livia",
+  "art": "journey",
+  "takeaway": "Retomar um orçamento funciona quando a mensagem traz um motivo novo e vem no tempo certo, sem repetir o pedido de resposta.",
+  "cover": {
+    "src": "/blog/black-friday-para-otica-retome-orcamentos-com-motivo/cover-9bb0903c.webp",
+    "alt": "Mão de atendente retirando uma pasta de orçamentos de uma gaveta no balcão de uma ótica",
+    "caption": ""
+  },
+  "blocks": [
+    {
+      "type": "text",
+      "id": "o-orcamento-parado",
+      "title": "Um orçamento de sexta que ninguém retomou",
+      "paragraphs": [
+        "O orçamento foi enviado numa sexta, às 17h, e na segunda de manhã continua parado. O cliente leu e sumiu. Na Black Friday, que cai em 27 de novembro, esse cliente tem várias promoções para comparar.",
+        "O [Bizcommunity](https://www.bizcommunity.com/article/why-customer-service-could-matter-as-much-as-the-discount-969624a) descreve o risco do atendimento por WhatsApp na Black Friday: cada pergunta sem resposta é um ponto em que a venda se perde, e uma resposta errada sobre estoque, depois de o pedido pago, cria um problema maior.",
+        "Retomar é parte da venda. Mas “oi, viu meu orçamento?” não é um motivo. O cliente responde quando a mensagem traz uma informação nova. Pense em como você mesmo responde: uma mensagem que traz prazo, foto ou horário ganha resposta; a que só cobra vai para o fim da fila."
+      ]
+    },
+    {
+      "type": "steps",
+      "id": "tres-retomadas",
+      "title": "Três retomadas, com o motivo de cada uma",
+      "items": [
+        {
+          "title": "1. Prazo da condição, 2 horas depois",
+          "text": "Se o orçamento tem uma condição com data, a primeira lembrança cita a data: “a condição de parcelamento vale até quinta, 22 de outubro”. É o único tipo de urgência que a loja usa sem inventar."
+        },
+        {
+          "title": "2. Informação nova, 4 horas depois",
+          "text": "O reforço traz algo que o orçamento não tinha: prazo de entrega da lente, foto do modelo em estoque, horário disponível para o exame. Se o cliente responde, a sequência para na hora. Exemplo: “a lente multifocal fica pronta em 5 dias úteis, e há horário de exame na terça, às 10h”."
+        },
+        {
+          "title": "3. Pergunta com saída, depois de 7 dias",
+          "text": "Essa é do vendedor. Ele pergunta o que pesou: preço, prazo ou dúvida. O cliente que diz “vou pensar” recebe um próximo passo claro. Quem não responde sai da lista ativa, sem insistência diária. O motivo anotado vira aprendizado para a próxima campanha."
+        }
+      ]
+    },
+    {
+      "type": "callout",
+      "title": "O que a retomada não faz",
+      "text": "O [checklist da Omnisend](https://www.omnisend.com/blog/black-friday-checklist/) manda confirmar estoque promocional e prazos de reposição antes de divulgar. A retomada herda essa regra: oferecer a armação que acabou é pior que não retomar. Também não promete desconto que ninguém autorizou, nem uma data de entrega que a reposição não cumpre. Se a loja não tem certeza, a mensagem não sai.",
+      "tone": "attention"
+    },
+    {
+      "type": "checklist",
+      "id": "revise-os-orcamentos",
+      "title": "Revise os orçamentos antes de 27 de novembro",
+      "items": [
+        "Todo orçamento aberto tem um responsável e uma data de retorno anotada.",
+        "A primeira retomada cita a data de validade da condição, com a data real.",
+        "A segunda traz uma informação nova: prazo, foto ou horário de exame.",
+        "O estoque dos produtos citados foi conferido na semana da mensagem.",
+        "Quem respondeu “vou pensar” tem um próximo passo combinado."
+      ]
+    },
+    {
+      "type": "text",
+      "id": "sem-depender-de-memoria",
+      "title": "A rotina que não depende de ninguém lembrar",
+      "paragraphs": [
+        "O ponto fraco desse método é humano: na semana cheia, ninguém lembra de mandar a segunda mensagem. A Its Time executa a sequência de 2 e 4 horas sozinha, com o nome do cliente, e para quando ele responde. O vendedor entra só quando já há conversa, e passa o dia atendendo quem está na loja em vez de caçar quem sumiu no WhatsApp."
+      ]
+    },
+    {
+      "type": "cta",
+      "title": "Orçamento retomado sem depender da memória",
+      "text": "Converse com a Its Time pelo WhatsApp e veja como a retomada de orçamentos funcionaria na sua ótica.",
+      "label": "Conversar no WhatsApp"
+    }
+  ],
+  "authorProfile": {
+    "name": "Livia",
+    "role": "Redatora",
+    "bio": "Redação da Its Time sobre atendimento, CRM e jornadas comerciais.",
+    "kind": "Person",
+    "url": "/"
+  },
+  "archetype": "guia-pratico",
+  "tags": [
+    "black-friday",
+    "orcamento",
+    "follow-up"
+  ],
+  "relatedSlugs": [
+    "follow-up-comercial-orcamento-parado-nao-e-processo",
+    "black-friday-para-otica-oferta-que-respeita-o-estoque"
+  ],
+  "sources": [
+    {
+      "label": "Bizcommunity: atendimento pode valer tanto quanto o desconto",
+      "url": "https://www.bizcommunity.com/article/why-customer-service-could-matter-as-much-as-the-discount-969624a"
+    },
+    {
+      "label": "Omnisend: checklist de Black Friday",
+      "url": "https://www.omnisend.com/blog/black-friday-checklist/"
+    }
+  ],
+  "editorialNote": "Guia de operação montado a partir das pesquisas citadas nas fontes e do banco de funcionalidades do produto. Os exemplos são ilustrativos."
+}
