@@ -1,0 +1,137 @@
+{
+  "slug": "atendimento-em-varios-canais-a-ia-absorve-o-volume-da-otica",
+  "title": "Atendimento em vários canais: a IA absorve o volume da ótica",
+  "excerpt": "Uma ótica com 3 lojas recebe mensagens por WhatsApp, site, Instagram e Messenger a qualquer hora. Uma IA bem desenhada responde em segundos e organiza tudo numa fila só.",
+  "category": "Atendimento e conversão",
+  "date": "2026-10-16",
+  "author": "Livia",
+  "art": "conversation",
+  "takeaway": "Volume não precisa virar fila de espera: a IA responde nos quatro canais, qualifica cada conversa e deixa a ótica inteira numa fila só.",
+  "cover": {
+    "src": "/blog/atendimento-em-varios-canais-a-ia-absorve-o-volume-da-otica/cover-815cf6a7.webp",
+    "alt": "Duas atendentes de uma ótica passando um atendimento de uma para a outra no balcão",
+    "caption": ""
+  },
+  "blocks": [
+    {
+      "type": "text",
+      "id": "o-volume-chega-de-todo-lado",
+      "title": "Três lojas, quatro canais, nenhuma hora de folga",
+      "paragraphs": [
+        "Imagine uma ótica com 3 lojas. Numa quinta-feira, entre 18h e 23h, chegam perguntas por WhatsApp, pelo site, pelo Instagram e pelo Messenger. Ninguém da equipe está olhando: a maioria já foi para casa.",
+        "Cada mensagem sem resposta esfria. A IA responde em segundos, 24 horas por dia, nos quatro canais, e já trabalha a conversa: pergunta o que o cliente procura e pede o que falta para o orçamento.",
+        "O resultado aparece na manhã seguinte, numa fila só, com cada conversa no ponto em que parou."
+      ]
+    },
+    {
+      "type": "table",
+      "id": "o-que-a-ia-absorve",
+      "title": "O que a IA absorve, do primeiro contato ao orçamento",
+      "columns": [
+        "Situação",
+        "O que acontece",
+        "O que a ótica encontra"
+      ],
+      "rows": [
+        [
+          "Pergunta de preço às 22h",
+          "Resposta em segundos, com a pergunta se o óculos é de grau ou de sol",
+          "Conversa qualificada na fila"
+        ],
+        [
+          "Foto da receita",
+          "Esférico, cilíndrico e eixo lidos e resumidos",
+          "Receita pronta para o orçamento"
+        ],
+        [
+          "Pedido de exame de vista",
+          "Horário conferido e lembrete 1 hora antes, no WhatsApp",
+          "Agenda preenchida e cliente avisado"
+        ],
+        [
+          "Orçamento sem resposta",
+          "Lembrança 2 horas depois e reforço 4 horas depois",
+          "Cliente retomado sem depender de memória"
+        ],
+        [
+          "Cliente de perfil privado",
+          "Contato entra sem nome e a pergunta do nome vem na primeira troca",
+          "Contato identificado"
+        ],
+        [
+          "Mensagem para a loja errada",
+          "A unidade certa é descoberta e a conversa vai para a equipe dela",
+          "Cada loja vê só o que é dela"
+        ]
+      ],
+      "caption": "O exemplo das 3 lojas é ilustrativo. O desenho funciona igual com 1 ou com 10 unidades."
+    },
+    {
+      "type": "text",
+      "id": "uma-fila-para-todas-as-lojas",
+      "title": "Uma fila para todas as lojas",
+      "paragraphs": [
+        "Sem uma fila única, são três celulares vibrando em três balcões, e quem pega a conversa de sábado não sabe o que foi dito na quarta. Com o histórico de cada cliente num lugar só, a conversa de sábado continua a de quarta.",
+        "Com várias lojas, a prática recomendada é um número de WhatsApp por unidade. Cada vendedor vê apenas os números e as lojas liberados para ele, e o desempenho de cada número fica separado."
+      ]
+    },
+    {
+      "type": "callout",
+      "title": "Regras que protegem a margem",
+      "text": "O atendimento segue regras fixas: nunca oferece desconto que ninguém autorizou e nunca confirma estoque sem consultar uma fonte válida. Preço fechado e pagamento ficam com o vendedor, que começa a conversa de fechamento com o contexto pronto.",
+      "tone": "note"
+    },
+    {
+      "type": "text",
+      "id": "o-volume-sem-fila",
+      "title": "O volume sem fila",
+      "paragraphs": [
+        "É esse o desenho da Its Time: quatro canais, uma fila, e a IA absorvendo o que se repete. A ótica de 3 lojas cresce em conversas, do WhatsApp ao Messenger, sem precisar crescer em gente de plantão."
+      ]
+    },
+    {
+      "type": "cta",
+      "title": "Volume sem fila de espera",
+      "text": "Converse com a Its Time pelo WhatsApp e veja como o atendimento da sua ótica ficaria nos quatro canais, em uma fila só.",
+      "label": "Conversar no WhatsApp"
+    },
+    {
+      "type": "faq",
+      "id": "duvidas",
+      "title": "Dúvidas sobre atendimento em vários canais",
+      "items": [
+        {
+          "question": "Preciso de um número de WhatsApp por loja?",
+          "answer": "É a prática recomendada: com um número por unidade, cada conversa chega à equipe da loja certa."
+        },
+        {
+          "question": "O atendimento usa os dados da minha ótica?",
+          "answer": "Sim, desde que estejam cadastrados. Com lentes, valores, endereços e horários preenchidos, a resposta traz dado real. Sem isso, fica genérica."
+        },
+        {
+          "question": "Funciona se minha equipe atende tudo à mão hoje?",
+          "answer": "Funciona. O funil se organiza pela leitura das conversas, e o atendimento automático entra onde a loja quiser."
+        }
+      ]
+    }
+  ],
+  "authorProfile": {
+    "name": "Livia",
+    "role": "Redatora",
+    "bio": "Redação da Its Time sobre atendimento, CRM e jornadas comerciais.",
+    "kind": "Person",
+    "url": "/"
+  },
+  "archetype": "guia-pratico",
+  "tags": [
+    "atendimento",
+    "ia",
+    "canais",
+    "escala"
+  ],
+  "relatedSlugs": [
+    "atendimento-fora-do-horario-a-mensagem-das-22h-na-otica",
+    "ia-de-atendimento-para-oticas-da-pergunta-ao-orcamento"
+  ],
+  "editorialNote": "Texto montado a partir do banco de funcionalidades do produto, sem dados de clientes. Os exemplos são ilustrativos."
+}
