@@ -10,6 +10,7 @@
     "test:e2e": "playwright test tests/feature-section.spec.ts",
     "test:visual": "playwright test tests/feature-section.spec.ts --grep @visual",
     "test:perf": "playwright test tests/feature-section.spec.ts --grep @perf",
+    "test:blog": "playwright test tests/blog.spec.ts tests/blog-photos.spec.ts tests/blog-editorial.spec.ts --workers=1",
     "quality": "npm run lint && npx tsc --noEmit && npm run build"
   },
   "dependencies": {

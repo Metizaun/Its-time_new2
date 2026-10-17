@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 400" role="img" aria-labelledby="title desc">
+  <title id="title">Do primeiro contato ao encaminhamento</title>
+  <desc id="desc">Quatro etapas conectadas: contato, contexto no CRM, próxima ação e equipe. A informação acompanha cada passagem.</desc>
+  <defs><linearGradient id="brand"><stop stop-color="#ff5a1f"/><stop offset="1" stop-color="#ff4d6d"/></linearGradient></defs>
+  <rect width="1200" height="400" rx="24" fill="#f7f6f4"/>
+  <g font-family="Arial, sans-serif" fill="#4e4b48"><text x="52" y="64" font-size="13" letter-spacing="2">ITS TIME / UMA JORNADA COM CONTEXTO</text><text x="52" y="345" font-size="16">Em cada passagem: necessidade registrada, próxima ação e responsabilidade definida.</text></g>
+  <path d="M160 195H1040" stroke="#d9d6d1" stroke-width="2"/>
+  <path d="M160 195H1040" stroke="url(#brand)" stroke-width="2" stroke-dasharray="8 12"/>
+  <g fill="#fff" stroke="#d9d6d1"><rect x="52" y="125" width="236" height="140" rx="16"/><rect x="338" y="125" width="236" height="140" rx="16"/><rect x="624" y="125" width="236" height="140" rx="16"/><rect x="910" y="125" width="236" height="140" rx="16"/></g>
+  <g font-family="Arial, sans-serif"><g fill="#b9360c" font-size="13"><text x="76" y="158">01 / ENTENDER</text><text x="362" y="158">02 / REGISTRAR</text><text x="648" y="158">03 / CONDUZIR</text><text x="934" y="158">04 / ENCAMINHAR</text></g><g fill="#11100f" font-size="22"><text x="76" y="199">Contato</text><text x="362" y="199">Contexto no CRM</text><text x="648" y="199">Próxima ação</text><text x="934" y="199">Equipe</text></g><g fill="#6a6764" font-size="14"><text x="76" y="234">O que o cliente procura?</text><text x="362" y="234">O que já foi conversado?</text><text x="648" y="234">Como a conversa avança?</text><text x="934" y="234">Quem assume e por quê?</text></g></g>
+</svg>

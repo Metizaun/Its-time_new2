@@ -31,8 +31,8 @@ const display = Chakra_Petch({
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://itstime.pro"),
-  title: "Its Time IA - Em manutenção",
-  description: "A Its Time está passando por uma atualização e volta em breve.",
+  title: "Its Time IA — Inteligência que opera. Estratégia que escala.",
+  description: "Atendimento com IA, CRM e automações para conectar conversas, organizar sua operação e gerar novas oportunidades de negócio.",
   openGraph: {
     siteName: "Its Time",
     locale: "pt_BR",
@@ -51,6 +51,7 @@ export default function RootLayout({
   return (
     <html
       lang="pt-BR"
+      data-scroll-behavior="smooth"
       className={`${geistSans.variable} ${geistMono.variable} ${display.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col">
