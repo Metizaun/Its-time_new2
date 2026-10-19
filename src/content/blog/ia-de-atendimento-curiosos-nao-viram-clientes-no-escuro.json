@@ -1,0 +1,119 @@
+{
+  "slug": "ia-de-atendimento-curiosos-nao-viram-clientes-no-escuro",
+  "title": "IA de atendimento: curiosos não viram clientes no escuro",
+  "excerpt": "Conversa que esfria sem ninguém ver não vira venda. Veja os quatro números que o dono de ótica precisa olhar toda semana para saber onde o cliente parou.",
+  "category": "Atendimento e conversão",
+  "date": "2026-10-19",
+  "author": "Livia",
+  "art": "journey",
+  "takeaway": "Atender o curioso é metade do trabalho; a outra metade é saber onde ele parou. Quatro números semanais bastam para decidir quem retomar.",
+  "cover": {
+    "src": "/blog/ia-de-atendimento-curiosos-nao-viram-clientes-no-escuro/cover-5362b159.webp",
+    "alt": "Vitrine iluminada de uma ótica à noite com uma pessoa de costas olhando do lado de fora",
+    "caption": ""
+  },
+  "blocks": [
+    {
+      "type": "text",
+      "id": "do-interesse-a-conversa",
+      "title": "A conversa esfriou e ninguém viu",
+      "paragraphs": [
+        "Uma cliente perguntou o preço de uma lente numa quarta, às 18h40. A conversa foi respondida e parou. Na sexta, o gerente fechou a semana sem saber que ela existia. Esse cliente se perdeu porque ninguém olhou.",
+        "Atender o curioso, a qualquer hora e em qualquer canal (WhatsApp, site, Instagram ou Messenger), é metade do trabalho. A outra metade é saber, no fim da semana, quantos pararam e em que ponto.",
+        "A regra é simples: uma vez por semana, o dono lê quatro números com o filtro de 7 dias. No resto do tempo, a equipe atende e vende. Quem pula essa leitura descobre o problema só quando o cliente já comprou em outra ótica, geralmente numa conversa de 5 minutos que a sua loja deixou para depois."
+      ]
+    },
+    {
+      "type": "table",
+      "id": "quatro-numeros",
+      "title": "Quatro números para olhar toda semana",
+      "columns": [
+        "Número",
+        "O que mostra",
+        "Decisão que sustenta"
+      ],
+      "rows": [
+        [
+          "Leads parados",
+          "Quem conversou e sumiu, nos últimos 30 dias",
+          "Dividir a lista de retorno entre a equipe"
+        ],
+        [
+          "Funil por etapa",
+          "Quantos clientes há em cada etapa, com até 5 etapas escolhidas pelo dono",
+          "Ver em qual etapa o cliente trava"
+        ],
+        [
+          "Taxa de conversão",
+          "Conversão sobre os leads do período, em janelas de 7, 30 e 90 dias",
+          "Comparar semanas equivalentes"
+        ],
+        [
+          "Horário das conversas",
+          "Dias e horas de maior movimento",
+          "Saber quando o atendimento precisa estar de plantão"
+        ]
+      ],
+      "caption": "Uma semana com feriado não se compara com outra sem. Compare períodos equivalentes."
+    },
+    {
+      "type": "callout",
+      "title": "O que esses números não entregam",
+      "text": "A receita estimada por um painel é leitura visual de tendência: ela não considera ajustes feitos no balcão e não serve para fechar o caixa. A origem do cliente também depende de quem anota: registrar se veio do Instagram, do Facebook ou de uma indicação é o que permite saber se o Instagram trouxe 5 conversas ou 50.",
+      "tone": "attention"
+    },
+    {
+      "type": "text",
+      "id": "quem-tem-varias-lojas",
+      "title": "Uma ótica com 3 unidades lê por loja",
+      "paragraphs": [
+        "Com várias lojas, o mesmo exercício vale por número de WhatsApp. Uma ótica com 3 unidades descobre qual número rende mais e qual está parado, e separa o que o atendimento resolveu sozinho do que precisou de uma pessoa.",
+        "Para a maioria das lojas, uma leitura por semana resolve. Em campanha, vale olhar duas vezes."
+      ]
+    },
+    {
+      "type": "text",
+      "id": "a-tela-inicial",
+      "title": "Os quatro números, já na tela inicial",
+      "paragraphs": [
+        "A Its Time entrega esses quatro números já na tela inicial, sem planilha e sem relatório para montar. O dono abre, lê em 15 minutos e sabe quem retomar na segunda-feira, sem pedir relatório a ninguém e sem esperar o fim do mês para descobrir quem sumiu."
+      ]
+    },
+    {
+      "type": "cta",
+      "title": "Saiba onde cada cliente parou",
+      "text": "Converse com a Its Time pelo WhatsApp e veja como seria a leitura semanal da sua ótica.",
+      "label": "Conversar no WhatsApp"
+    },
+    {
+      "type": "checklist",
+      "id": "sinais-de-continuidade",
+      "title": "Checklist semanal de 15 minutos",
+      "items": [
+        "A lista de leads parados dos últimos 30 dias foi dividida por vendedor.",
+        "O funil foi conferido, com data de retorno para cada orçamento.",
+        "A taxa de conversão foi comparada com a semana equivalente anterior.",
+        "O horário de maior movimento foi visto para confirmar quando o atendimento precisa de plantão.",
+        "A origem dos leads novos foi anotada."
+      ]
+    }
+  ],
+  "authorProfile": {
+    "name": "Livia",
+    "role": "Redatora",
+    "bio": "Redação da Its Time sobre atendimento, CRM e jornadas comerciais.",
+    "kind": "Person",
+    "url": "/"
+  },
+  "archetype": "guia-pratico",
+  "tags": [
+    "metricas",
+    "funil",
+    "ia"
+  ],
+  "relatedSlugs": [
+    "follow-up-com-ia-o-funil-que-se-atualiza-lendo-a-conversa",
+    "atendimento-fora-do-horario-a-mensagem-das-22h-na-otica"
+  ],
+  "editorialNote": "Texto montado a partir do banco de funcionalidades do produto, sem dados de clientes. Os exemplos são ilustrativos."
+}
