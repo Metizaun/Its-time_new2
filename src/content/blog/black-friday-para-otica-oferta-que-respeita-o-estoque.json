@@ -1,0 +1,130 @@
+{
+  "slug": "black-friday-para-otica-oferta-que-respeita-o-estoque",
+  "title": "Black Friday para ótica: oferta que respeita o estoque",
+  "excerpt": "O varejo óptico faturou R$ 2,15 bilhões em julho, 11% abaixo do ano anterior. Em um mês fraco, prometer o que o estoque não entrega custa caro. Planeje a oferta pelo giro.",
+  "category": "Estratégia comercial",
+  "date": "2026-10-19",
+  "author": "Livia",
+  "art": "journey",
+  "takeaway": "A oferta da Black Friday precisa nascer do estoque e da margem, e o atendimento só confirma o que a loja consegue entregar.",
+  "cover": {
+    "src": "/blog/black-friday-para-otica-oferta-que-respeita-o-estoque/cover-8de7a1c3.webp",
+    "alt": "Funcionário de costas conferindo as prateleiras de armações no estoque de uma ótica",
+    "caption": ""
+  },
+  "blocks": [
+    {
+      "type": "text",
+      "id": "a-promessa-precisa-caber",
+      "title": "R$ 2,15 bilhões em julho, 11% a menos",
+      "paragraphs": [
+        "O varejo óptico brasileiro movimentou R$ 2,15 bilhões em julho de 2026, uma queda de 11% sobre julho de 2025, segundo reportagem da [Conecta Info](https://conectainfo.net/2026/10/08/335461-black-friday-no-varejo-optico-o-que-esperar-em-2026/) de 8 de outubro. A Abióptica reduziu a previsão de alta anual: de 5,2%, passou para 2,9% (cenário-base).",
+        "Nesse quadro, a Black Friday de 27 de novembro é uma janela de recuperação e também um risco. A ótica que entra na data sem planejar troca faturamento por prejuízo: desconta o que não tem margem e promete o que não tem em prateleira.",
+        "A mesma reportagem lembra a pesquisa da LWSA com 1.044 consumidores: 50% pesquisam ofertas mais de um mês antes. A ótica tem tempo de montar a oferta pelo que tem em estoque, e não o contrário."
+      ]
+    },
+    {
+      "type": "table",
+      "id": "oferta-por-giro",
+      "title": "Como cada tipo de produto entra na oferta",
+      "columns": [
+        "Tipo de produto",
+        "Giro",
+        "Margem",
+        "Como entra na campanha"
+      ],
+      "rows": [
+        [
+          "Armação de sucesso, vende rápido",
+          "Alto",
+          "Boa",
+          "Desconto com teto aprovado e quantidade conferida"
+        ],
+        [
+          "Lente de linha, venda recorrente",
+          "Médio",
+          "Boa",
+          "Benefício além do preço, com custo conhecido"
+        ],
+        [
+          "Armação parada há meses",
+          "Baixo",
+          "Variável",
+          "Oferta de escoamento, com limite e sem destaque"
+        ],
+        [
+          "Produto de entrada, comparado por preço",
+          "Alto",
+          "Apertada",
+          "Fora da campanha, ou desconto mínimo"
+        ]
+      ],
+      "caption": "Exemplo de classificação: cada ótica preenche com os próprios produtos, antes de divulgar, e revisa a tabela quando o estoque mudar."
+    },
+    {
+      "type": "text",
+      "id": "estoque-e-atendimento",
+      "title": "Estoque e atendimento precisam dizer a mesma coisa",
+      "paragraphs": [
+        "A loja precisa de uma única fonte para o que está disponível. Se o estoque está em dois cadernos e uma planilha, o vendedor e o cliente recebem respostas diferentes. Com várias lojas, um número de WhatsApp por unidade mantém cada resposta ligada ao estoque certo.",
+        "O atendimento responde o que está cadastrado, como endereço e horário, e deixa estoque e preço fechado com quem tem a informação: o vendedor. Uma resposta errada sobre estoque, depois do pagamento, custa mais que o desconto."
+      ]
+    },
+    {
+      "type": "callout",
+      "title": "O que a oferta não deve prometer",
+      "text": "Ainda não vale prometer quantidade que a loja não tem, prazo que a reposição não cumpre e desconto acima do teto aprovado. Quando a quantidade é limitada de verdade, ela entra na divulgação com o número real, e a conta fecha com o estoque. Quando não é, escassez inventada derruba a confiança.",
+      "tone": "attention"
+    },
+    {
+      "type": "checklist",
+      "id": "checagem-de-estoque",
+      "title": "Checagem de estoque antes da divulgação",
+      "items": [
+        "Cada modelo anunciado tem a quantidade em prateleira e o prazo de reposição anotados.",
+        "O desconto máximo por item está aprovado por escrito.",
+        "A equipe sabe quem confirma estoque quando o cliente pergunta.",
+        "Cada loja tem o seu estoque de oferta, sem soma imaginária.",
+        "A divulgação cita a data real, 27 de novembro."
+      ]
+    },
+    {
+      "type": "text",
+      "id": "oferta-que-nao-passa-do-teto",
+      "title": "Uma oferta que nunca passa do teto",
+      "paragraphs": [
+        "Pense numa campanha em que nenhuma resposta, em nenhum horário, oferece mais do que o teto aprovado ou confirma o que não está na prateleira. É o que a Its Time faz no atendimento: segue o desconto autorizado e só confirma estoque de fonte válida."
+      ]
+    },
+    {
+      "type": "cta",
+      "title": "Oferta e atendimento dizendo a mesma coisa",
+      "text": "Converse com a Its Time pelo WhatsApp e veja como o atendimento da sua ótica respeitaria o teto e o estoque da campanha.",
+      "label": "Conversar no WhatsApp"
+    }
+  ],
+  "authorProfile": {
+    "name": "Livia",
+    "role": "Redatora",
+    "bio": "Redação da Its Time sobre atendimento, CRM e jornadas comerciais.",
+    "kind": "Person",
+    "url": "/"
+  },
+  "archetype": "guia-ofertas",
+  "tags": [
+    "black-friday",
+    "estoque",
+    "margem"
+  ],
+  "relatedSlugs": [
+    "black-friday-na-otica-o-que-o-vendedor-pode-prometer",
+    "black-friday-para-otica-retome-orcamentos-com-motivo"
+  ],
+  "sources": [
+    {
+      "label": "Conecta Info: Black Friday no varejo óptico, o que esperar em 2026",
+      "url": "https://conectainfo.net/2026/10/08/335461-black-friday-no-varejo-optico-o-que-esperar-em-2026/"
+    }
+  ],
+  "editorialNote": "Guia de operação montado a partir das pesquisas citadas nas fontes e do banco de funcionalidades do produto. Os exemplos são ilustrativos."
+}
