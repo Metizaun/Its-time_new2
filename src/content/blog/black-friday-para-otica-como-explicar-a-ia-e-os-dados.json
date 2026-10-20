@@ -1,0 +1,138 @@
+{
+  "slug": "black-friday-para-otica-como-explicar-a-ia-e-os-dados",
+  "title": "Black Friday para ótica: como explicar a IA e os dados",
+  "excerpt": "78% dos brasileiros acham que a IA facilita as compras, mas 52,3% se preocupam com privacidade. Explicar o que a IA faz antes da oferta protege a confiança.",
+  "category": "Estratégia comercial",
+  "date": "2026-10-20",
+  "author": "Livia",
+  "art": "conversation",
+  "takeaway": "O cliente aceita a IA no atendimento quando sabe que é uma IA, que dados ela pede e quem vê a conversa depois.",
+  "cover": {
+    "src": "/blog/black-friday-para-otica-como-explicar-a-ia-e-os-dados/cover-324f393e.webp",
+    "alt": "Atendente de perfil olhando um tablet no balcão enquanto um cliente de costas espera",
+    "caption": ""
+  },
+  "blocks": [
+    {
+      "type": "text",
+      "id": "abertura",
+      "title": "78% esperam compras mais fáceis. 52,3% temem pelos dados",
+      "paragraphs": [
+        "Para 78% dos brasileiros, a IA vai tornar as compras mais fáceis. Para 52,3%, privacidade e uso de dados são a principal preocupação com a tecnologia. Os dois números saíram na mesma pesquisa, noticiada pelo [TI Inside](https://tiinside.com.br/15/10/2026/ia-na-black-friday-78-dos-brasileiros-esperam-compras-mais-faceis-mas-privacidade-preocupa/) em 15 de outubro.",
+        "A conclusão que o texto tira vale para a ótica: a conveniência abre a porta e a transparência decide se o cliente entra. A pesquisa mede o consumidor brasileiro em geral, não o de ótica, mas o padrão é fácil de reconhecer no balcão.",
+        "Quem manda a foto da receita pelo WhatsApp está entregando um dado pessoal. Quer saber para onde ele vai antes de a oferta de Black Friday aparecer."
+      ]
+    },
+    {
+      "type": "text",
+      "id": "o-que-dizer",
+      "title": "O que o cliente precisa saber antes da oferta?",
+      "paragraphs": [
+        "Três avisos, todos curtos, antes de qualquer promoção."
+      ],
+      "subsections": [
+        {
+          "title": "Quem responde é uma IA?",
+          "paragraphs": [
+            "A primeira mensagem diz isso em uma linha, em qualquer canal: WhatsApp, site, Instagram ou Messenger. A IA se apresenta como assistente da loja. Ninguém descobre depois que conversou com uma máquina."
+          ]
+        },
+        {
+          "title": "Que dados ela pede e por quê?",
+          "paragraphs": [
+            "Nome, telefone e, se o cliente quiser orçamento de lente, a foto da receita para ler esférico, cilíndrico e eixo. A mensagem diz para que o dado serve: montar o resumo que a equipe e o cliente vão consultar."
+          ]
+        },
+        {
+          "title": "Quem vê a conversa depois?",
+          "paragraphs": [
+            "Só quem precisa. O vendedor enxerga os números e as lojas que o administrador liberou, e a conversa de uma loja não aparece na outra."
+          ]
+        }
+      ]
+    },
+    {
+      "type": "table",
+      "id": "quem-ve-o-que",
+      "title": "Quem vê cada dado depois",
+      "columns": [
+        "Dado",
+        "Para que serve",
+        "Quem vê"
+      ],
+      "rows": [
+        [
+          "Nome e telefone",
+          "Identificar o cliente na conversa",
+          "Vendedores com acesso àquela loja"
+        ],
+        [
+          "Foto da receita",
+          "Resumo com esférico, cilíndrico e eixo",
+          "A equipe da conversa e o próprio cliente"
+        ],
+        [
+          "Histórico da conversa",
+          "Evitar que o cliente repita tudo a cada contato",
+          "Quem atende aquele número de WhatsApp"
+        ]
+      ],
+      "caption": "A conta de cada empresa é isolada das outras."
+    },
+    {
+      "type": "callout",
+      "title": "O que a pesquisa não mostra",
+      "text": "A pesquisa do TI Inside ainda não mostra se explicar a IA aumenta as vendas, e este texto não afirma isso. Ela mostra que a preocupação com dados existe. Quem a ignora perde a confiança antes de perder a venda.",
+      "tone": "note"
+    },
+    {
+      "type": "checklist",
+      "id": "checagem",
+      "title": "Checagem antes de 27 de novembro",
+      "items": [
+        "A primeira mensagem de cada canal avisa que a IA atende.",
+        "Há uma frase pronta dizendo que dados a IA pede e para que servem.",
+        "O administrador conferiu quais vendedores veem quais números e lojas.",
+        "Ninguém promete o que a IA não promete: desconto sem aprovação e estoque sem consulta."
+      ]
+    },
+    {
+      "type": "text",
+      "id": "confianca-como-padrao",
+      "title": "Confiança como padrão, não como aviso",
+      "paragraphs": [
+        "A Its Time foi desenhada com essa ordem: a IA se apresenta, pede só o que serve ao orçamento e cada vendedor enxerga apenas as lojas liberadas. O cliente ganha o atendimento rápido do WhatsApp ao Instagram sem abrir mão de saber com quem fala."
+      ]
+    },
+    {
+      "type": "cta",
+      "title": "Atendimento rápido e transparente",
+      "text": "Converse com a Its Time pelo WhatsApp e veja como a IA se apresenta e trata os dados do cliente na sua ótica.",
+      "label": "Conversar no WhatsApp"
+    }
+  ],
+  "authorProfile": {
+    "name": "Livia",
+    "role": "Redatora",
+    "bio": "Redação da Its Time sobre atendimento, CRM e jornadas comerciais.",
+    "kind": "Person",
+    "url": "/"
+  },
+  "archetype": "explicador",
+  "tags": [
+    "black-friday",
+    "ia",
+    "privacidade"
+  ],
+  "relatedSlugs": [
+    "black-friday-na-otica-o-que-o-vendedor-pode-prometer",
+    "o-que-esperar-de-uma-ia-de-atendimento-numa-otica"
+  ],
+  "sources": [
+    {
+      "label": "TI Inside: IA na Black Friday, 78% esperam compras mais fáceis, mas privacidade preocupa",
+      "url": "https://tiinside.com.br/15/10/2026/ia-na-black-friday-78-dos-brasileiros-esperam-compras-mais-faceis-mas-privacidade-preocupa/"
+    }
+  ],
+  "editorialNote": "Guia de operação montado a partir das pesquisas citadas nas fontes e do banco de funcionalidades do produto. Os exemplos são ilustrativos."
+}
