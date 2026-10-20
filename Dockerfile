@@ -2,8 +2,8 @@ FROM node:20-bookworm-slim AS build
 
 WORKDIR /app
 
-COPY package.json ./
-RUN npm install --include=optional --no-audit --no-fund
+COPY package.json package-lock.json ./
+RUN npm ci --include=optional --no-audit --no-fund
 
 COPY . .
 
@@ -21,6 +21,9 @@ RUN npm run build
 RUN npm prune --omit=dev
 
 FROM node:20-bookworm-slim AS runner
+
+ARG RELEASE_SHA="unknown"
+LABEL org.opencontainers.image.revision=$RELEASE_SHA
 
 WORKDIR /app
 ENV NODE_ENV=production

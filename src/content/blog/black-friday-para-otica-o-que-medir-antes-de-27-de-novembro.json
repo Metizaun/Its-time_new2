@@ -1,0 +1,102 @@
+{
+  "slug": "black-friday-para-otica-o-que-medir-antes-de-27-de-novembro",
+  "title": "Black Friday para ótica: o que medir antes de 27 de novembro",
+  "excerpt": "48% dos consumidores já têm a lista de compras pronta antes da Black Friday. Escolha uma pergunta e um número para acompanhar antes de divulgar a oferta de 27 de novembro.",
+  "category": "Estratégia comercial",
+  "date": "2026-10-16",
+  "author": "Livia",
+  "art": "journey",
+  "takeaway": "Campanha sem pergunta definida vira movimento sem aprendizado: escolha um número que sustente uma decisão e revise no meio de novembro, não no último dia.",
+  "cover": {
+    "src": "/blog/black-friday-para-otica-o-que-medir-antes-de-27-de-novembro/cover-6e4f175f.webp",
+    "alt": "Mãos de uma pessoa sobre o balcão de uma ótica, ao lado de uma prancheta em branco e armações alinhadas",
+    "caption": ""
+  },
+  "blocks": [
+    {
+      "type": "text",
+      "id": "abertura",
+      "title": "Faltam 42 dias e ninguém decidiu o que contar",
+      "paragraphs": [
+        "Faltam 42 dias para a Black Friday de 2026, que cai em 27 de novembro. A ótica ainda tem tempo de ajustar a oferta. O que não dá para ajustar depois é a pergunta que a campanha deveria responder.",
+        "O Google e a Offerwise apontam que 48% dos consumidores já têm a lista de compras pronta antes da data, de acordo com o [Comunique-se](https://portal.comunique-se.com.br/339081-black-friday-comeca-antes-e-a-gestao-da-loja-cabe-no-celular/). Parte da decisão acontece em outubro, na conversa que a ótica teve com o cliente ou deixou de ter.",
+        "O mesmo texto traz o retrato de quem atende: no Radar Mercado Digital 2026, do Sebrae com a E-Commerce Brasil, 3.081 empresários responderam e 59,2% dos pequenos negócios digitais são tocados por uma única pessoa. Na ótica independente é parecido. Quem faz tudo precisa de uma pergunta só, escolhida antes de a oferta ir ao ar, para não passar novembro olhando dez números que não levam a nenhuma decisão."
+      ]
+    },
+    {
+      "type": "steps",
+      "id": "tres-decisoes",
+      "title": "Uma pergunta, um número e uma data",
+      "items": [
+        {
+          "title": "1. Escolha uma pergunta por campanha",
+          "text": "Troque “fazer uma Black Friday boa” por algo que mude uma decisão: qual condição gera mais pedidos de orçamento? O post do Instagram traz conversa ou só curtida? Uma pergunta cabe em duas semanas de acompanhamento. Cinco viram ruído."
+        },
+        {
+          "title": "2. Conte a etapa certa do funil",
+          "text": "Conversa nova, orçamento enviado e venda fechada são três resultados diferentes. Se a pergunta é sobre procura, conte conversas novas por dia. Se é sobre a oferta, conte orçamentos abertos. Misturar os três faz uma campanha movimentada parecer uma campanha vendedora."
+        },
+        {
+          "title": "3. Marque a revisão entre 10 e 15 de novembro",
+          "text": "Olhar o número só em 28 de novembro não corrige nada. No meio do mês dá para notar que muita gente pergunta a mesma coisa e reescrever a mensagem. Se há conversa e poucos orçamentos, olhe a condição antes de mexer no preço."
+        }
+      ]
+    },
+    {
+      "type": "callout",
+      "title": "O que o número não diz",
+      "text": "Mais conversas em novembro não mostram qual publicação trouxe cada cliente. Anote a origem de cada contato (Instagram, Facebook, indicação) e a leitura por canal fica possível depois. E qualquer receita estimada por painel é tendência: ela não considera os ajustes feitos no balcão e não fecha caixa.",
+      "tone": "attention"
+    },
+    {
+      "type": "checklist",
+      "id": "antes-de-anunciar",
+      "title": "Antes de divulgar a oferta",
+      "items": [
+        "A campanha tem uma pergunta escrita em uma linha, como “qual condição gera mais orçamentos?”.",
+        "O número escolhido corresponde à etapa que a pergunta quer observar.",
+        "Conversas, orçamentos e vendas aparecem separados.",
+        "Existe uma data de revisão entre 10 e 15 de novembro, com o nome de quem olha.",
+        "A origem do cliente está anotada nos contatos de outubro."
+      ]
+    },
+    {
+      "type": "text",
+      "id": "sem-planilha",
+      "title": "Medir sem depender de planilha",
+      "paragraphs": [
+        "A contagem se perde na semana cheia, quando o dono atende, conserta e ainda posta. Esse é o ponto em que a Its Time entra: as conversas do WhatsApp, do site, do Instagram e do Messenger já chegam separadas em conversas, orçamentos e vendas, sem planilha e sem ninguém lembrar de anotar."
+      ]
+    },
+    {
+      "type": "cta",
+      "title": "Veja a campanha com clareza",
+      "text": "Converse com a Its Time pelo WhatsApp e veja como seria acompanhar conversas, orçamentos e vendas da sua ótica sem planilha.",
+      "label": "Conversar no WhatsApp"
+    }
+  ],
+  "authorProfile": {
+    "name": "Livia",
+    "role": "Redatora",
+    "bio": "Redação da Its Time sobre atendimento, CRM e jornadas comerciais.",
+    "kind": "Person",
+    "url": "/"
+  },
+  "archetype": "guia-pratico",
+  "tags": [
+    "black-friday",
+    "otica",
+    "metricas"
+  ],
+  "relatedSlugs": [
+    "black-friday-para-otica-retome-orcamentos-com-motivo",
+    "atendimento-na-black-friday-a-conversa-nao-acaba-na-venda"
+  ],
+  "sources": [
+    {
+      "label": "Comunique-se: Black Friday começa antes e a gestão da loja cabe no celular",
+      "url": "https://portal.comunique-se.com.br/339081-black-friday-comeca-antes-e-a-gestao-da-loja-cabe-no-celular/"
+    }
+  ],
+  "editorialNote": "Guia de operação montado a partir das pesquisas citadas nas fontes e do banco de funcionalidades do produto. Os exemplos são ilustrativos."
+}
