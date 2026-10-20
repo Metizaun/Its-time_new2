@@ -518,3 +518,11 @@ float 8s ease-in-out infinite;
 ```txt
 Ultra premium futuristic SaaS hero section background, infinite soft white environment, floating iPhone mockup in center, elegant SDR AI conversation on screen, abstract modular interface projections emerging from the device, floating CRM cards, automation workflows, pipeline system, WhatsApp AI assistant UI, strategic orange and coral accents, swiss editorial design, minimal tech aesthetic, modular particles and pixel grids floating around, structured intelligence visual language, cinematic soft lighting, glass precision, extremely clean composition, Apple + Linear + OpenAI inspired, subtle depth, premium startup branding, organized data flow from chaos to intelligent system, white infinite background, elegant shadows, futuristic business automation atmosphere, ultra detailed, sophisticated motion design feeling, 16:9
 ```
+
+---
+
+# ATUALIZAÇÕES (2026-10-15)
+
+Mudanças feitas na hero depois deste documento (menu, cards de entrada sem e-mail e com a Nya, card de agenda, faixa de
+confiança sem carrossel, fundo animado, ícone em degradê, favicon e layout em coluna no tablet e no celular) estão
+registradas em `System rules/Feature-section/design-system-secao-animada.md`, seção 7. Onde houver conflito, vale aquele documento.

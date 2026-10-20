@@ -1,3 +1,9 @@
+> **SUBSTITUÍDO (2026-10-15).** Este documento descreve a seção antiga (cubo, multiagentes, preto profundo, glow vermelho),
+> que foi totalmente refeita. O design system vigente está em `System rules/Feature-section/design-system-secao-animada.md`.
+> Não siga as cores, o fundo nem os glows deste arquivo.
+
+---
+
 # FEATURE SECTION — MULTIAGENTES ESPECIALIZADOS
 
 ---

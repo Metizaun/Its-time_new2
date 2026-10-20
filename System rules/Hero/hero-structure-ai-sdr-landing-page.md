@@ -320,10 +320,10 @@ Representam:
 ## Layout
 
 ```txt
-[ Lead ]
+[ Lead (ícone da Nya) ]
 [ WhatsApp ]
 [ Instagram ]
-[ Email ]
+[ Agenda ]   <- ocupa o lugar do antigo card de e-mail (não trabalhamos com e-mail)
 ```
 
 ---
@@ -344,7 +344,7 @@ left: -180px;
 | Lead | -180px |
 | WhatsApp | -40px |
 | Instagram | 120px |
-| Email | 280px |
+| Agenda | 280px |
 
 ---
 

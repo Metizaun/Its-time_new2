@@ -9,6 +9,7 @@ const documentationLinks = [
   { href: "/dev/documentacao/agenda", label: "Agenda Universal", meta: "Sincronização" },
   { href: "/dev/documentacao/webhook-leads", label: "Webhook de leads", meta: "Entrada CRM" },
   { href: "/dev/documentacao/webhook-cobranca", label: "Webhook de cobrança", meta: "Coleções" },
+  { href: "/dev/documentacao/jornadas-rb", label: "Jornadas RB", meta: "Automações" },
 ] as const;
 
 export function DocumentationSidebar({ currentPath, sections }: DocumentationSidebarProps) {

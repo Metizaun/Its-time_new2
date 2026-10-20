@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { DocumentationSidebar } from "../DocumentationSidebar";
 import { ArrowLeft, Braces, CheckCircle2, ExternalLink, KeyRound, RefreshCw, Webhook } from "lucide-react";
 import type { ReactNode } from "react";
 
@@ -247,7 +248,7 @@ export default function AgendaDocumentationPage() {
         </section>
 
         <div className="mt-8 grid gap-8 lg:grid-cols-[250px_minmax(0,1fr)] lg:items-start">
-          <aside className="lg:sticky lg:top-24"><nav aria-label="Nesta página" className="rounded-2xl border border-[var(--border-default)] bg-[var(--color-surface-2)] p-4 shadow-sm"><p className="mb-3 font-mono text-xs font-semibold uppercase tracking-wider text-[var(--color-primary-600)]">Nesta página</p><ol className="grid gap-1 sm:grid-cols-2 lg:grid-cols-1">{sections.map(([id, title], index) => <li key={id}><a href={`#${id}`} className="flex min-h-10 items-center rounded-lg px-2 py-2 text-sm text-[var(--color-gray-600)] hover:bg-white hover:text-[var(--color-primary-600)] focus-visible:shadow-focus focus-visible:outline-none"><span className="mr-2 font-mono text-xs text-[var(--color-gray-400)]">{String(index + 1).padStart(2, "0")}</span>{title}</a></li>)}</ol></nav></aside>
+        <DocumentationSidebar currentPath="/dev/documentacao/agenda" sections={sections} />
 
           <article className="min-w-0 rounded-3xl border border-[var(--border-default)] bg-[var(--color-surface-1)] px-5 py-8 shadow-sm sm:px-10 lg:px-12">
             <DocSection id="inicio"><SectionTitle step="01 · Comece aqui" title="Início rápido" /><p className="mt-4 leading-7 text-[var(--color-gray-700)]">A integração tem duas URLs e muitos tipos de evento. O Its Time envia a agenda para o webhook do parceiro; o parceiro envia de volta somente o resultado do atendimento.</p><div className="mt-6 grid gap-3 sm:grid-cols-3">{[[KeyRound, "1. Crie a conexão", "O administrador cadastra a URL do webhook e recebe os segredos."], [Webhook, "2. Receba eventos", "Valide a assinatura e persista os eventos de forma idempotente."], [RefreshCw, "3. Reporte o resultado", "Envie done ou no_show referenciando o appointmentId do Its Time."]].map(([Icon, title, text]) => { const CardIcon = Icon as typeof KeyRound; return <div key={String(title)} className="rounded-xl border border-[var(--border-default)] bg-[var(--color-surface-2)] p-4"><CardIcon className="h-5 w-5 text-[var(--color-primary-600)]" aria-hidden="true" /><h3 className="mt-3 font-semibold">{String(title)}</h3><p className="mt-1 text-sm leading-6 text-[var(--color-gray-600)]">{String(text)}</p></div>; })}</div><CodeBlock label="Endpoint de retorno" code={`POST ${inboundEndpoint}`} /></DocSection>

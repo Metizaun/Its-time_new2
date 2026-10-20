@@ -1,6 +1,4 @@
 import Image from "next/image";
-import Link from "next/link";
-import { LegalLinks } from "@/components/LegalLinks";
 import { whatsappLink } from "@/lib/whatsapp";
 
 export function MaintenancePage() {
@@ -91,18 +89,6 @@ export function MaintenancePage() {
           </div>
         </div>
       </section>
-
-      <footer className="maintenance-footer">
-        <div className="maintenance-footer-brand">
-          <span>ITS TIME</span>
-          <span className="maintenance-footer-divider" aria-hidden="true" />
-          <span>IA que organiza. Estratégia que multiplica.</span>
-        </div>
-        <div className="maintenance-footer-links">
-          <Link href="/updates">Atualizações</Link>
-          <LegalLinks />
-        </div>
-      </footer>
 
     </main>
   );
