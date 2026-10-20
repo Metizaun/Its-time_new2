@@ -1,0 +1,120 @@
+{
+  "slug": "atendimento-fora-do-horario-a-mensagem-das-22h-na-otica",
+  "title": "Atendimento fora do horário: a mensagem das 22h na ótica",
+  "excerpt": "A pergunta de preço chega às 22h, quando a loja fechou. Veja o que acontece até as 9h e o que o vendedor encontra pronto na manhã seguinte.",
+  "category": "Atendimento com IA",
+  "date": "2026-10-20",
+  "author": "Livia",
+  "art": "conversation",
+  "takeaway": "A mensagem que chega depois do expediente esfria até a manhã; um atendimento que qualifica nos quatro canais entrega ao vendedor algo pronto para conduzir.",
+  "cover": {
+    "src": "/blog/atendimento-fora-do-horario-a-mensagem-das-22h-na-otica/cover-125f7eac.webp",
+    "alt": "Cliente de costas examinando um par de óculos contra a luz diante do expositor de uma ótica",
+    "caption": ""
+  },
+  "blocks": [
+    {
+      "type": "text",
+      "id": "quando-o-interesse-chega-fora-de-hora",
+      "title": "O Instagram avisou às 22h12 e a loja já estava fechada",
+      "paragraphs": [
+        "Às 22h12, alguém pergunta pelo Instagram da ótica o preço de uma lente. A loja fechou às 19h e o vendedor só vê a mensagem às 9h. Nesse intervalo de quase 11 horas, o cliente abriu a conversa com mais duas óticas.",
+        "O atendimento fora do horário não é um problema de equipe. Ninguém trabalha de graça às 22h. É um problema de desenho: a conversa precisa continuar andando sem depender de quem está dormindo.",
+        "Veja como seria a noite ideal, do WhatsApp ao Messenger."
+      ]
+    },
+    {
+      "type": "table",
+      "id": "da-pergunta-ao-balcao",
+      "title": "Da pergunta das 22h ao balcão das 9h",
+      "columns": [
+        "Hora",
+        "O que acontece com a conversa",
+        "O que o vendedor encontra"
+      ],
+      "rows": [
+        [
+          "22h12",
+          "Resposta em segundos, com a pergunta se o óculos é de grau ou de sol. Se o perfil é privado, o contato entra sem nome e o nome é perguntado logo na primeira troca",
+          "Nada ainda: a conversa está andando"
+        ],
+        [
+          "22h20",
+          "A receita (grau) ou a foto do modelo (sol) chega. A receita vira um resumo com esférico, cilíndrico e eixo",
+          "Uma conversa com o tipo de lente definido"
+        ],
+        [
+          "22h30",
+          "Se o cliente pede preço fechado, o valor fica para o vendedor e a conversa segue sendo qualificada. Estoque só é confirmado de fonte válida",
+          "A conversa em andamento, com o que já foi perguntado"
+        ],
+        [
+          "9h",
+          "A fila do dia está pronta, nos quatro canais, no mesmo lugar",
+          "A conversa qualificada, com a receita lida"
+        ]
+      ],
+      "caption": "Horários de exemplo."
+    },
+    {
+      "type": "text",
+      "id": "interesse-e-operacao",
+      "title": "Três lojas, três celulares",
+      "paragraphs": [
+        "No sábado, uma rede com três lojas tem três celulares vibrando em três balcões. A cliente volta perguntando do orçamento da semana passada e quem pega a conversa não sabe de nada. Com o histórico num lugar só, a conversa continua de onde parou.",
+        "Com mais de uma unidade, o atendimento descobre qual loja o cliente quer e encaminha a conversa para a equipe dela, já organizada. A prática recomendada é um número de WhatsApp por loja. O vendedor começa pela proposta, sem repetir as três perguntas que já foram feitas, e a cliente do sábado não precisa explicar de novo o que pediu na quarta."
+      ]
+    },
+    {
+      "type": "text",
+      "id": "a-noite-trabalhada",
+      "title": "A noite trabalhada",
+      "paragraphs": [
+        "A Its Time atende nos quatro canais, 24 horas por dia: quando o vendedor chega às 9h, a conversa das 22h já foi qualificada. A ótica passa a vender também no horário em que está fechada."
+      ]
+    },
+    {
+      "type": "cta",
+      "title": "A mensagem das 22h, aproveitada",
+      "text": "Converse com a Its Time pelo WhatsApp e veja o que o seu vendedor encontraria na manhã seguinte.",
+      "label": "Conversar no WhatsApp"
+    },
+    {
+      "type": "faq",
+      "id": "duvidas",
+      "title": "Dúvidas sobre atendimento fora do horário",
+      "items": [
+        {
+          "question": "O que o atendimento faz às 22h?",
+          "answer": "Responde, qualifica e organiza a conversa. O vendedor chega às 9h com a fila pronta e fecha a venda."
+        },
+        {
+          "question": "O cliente sabe que está falando com uma IA?",
+          "answer": "Deve saber. A primeira mensagem avisa, e o texto explica o que vai acontecer na manhã seguinte."
+        },
+        {
+          "question": "A resposta é errada se a loja não cadastrou nada?",
+          "answer": "Fica genérica. Com lentes, horários, médicos e valores cadastrados, responde com dado real."
+        }
+      ]
+    }
+  ],
+  "authorProfile": {
+    "name": "Livia",
+    "role": "Redatora",
+    "bio": "Redação da Its Time sobre atendimento, CRM e jornadas comerciais.",
+    "kind": "Person",
+    "url": "/"
+  },
+  "archetype": "guia-pratico",
+  "tags": [
+    "atendimento",
+    "ia",
+    "horario"
+  ],
+  "relatedSlugs": [
+    "ia-de-atendimento-para-oticas-da-pergunta-ao-orcamento",
+    "ia-de-atendimento-curiosos-nao-viram-clientes-no-escuro"
+  ],
+  "editorialNote": "Texto montado a partir do banco de funcionalidades do produto, sem dados de clientes. Os exemplos são ilustrativos."
+}
