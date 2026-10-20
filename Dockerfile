@@ -12,6 +12,11 @@ COPY . .
 # Without the argument the maintenance page is what ships. Env files are not part of the build context.
 ARG SHOW_FULL_SITE=""
 ENV SHOW_FULL_SITE=$SHOW_FULL_SITE
+# Umami (analytics). Public values, inlined at build time; leave empty to ship without tracking.
+ARG NEXT_PUBLIC_UMAMI_WEBSITE_ID=""
+ARG NEXT_PUBLIC_UMAMI_SRC=""
+ENV NEXT_PUBLIC_UMAMI_WEBSITE_ID=$NEXT_PUBLIC_UMAMI_WEBSITE_ID
+ENV NEXT_PUBLIC_UMAMI_SRC=$NEXT_PUBLIC_UMAMI_SRC
 RUN npm run build
 RUN npm prune --omit=dev
 

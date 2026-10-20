@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import { Chakra_Petch, Geist, Geist_Mono } from "next/font/google";
 import Script from "next/script";
+import { AnalyticsTracker } from "@/components/AnalyticsTracker";
+import { UMAMI_SRC, UMAMI_WEBSITE_ID } from "@/lib/analytics";
 import "./globals.css";
 import "../styles/feature-section.css";
 import "../styles/crescer-section.css";
@@ -56,6 +58,18 @@ export default function RootLayout({
     >
       <body className="min-h-full flex flex-col">
         {children}
+        {UMAMI_SRC && UMAMI_WEBSITE_ID ? (
+          <>
+            <Script
+              src={UMAMI_SRC}
+              data-website-id={UMAMI_WEBSITE_ID}
+              data-domains="itstime.pro,www.itstime.pro"
+              data-do-not-track="true"
+              strategy="afterInteractive"
+            />
+            <AnalyticsTracker />
+          </>
+        ) : null}
         <Script
           src="https://app.itstime.pro/widget.js"
           data-widget-key="sGN8WHpExmKo1LBtGudzZA5sejoxEYQt"
