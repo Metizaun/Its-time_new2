@@ -1,0 +1,117 @@
+{
+  "slug": "atendimento-com-ia-quando-a-voz-explica-melhor",
+  "title": "Atendimento com IA: quando a voz explica melhor",
+  "excerpt": "Uma receita com dois graus e três tratamentos não cabe em uma mensagem curta. Em alguns casos, uma resposta em áudio, com a voz da própria ótica, explica melhor que texto.",
+  "category": "Atendimento com IA",
+  "date": "2026-10-21",
+  "author": "Livia",
+  "art": "conversation",
+  "takeaway": "Algumas respostas ganham em áudio: a voz entra quando a explicação é longa, e a loja escolhe voz e tom para soar como a própria ótica.",
+  "cover": {
+    "src": "/blog/atendimento-com-ia-quando-a-voz-explica-melhor/cover-c044ceb9.webp",
+    "alt": "Atendente de perfil falando ao celular enquanto segura uma armação no balcão de uma ótica",
+    "caption": ""
+  },
+  "blocks": [
+    {
+      "type": "text",
+      "id": "uma-duvida-que-nao-cabe-em-uma-linha",
+      "title": "E quando a dúvida não cabe em uma linha?",
+      "paragraphs": [
+        "Uma cliente pergunta pelo Instagram da ótica a diferença entre a lente com filtro de luz azul e a fotossensível, para quem passa 8 horas no computador e dirige à noite. Escrever isso em texto dá quatro parágrafos que ninguém lê. Falar leva 40 segundos, o tempo de a cliente ouvir enquanto volta do trabalho de ônibus.",
+        "O texto é o formato certo para o que é simples: horário, endereço, prazo. Para o que pede comparação, a voz é mais próxima e mais fácil de acompanhar.",
+        "A regra de ouro é escolher o formato pela explicação, e não pelo costume de quem atende. Quem passa 8 horas no computador quer ouvir a diferença entre duas lentes em 40 segundos, e não ler uma bula."
+      ]
+    },
+    {
+      "type": "text",
+      "id": "quando-o-audio-entra",
+      "title": "Quando a voz entra no lugar do texto?",
+      "paragraphs": [
+        "Três situações em que o áudio resolve melhor que o texto."
+      ],
+      "subsections": [
+        {
+          "title": "Explicação com mais de uma opção",
+          "paragraphs": [
+            "Comparar lentes, tratamentos ou prazos pede tom de conversa. Em áudio, a diferença cabe em poucas frases, e a resposta fecha com uma pergunta simples para a cliente decidir."
+          ]
+        },
+        {
+          "title": "Explicação de receita",
+          "paragraphs": [
+            "Uma receita com cilindro alto e duas opções de lente rende melhor em voz do que em quatro parágrafos. A resposta diz o que a leitura da foto mostrou e o que muda entre as opções."
+          ]
+        },
+        {
+          "title": "Resposta que já pede muitos blocos",
+          "paragraphs": [
+            "O ideal é responder curto, em blocos. Quando a resposta não cabe em poucos blocos, a voz resolve em uma mensagem só."
+          ]
+        }
+      ]
+    },
+    {
+      "type": "text",
+      "id": "planejar-a-resposta",
+      "title": "O que a loja controla na voz?",
+      "paragraphs": [
+        "A ótica escolhe a voz e a personalidade do atendimento, e as regras da loja ficam escritas ali. O tom pode ser Equilibrado (cordial e objetivo) ou Construtivo.",
+        "O atendimento também consulta os dados cadastrados da empresa: endereço, médicos e valores. Sem esse cadastro, o áudio fica genérico, tão vazio quanto o texto. Quem cadastra lentes, parcelamento e horários no WhatsApp, no site, no Instagram e no Messenger dá à voz o que dizer. Uma ótica com 3 unidades cadastra o endereço e o horário de cada uma."
+      ]
+    },
+    {
+      "type": "callout",
+      "title": "O que a voz não faz",
+      "text": "A voz não fecha venda. A resposta nunca oferece desconto que ninguém autorizou e nunca confirma estoque sem consultar uma fonte válida. Preço fechado e comprovante de pagamento são do vendedor. Isso ainda não significa que todo áudio substitui o texto: o que é simples continua em mensagem curta.",
+      "tone": "note"
+    },
+    {
+      "type": "text",
+      "id": "a-voz-da-propria-otica",
+      "title": "A voz da própria ótica",
+      "paragraphs": [
+        "A Its Time decide sozinha quando uma explicação pede áudio e responde com a voz e o tom que a loja escolheu, no WhatsApp ou no Instagram. A cliente ouve a ótica explicando em 40 segundos, e a equipe não gasta o dia gravando mensagem."
+      ]
+    },
+    {
+      "type": "cta",
+      "title": "A explicação certa, no formato certo",
+      "text": "Converse com a Its Time pelo WhatsApp e veja como seria uma explicação de lentes em áudio, com a voz da sua ótica.",
+      "label": "Conversar no WhatsApp"
+    },
+    {
+      "type": "faq",
+      "id": "duvidas",
+      "title": "Dúvidas sobre áudio no atendimento",
+      "items": [
+        {
+          "question": "Toda resposta vira áudio?",
+          "answer": "Não. O que é simples segue em texto curto. O áudio entra quando a explicação é longa."
+        },
+        {
+          "question": "Posso escolher a voz?",
+          "answer": "Sim. A voz e o tom são escolhidos pela loja."
+        }
+      ]
+    }
+  ],
+  "authorProfile": {
+    "name": "Livia",
+    "role": "Redatora",
+    "bio": "Redação da Its Time sobre atendimento, CRM e jornadas comerciais.",
+    "kind": "Person",
+    "url": "/"
+  },
+  "archetype": "explicador",
+  "tags": [
+    "ia",
+    "audio",
+    "atendimento"
+  ],
+  "relatedSlugs": [
+    "ia-de-atendimento-para-oticas-da-pergunta-ao-orcamento",
+    "o-que-esperar-de-uma-ia-de-atendimento-numa-otica"
+  ],
+  "editorialNote": "Texto montado a partir do banco de funcionalidades do produto, sem dados de clientes. Os exemplos são ilustrativos."
+}
