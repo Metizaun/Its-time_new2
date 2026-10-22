@@ -47,6 +47,7 @@ export function SiteFooter() {
               <li><CookiePreferencesButton /></li>
               <li><Link href="/blog">Blog</Link></li>
               <li><Link href="/updates">Atualizações</Link></li>
+              <li><Link href="/tutoriais/whatsapp-oficial">Tutoriais</Link></li>
             </ul>
           </nav>
         </div>

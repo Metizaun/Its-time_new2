@@ -5,25 +5,37 @@ type DocumentationSidebarProps = {
   sections: readonly (readonly [string, string])[];
 };
 
-const documentationLinks = [
-  { href: "/dev/documentacao/agenda", label: "Agenda Universal", meta: "Sincronização" },
-  { href: "/dev/documentacao/webhook-leads", label: "Webhook de leads", meta: "Entrada CRM" },
-  { href: "/dev/documentacao/webhook-cobranca", label: "Webhook de cobrança", meta: "Coleções" },
-  { href: "/dev/documentacao/jornadas-rb", label: "Jornadas RB", meta: "Automações" },
+// Tutoriais são para quem usa o CRM; Documentação é para quem integra sistemas.
+const linkGroups = [
+  {
+    label: "Tutoriais",
+    links: [{ href: "/tutoriais/whatsapp-oficial", label: "WhatsApp oficial", meta: "Conexão" }],
+  },
+  {
+    label: "Documentação",
+    links: [
+      { href: "/dev/documentacao/agenda", label: "Agenda Universal", meta: "Sincronização" },
+      { href: "/dev/documentacao/webhook-leads", label: "Webhook de leads", meta: "Entrada CRM" },
+      { href: "/dev/documentacao/webhook-cobranca", label: "Webhook de cobrança", meta: "Coleções" },
+      { href: "/dev/documentacao/jornadas-rb", label: "Jornadas RB", meta: "Automações" },
+    ],
+  },
 ] as const;
 
 export function DocumentationSidebar({ currentPath, sections }: DocumentationSidebarProps) {
   return (
     <aside className="space-y-4 lg:sticky lg:top-24">
+      {linkGroups.map((group) => (
       <nav
-        aria-label="Documentação"
+        key={group.label}
+        aria-label={group.label}
         className="rounded-2xl border border-[var(--border-default)] bg-[var(--color-surface-2)] p-4 shadow-sm"
       >
         <p className="mb-3 font-mono text-xs font-semibold uppercase tracking-wider text-[var(--color-primary-600)]">
-          Documentação
+          {group.label}
         </p>
         <ul className="grid gap-1">
-          {documentationLinks.map((item) => {
+          {group.links.map((item) => {
             const isCurrent = item.href === currentPath;
 
             return (
@@ -53,6 +65,7 @@ export function DocumentationSidebar({ currentPath, sections }: DocumentationSid
           })}
         </ul>
       </nav>
+      ))}
 
       <nav
         aria-label="Nesta página"
