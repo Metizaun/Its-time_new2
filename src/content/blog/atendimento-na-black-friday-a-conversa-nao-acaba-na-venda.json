@@ -1,0 +1,124 @@
+{
+  "slug": "atendimento-na-black-friday-a-conversa-nao-acaba-na-venda",
+  "title": "Atendimento na Black Friday: a conversa não acaba na venda",
+  "excerpt": "50% dos consumidores pesquisam ofertas mais de um mês antes e só 20% compram apenas na sexta. O atendimento precisa de um plano para antes, durante e depois do dia 27.",
+  "category": "Estratégia comercial",
+  "date": "2026-10-21",
+  "author": "Livia",
+  "art": "journey",
+  "takeaway": "A maior parte das conversas da Black Friday acontece fora do dia 27: planeje o atendimento para o mês inteiro, não só para a sexta.",
+  "cover": {
+    "src": "/blog/atendimento-na-black-friday-a-conversa-nao-acaba-na-venda/cover-5d3f740f.webp",
+    "alt": "Duas atendentes ocupadas com clientes no balcão movimentado de uma ótica",
+    "caption": ""
+  },
+  "blocks": [
+    {
+      "type": "text",
+      "id": "abertura",
+      "title": "Só 20% concentram a compra na sexta",
+      "paragraphs": [
+        "A Black Friday de 2026 cai em 27 de novembro, mas só 20% dos consumidores planejam concentrar as compras nesse dia. A conta vem da pesquisa da LWSA com a Opinion Box, que ouviu 1.044 pessoas e foi citada pelo [O Globo](https://oglobo.globo.com/patrocinado/dino/noticia/2026/10/14/black-friday-amplia-demanda-no-varejo-e-exige-planejamento-1.ghtml) em 14 de outubro.",
+        "Os outros números da mesma pesquisa apontam para um mês inteiro de conversa: 50% começam a pesquisar ofertas mais de 30 dias antes e 54% distribuem as compras por novembro. A pesquisa é do consumidor em geral, não de ótica, mas o balcão sente o mesmo.",
+        "Uma ótica que prepara só o dia 27 deixa sem plano as quatro semanas em que as perguntas chegam."
+      ]
+    },
+    {
+      "type": "table",
+      "id": "tres-fases",
+      "title": "Três fases, uma conversa só",
+      "columns": [
+        "Fase",
+        "Período",
+        "O que o cliente precisa",
+        "O que a ótica entrega"
+      ],
+      "rows": [
+        [
+          "Antes",
+          "16 de outubro a 26 de novembro",
+          "Resposta rápida sobre preço, grau e prazo, a qualquer hora",
+          "Conversa qualificada esperando o vendedor de manhã"
+        ],
+        [
+          "Durante",
+          "27 de novembro",
+          "Resposta em segundos, mesmo com a fila cheia",
+          "Nenhuma pergunta esperando enquanto o vendedor fecha valores"
+        ],
+        [
+          "Depois",
+          "A partir de 28 de novembro",
+          "Retorno do orçamento e lembrete do exame de vista",
+          "Lista de retorno com dono e data, lembrete 1 hora antes do exame"
+        ]
+      ],
+      "caption": "Todo o volume de perguntas precisa de resposta; o tempo do vendedor vai para fechar."
+    },
+    {
+      "type": "text",
+      "id": "regras-antes-do-pico",
+      "title": "Quatro regras antes do pico",
+      "paragraphs": [
+        "Primeira regra: quem responde o quê. Pergunta de preço fechado vai para o vendedor. Pergunta de endereço e horário tem resposta pronta, com os dados reais da loja.",
+        "Segunda: as respostas padrão ficam escritas no começo da campanha, em vez de na cabeça de cada vendedor. Terceira: o histórico acompanha o cliente em todos os canais, e a conversa de sexta continua na terça sem recomeçar. Quarta: cada vendedor responde só pelas lojas dele."
+      ]
+    },
+    {
+      "type": "callout",
+      "title": "O que o preço fechado exige",
+      "text": "Desconto e estoque pedem uma decisão de quem conhece a margem. Uma resposta padrão nunca oferece desconto que ninguém autorizou e nunca confirma estoque sem consultar uma fonte válida. O vendedor fecha o preço e valida o pagamento.",
+      "tone": "note"
+    },
+    {
+      "type": "checklist",
+      "id": "plano-de-continuidade",
+      "title": "Plano de continuidade, de 16 de outubro a dezembro",
+      "items": [
+        "As respostas padrão da loja (prazo, parcelamento, endereço) estão escritas.",
+        "O atendimento responde fora do horário, nos quatro canais.",
+        "Alguém olha as conversas que chegaram à noite às 9h e às 18h na semana do dia 27.",
+        "O lembrete do exame de vista sai 1 hora antes, e a falta vira motivo para nova chamada.",
+        "Os orçamentos de sexta têm um responsável e uma data de retorno na segunda-feira."
+      ]
+    },
+    {
+      "type": "text",
+      "id": "o-mes-inteiro",
+      "title": "Um mês inteiro de conversa, sem fila",
+      "paragraphs": [
+        "É esse o desenho que a Its Time executa: a IA responde nos quatro canais em segundos, qualifica cada conversa e deixa o vendedor com tempo para fechar. A Black Friday deixa de ser uma corrida contra o celular."
+      ]
+    },
+    {
+      "type": "cta",
+      "title": "Uma Black Friday sem fila de mensagens",
+      "text": "Converse com a Its Time pelo WhatsApp e veja como seria o atendimento da sua ótica nas quatro semanas até 27 de novembro.",
+      "label": "Conversar no WhatsApp"
+    }
+  ],
+  "authorProfile": {
+    "name": "Livia",
+    "role": "Redatora",
+    "bio": "Redação da Its Time sobre atendimento, CRM e jornadas comerciais.",
+    "kind": "Person",
+    "url": "/"
+  },
+  "archetype": "guia-pratico",
+  "tags": [
+    "black-friday",
+    "atendimento",
+    "ia"
+  ],
+  "relatedSlugs": [
+    "black-friday-na-otica-comeca-antes-da-sexta-feira",
+    "atendimento-em-varios-canais-a-ia-absorve-o-volume-da-otica"
+  ],
+  "sources": [
+    {
+      "label": "O Globo: Black Friday amplia demanda no varejo e exige planejamento",
+      "url": "https://oglobo.globo.com/patrocinado/dino/noticia/2026/10/14/black-friday-amplia-demanda-no-varejo-e-exige-planejamento-1.ghtml"
+    }
+  ],
+  "editorialNote": "Guia de operação montado a partir das pesquisas citadas nas fontes e do banco de funcionalidades do produto. Os exemplos são ilustrativos."
+}

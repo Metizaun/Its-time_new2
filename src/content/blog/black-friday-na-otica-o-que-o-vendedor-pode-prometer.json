@@ -1,0 +1,115 @@
+{
+  "slug": "black-friday-na-otica-o-que-o-vendedor-pode-prometer",
+  "title": "Black Friday na ótica: o que o vendedor pode prometer?",
+  "excerpt": "Levantamento do Google mostra ticket médio até 23% maior quando a oferta vai além do preço. Antes disso, a equipe precisa saber o que confirma e quem decide.",
+  "category": "Estratégia comercial",
+  "date": "2026-10-22",
+  "author": "Livia",
+  "art": "journey",
+  "takeaway": "Uma vantagem além do preço só vende quando o vendedor sabe exatamente o que confirmar e a quem levar o pedido fora da regra.",
+  "cover": {
+    "src": "/blog/black-friday-na-otica-o-que-o-vendedor-pode-prometer/cover-14b22b54.webp",
+    "alt": "Três funcionários de costas reunidos em volta do balcão de uma ótica antes de abrir",
+    "caption": ""
+  },
+  "blocks": [
+    {
+      "type": "text",
+      "id": "abertura",
+      "title": "O ticket sobe 23%. Só com a regra certa",
+      "paragraphs": [
+        "O ticket médio da Black Friday sobe até 23% quando a oferta traz uma vantagem além do desconto simples, segundo levantamento do Google reproduzido pelo [Estado de Minas](https://www.em.com.br/mundo-corporativo/2026/10/7517381-black-friday-no-varejo-optico-o-que-esperar-em-2026.html). A mesma matéria cita a pesquisa da LWSA: 44% dos consumidores esperam gastar acima de R$ 1 mil na data.",
+        "Numa ótica, a vantagem seria o ajuste da armação incluso ou a limpeza gratuita das lentes. São exemplos, sem promessa de resultado.",
+        "O problema aparece no balcão. A cliente pergunta se o ajuste vale em outra loja e o vendedor não sabe responder. Ele confirma por conta própria ou pede para esperar. A cliente vai comparar em outro lugar."
+      ]
+    },
+    {
+      "type": "text",
+      "id": "o-que-pode-confirmar",
+      "title": "O que o vendedor pode confirmar?",
+      "paragraphs": [
+        "Três respostas precisam existir antes de a campanha ir ao ar, cada uma aprovada por quem responde pelo preço."
+      ],
+      "subsections": [
+        {
+          "title": "O que está incluído na oferta?",
+          "paragraphs": [
+            "A frase diz se a condição vale para armação, lente ou os dois juntos e quais marcas a vantagem extra cobre. O vendedor repete essa frase, sem improviso."
+          ]
+        },
+        {
+          "title": "O que muda de uma loja para outra?",
+          "paragraphs": [
+            "Cada unidade tem equipe, agenda e estoque próprios. Se o ajuste só existe na loja do centro, a mensagem informa isso antes de o cliente sair de casa."
+          ]
+        },
+        {
+          "title": "Quem aprova a exceção?",
+          "paragraphs": [
+            "O pedido fora da regra (desconto maior, prazo diferente) sobe para uma pessoa com nome. O vendedor explica a oferta aprovada e encaminha o resto."
+          ]
+        }
+      ]
+    },
+    {
+      "type": "callout",
+      "title": "O que o número de 23% não significa",
+      "text": "O levantamento do Google retrata o varejo em geral e ainda não separa as óticas. Em cada loja, o resultado depende do custo da vantagem e do que ela consegue entregar. Escolha um benefício com custo conhecido.",
+      "tone": "note"
+    },
+    {
+      "type": "text",
+      "id": "duas-respostas",
+      "title": "A mesma resposta, em qualquer dia",
+      "paragraphs": [
+        "O mesmo texto do [Estado de Minas](https://www.em.com.br/mundo-corporativo/2026/10/7517381-black-friday-no-varejo-optico-o-que-esperar-em-2026.html) cita que 54% dos consumidores vão distribuir as compras ao longo de novembro. A cliente fala com dois vendedores em semanas diferentes, às vezes com duas lojas. As duas respostas precisam coincidir, porque a cliente vai comparar uma com a outra no WhatsApp e na loja.",
+        "Imagine esse balcão afinado: a condição está escrita, cada loja confirma só o que entrega e o desconto nunca passa do teto aprovado, nem às 22h de um domingo, nem quando o vendedor de Campinas está de folga e o de Santos assume a conversa. A Its Time foi desenhada para atender assim, com as condições cadastradas e sem desconto que ninguém autorizou."
+      ]
+    },
+    {
+      "type": "faq",
+      "id": "perguntas",
+      "title": "Perguntas sobre prometer na Black Friday",
+      "items": [
+        {
+          "question": "O vendedor precisa ter autonomia para mudar a oferta?",
+          "answer": "Não. Ele precisa de uma resposta clara para as perguntas previsíveis e de um caminho rápido para as imprevisíveis."
+        },
+        {
+          "question": "As condições têm de ser iguais em todas as lojas?",
+          "answer": "Não necessariamente. Se agenda ou serviço variam, a diferença aparece na divulgação e cada equipe sabe o que confirma."
+        }
+      ]
+    },
+    {
+      "type": "cta",
+      "title": "Atendimento que sustenta a oferta",
+      "text": "Converse com a Its Time pelo WhatsApp e veja como a sua condição de Black Friday seria respondida igual, em qualquer horário.",
+      "label": "Conversar no WhatsApp"
+    }
+  ],
+  "authorProfile": {
+    "name": "Livia",
+    "role": "Redatora",
+    "bio": "Redação da Its Time sobre atendimento, CRM e jornadas comerciais.",
+    "kind": "Person",
+    "url": "/"
+  },
+  "archetype": "explicador",
+  "tags": [
+    "black-friday",
+    "equipe",
+    "oferta"
+  ],
+  "relatedSlugs": [
+    "black-friday-para-otica-oferta-que-respeita-o-estoque",
+    "black-friday-para-otica-como-explicar-a-ia-e-os-dados"
+  ],
+  "sources": [
+    {
+      "label": "Estado de Minas: Black Friday no varejo óptico, o que esperar em 2026",
+      "url": "https://www.em.com.br/mundo-corporativo/2026/10/7517381-black-friday-no-varejo-optico-o-que-esperar-em-2026.html"
+    }
+  ],
+  "editorialNote": "Guia de operação montado a partir das pesquisas citadas nas fontes e do banco de funcionalidades do produto. Os exemplos são ilustrativos."
+}

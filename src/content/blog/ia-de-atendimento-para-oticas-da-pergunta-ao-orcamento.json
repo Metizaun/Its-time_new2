@@ -1,0 +1,109 @@
+{
+  "slug": "ia-de-atendimento-para-oticas-da-pergunta-ao-orcamento",
+  "title": "IA de atendimento para óticas: da pergunta ao orçamento",
+  "excerpt": "“Quanto custa uma lente?” é a pergunta mais comum e a mais difícil de responder sem contexto. Uma boa triagem pergunta se é grau ou sol e lê a receita antes de o vendedor entrar.",
+  "category": "Atendimento com IA",
+  "date": "2026-10-21",
+  "author": "Livia",
+  "art": "journey",
+  "takeaway": "A pergunta de preço só vira orçamento quando a conversa chega ao vendedor com o tipo de lente e a receita, e a triagem pode acontecer fora do expediente.",
+  "cover": {
+    "src": "/blog/ia-de-atendimento-para-oticas-da-pergunta-ao-orcamento/cover-cf3a9e75.webp",
+    "alt": "Mão de atendente deslizando um estojo de óculos pelo balcão de vidro de uma ótica",
+    "caption": ""
+  },
+  "blocks": [
+    {
+      "type": "text",
+      "id": "a-pergunta-chega-depois-do-expediente",
+      "title": "Quanto custa uma lente? A pergunta das 22h",
+      "paragraphs": [
+        "São 22h e uma cliente escreve no WhatsApp: “quanto custa uma lente?”. Sem contexto, não existe resposta certa. O preço muda com o grau, o tratamento, o tipo de lente e a armação.",
+        "Se a loja só responde de manhã, a cliente já perguntou para três óticas. Se responde com um valor solto, atrai quem compara só preço e queima a negociação. Nos dois casos, o primeiro contato fica sem aproveitamento. É nessa janela, entre o último cliente do dia e a abertura da loja, que a pergunta de preço esfria.",
+        "A resposta certa às 22h é uma boa triagem: a conversa começa na hora e já faz as perguntas que o vendedor faria."
+      ]
+    },
+    {
+      "type": "steps",
+      "id": "do-preco-a-uma-conversa",
+      "title": "Da pergunta de preço a uma conversa com contexto",
+      "items": [
+        {
+          "title": "1. Grau ou sol?",
+          "text": "A primeira pergunta separa duas conversas diferentes. Se for óculos de grau, pede-se a receita. Se for de sol, a foto do modelo que a cliente quer."
+        },
+        {
+          "title": "2. A receita vira um resumo",
+          "text": "A foto da receita é lida e vira esférico, cilíndrico e eixo, num resumo para a equipe e para a cliente, no lugar de uma receita digitada errada às pressas."
+        },
+        {
+          "title": "3. A recomendação segue a regra da loja",
+          "text": "Para sugerir lentes, a triagem usa parâmetros que a ótica define: esférico mínimo e máximo, cilíndrico, tratamentos, prioridade de venda e parcelamento."
+        },
+        {
+          "title": "4. O vendedor abre a conversa já pronta",
+          "text": "De manhã, a conversa chega qualificada: tipo de lente, receita lida e dúvida principal. O preço fechado fica com o vendedor, que começa pela proposta."
+        }
+      ]
+    },
+    {
+      "type": "text",
+      "id": "qualificar-sem-formulario",
+      "title": "Qualificar sem virar formulário",
+      "paragraphs": [
+        "A boa triagem responde curto, em blocos, e não despeja 10 perguntas de uma vez: faz uma, ouve e segue. O tom é cordial e objetivo. Quando a explicação é longa, uma mensagem de voz rende mais que quatro parágrafos de texto, como no caso de uma receita com cilindro alto e duas opções de lente."
+      ]
+    },
+    {
+      "type": "callout",
+      "title": "O cadastro decide o quanto a triagem acerta",
+      "text": "A resposta depende do que a loja cadastrou. Com lentes, médicos, horários e valores preenchidos, ela responde com dado real no WhatsApp, no site, no Instagram e no Messenger. Sem isso, a resposta fica genérica e o cliente percebe. A leitura da receita depende da qualidade da foto: o resumo é um apoio, e quem fecha o orçamento é o vendedor.",
+      "tone": "attention"
+    },
+    {
+      "type": "text",
+      "id": "a-triagem-que-nao-dorme",
+      "title": "A triagem que não dorme",
+      "paragraphs": [
+        "É isso que a Its Time faz às 22h de qualquer dia: responde na hora, pergunta se o óculos é de grau ou de sol, lê a receita e deixa a conversa pronta para o vendedor. A cliente recebe atenção quando quer comprar, e o orçamento nasce com contexto."
+      ]
+    },
+    {
+      "type": "cta",
+      "title": "A pergunta das 22h, respondida",
+      "text": "Converse com a Its Time pelo WhatsApp e veja como uma pergunta de preço chegaria ao seu vendedor, já qualificada.",
+      "label": "Conversar no WhatsApp"
+    },
+    {
+      "type": "checklist",
+      "id": "antes-de-levar-a-ia",
+      "title": "Antes de colocar a triagem para atender",
+      "items": [
+        "Os valores das lentes mais vendidas estão cadastrados, com parcelamento.",
+        "Endereço e horário de cada unidade estão preenchidos.",
+        "Os parâmetros de recomendação (esférico, cilíndrico, tratamentos) estão definidos.",
+        "A equipe sabe que preço fechado e comprovante de pagamento são do vendedor.",
+        "Alguém olha as conversas qualificadas às 9h, a primeira coisa do dia."
+      ]
+    }
+  ],
+  "authorProfile": {
+    "name": "Livia",
+    "role": "Redatora",
+    "bio": "Redação da Its Time sobre atendimento, CRM e jornadas comerciais.",
+    "kind": "Person",
+    "url": "/"
+  },
+  "archetype": "guia-pratico",
+  "tags": [
+    "ia",
+    "atendimento",
+    "orcamento",
+    "receita"
+  ],
+  "relatedSlugs": [
+    "atendimento-fora-do-horario-a-mensagem-das-22h-na-otica",
+    "atendimento-com-ia-quando-a-voz-explica-melhor"
+  ],
+  "editorialNote": "Texto montado a partir do banco de funcionalidades do produto, sem dados de clientes. Os exemplos são ilustrativos."
+}
