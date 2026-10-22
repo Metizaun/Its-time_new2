@@ -1,3 +1,4 @@
+import { CookiePreferencesButton } from "@/components/CookieConsent";
 import Link from "next/link";
 import { ArrowUpRight, AtSign, Mail, MessageCircle } from "lucide-react";
 import { whatsappLinkProps } from "@/lib/whatsapp";
@@ -42,6 +43,8 @@ export function SiteFooter() {
             <ul>
               <li><Link href="/termos-de-uso">Termos de uso</Link></li>
               <li><Link href="/politica-de-privacidade">Política de privacidade</Link></li>
+              <li><Link href="/exclusao-de-dados">Exclusão de dados</Link></li>
+              <li><CookiePreferencesButton /></li>
               <li><Link href="/blog">Blog</Link></li>
               <li><Link href="/updates">Atualizações</Link></li>
             </ul>

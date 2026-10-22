@@ -328,7 +328,7 @@ export function CashFlow() {
             <span className="cc-hub-core">
               <Image
                 src="/assets/brand/its-time-mark-transparent-clean.png"
-                alt="Its Time IA"
+                alt="Its Time CRM"
                 width={48}
                 height={50}
                 sizes="40px"

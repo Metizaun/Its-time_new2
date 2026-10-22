@@ -21,6 +21,12 @@ export function LegalLinks() {
       >
         Termos de uso
       </Link>
+      <Link
+        href="/exclusao-de-dados"
+        className="transition-colors hover:text-[var(--color-primary-600)] focus-visible:shadow-focus"
+      >
+        Exclusão de dados
+      </Link>
     </nav>
   );
 }

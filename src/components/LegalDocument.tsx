@@ -1,11 +1,12 @@
 "use client";
 
 import { useEffect, type ReactNode } from "react";
-import { ArrowLeft, FileText, Mail, ShieldCheck } from "lucide-react";
+import { ArrowLeft, FileText, Mail, ShieldCheck, Trash2 } from "lucide-react";
 import Link from "next/link";
 import { LegalLinks } from "@/components/LegalLinks";
+import { DeletionStatus } from "@/components/DeletionStatus";
 
-type DocumentKind = "privacy" | "terms";
+export type DocumentKind = "privacy" | "terms" | "deletion";
 
 type Section = {
   id: string;
@@ -24,6 +25,22 @@ function SectionLabel({ children }: { children: ReactNode }) {
       <span aria-hidden="true" className="h-0.5 w-5 bg-[var(--color-primary-500)]" />
       {children}
     </p>
+  );
+}
+
+function EmailLink() {
+  return (
+    <a className="font-semibold text-[var(--color-primary-600)] underline underline-offset-4" href={"mailto:" + companyEmail}>
+      {companyEmail}
+    </a>
+  );
+}
+
+function DeletionLink() {
+  return (
+    <Link className="font-semibold text-[var(--color-primary-600)] underline underline-offset-4" href="/exclusao-de-dados">
+      itstime.pro/exclusao-de-dados
+    </Link>
   );
 }
 
@@ -84,7 +101,8 @@ const privacySections: Section[] = [
             "mensagens, imagens, áudios, documentos e metadados de atendimento;",
             "origem do contato, etiquetas, anotações, oportunidades e agendamentos;",
             "registros técnicos, ações realizadas e informações de segurança; e",
-            "identificadores, configurações e status de integrações.",
+            "identificadores, configurações e status de integrações; e",
+            "nas integrações com Instagram e Messenger, o identificador da conta ou da Página, o nome e a foto de perfil públicos do contato e o conteúdo das conversas.",
           ]}
         />
         <p className="mt-4">
@@ -122,13 +140,25 @@ const privacySections: Section[] = [
   },
   {
     id: "ia",
-    title: "WhatsApp, Meta e inteligência artificial",
+    title: "WhatsApp, Instagram, Messenger e inteligência artificial",
     content: (
       <>
         <p>
-          Canais conectados podem envolver Meta, WhatsApp Business e parceiros
-          como a Gupshup. Recursos de IA podem apoiar transcrição, compreensão de
-          mensagens, organização, classificação e elaboração de respostas.
+          Canais conectados podem envolver a Meta (WhatsApp Business Platform,
+          Instagram e Messenger) e parceiros como a Gupshup. A conexão é feita
+          pela própria empresa contratante e pode ser desfeita por ela a
+          qualquer momento nas configurações da Meta ou do Its Time CRM.
+        </p>
+        <p className="mt-4">
+          Recursos de IA podem apoiar transcrição, compreensão de mensagens,
+          organização, classificação e elaboração de respostas. Para isso,
+          trechos das conversas são processados pelos fornecedores OpenAI
+          (geração de respostas, transcrição de áudio e leitura de imagens),
+          Google (modelos Gemini e serviços de mapas) e ElevenLabs (voz
+          sintetizada, quando habilitada). Não autorizamos esses fornecedores a
+          usar os dados para treinar seus próprios modelos. Os agentes de IA
+          atendem somente sobre a empresa contratante e podem ser pausados, com
+          a conversa assumida por uma pessoa da equipe.
         </p>
         <p className="mt-4">
           Os resultados podem conter erros. A empresa contratante deve
@@ -155,8 +185,24 @@ const privacySections: Section[] = [
           Alguns fornecedores podem processar dados fora do Brasil. A
           transferência internacional observará a LGPD e a regulamentação da
           ANPD, com finalidade, necessidade, transparência, segurança e direitos
-          compatíveis. A lista de fornecedores, destinos e mecanismos aplicáveis
-          deve ser mantida atualizada conforme os serviços realmente utilizados.
+          compatíveis.
+        </p>
+        <p className="mt-4">Fornecedores que podem tratar dados em nosso nome:</p>
+        <BulletList
+          items={[
+            "Meta Platforms (WhatsApp, Instagram e Messenger): canais de mensagem; Estados Unidos e Irlanda;",
+            "Gupshup: parceiro de envio de mensagens WhatsApp; Estados Unidos e Índia;",
+            "OpenAI: inteligência artificial e transcrição; Estados Unidos;",
+            "Google: inteligência artificial (Gemini) e mapas; Estados Unidos;",
+            "ElevenLabs: voz sintetizada; Estados Unidos;",
+            "Vercel: hospedagem da interface do sistema; Estados Unidos; e",
+            "provedor de servidores em nuvem: hospedagem do banco de dados e dos serviços do CRM.",
+          ]}
+        />
+        <p className="mt-4">
+          As transferências internacionais se apoiam nas hipóteses do artigo 33
+          da LGPD, como cláusulas contratuais e a execução do contrato com a
+          empresa contratante.
         </p>
       </>
     ),
@@ -168,9 +214,16 @@ const privacySections: Section[] = [
       <>
         <p>
           Conservamos os dados pelo período necessário às finalidades, ao
-          contrato, às obrigações legais e ao exercício regular de direitos.
-          Prazos variam por categoria, finalidade, conta e obrigação aplicável.
+          contrato, às obrigações legais e ao exercício regular de direitos:
         </p>
+        <BulletList
+          items={[
+            "após o encerramento do contrato, a empresa tem 30 dias para exportar seus dados, que são excluídos em até 90 dias;",
+            "pedidos de exclusão de titulares são atendidos em até 15 dias;",
+            "cópias de segurança são substituídas no seu ciclo normal de rotação; e",
+            "dados que a lei obriga a guardar são mantidos apenas pelo prazo legal e com acesso restrito.",
+          ]}
+        />
         <p className="mt-4">
           Adotamos medidas compatíveis com o risco, incluindo controle de
           acesso, segregação lógica entre contas, proteção de credenciais,
@@ -204,6 +257,10 @@ const privacySections: Section[] = [
           . Podemos solicitar dados para confirmar a identidade. Quando a Its
           Time for Operadora, encaminharemos o pedido à Controladora.
         </p>
+        <p className="mt-4">
+          Para pedir a exclusão dos seus dados, veja o passo a passo em{" "}
+          <DeletionLink />.
+        </p>
       </>
     ),
   },
@@ -214,8 +271,13 @@ const privacySections: Section[] = [
       <>
         <p>
           Utilizamos cookies e armazenamento local necessários para sessão,
-          segurança, preferências e funcionamento da interface. Não usamos
-          cookies de publicidade comportamental nesta aplicação.
+          segurança, preferências e funcionamento da interface. No site
+          itstime.pro também usamos o Google Analytics, que grava cookies para
+          medir visitas, páginas vistas e cliques de forma agregada, somente
+          depois que você aceita no aviso de cookies. A Umami mede sem cookies.
+          Não usamos cookies de publicidade comportamental. Você pode mudar sua
+          escolha a qualquer momento em Preferências de cookies, no rodapé do
+          site, ou apagar cookies nas configurações do navegador.
         </p>
         <div className="mt-4 rounded-xl border border-border bg-[var(--color-surface-2)] p-4 text-[var(--color-gray-700)]">
           <p className="font-semibold text-[var(--color-gray-900)]">
@@ -283,8 +345,10 @@ const termsSections: Section[] = [
     title: "WhatsApp e integrações",
     content: (
       <p>
-        A plataforma pode oferecer integrações com WhatsApp Business, Meta,
-        Gupshup e outros provedores. A Contratante deve obter autorizações,
+        A plataforma pode oferecer integrações com WhatsApp Business, Instagram,
+        Messenger, Meta, Gupshup e outros provedores. Quando a empresa conecta
+        sua própria conta do WhatsApp Business Platform, as mensagens são
+        cobradas pela Meta diretamente da empresa, conforme a tabela da Meta. A Contratante deve obter autorizações,
         respeitar opt-in, templates, janelas de atendimento e políticas dos
         canais. A disponibilidade depende também desses provedores.
       </p>
@@ -355,6 +419,11 @@ const termsSections: Section[] = [
           fornecedores ou legislação. A versão vigente ficará disponível nesta
           página e alterações materiais serão comunicadas quando aplicável.
         </p>
+        <p className="mt-4">
+          Estes Termos são regidos pelas leis da República Federativa do Brasil.
+          Fica eleito o foro da comarca de Porto Alegre/RS para resolver
+          eventuais controvérsias, salvo disposição legal em contrário.
+        </p>
         <div className="mt-4 rounded-xl border border-border bg-[var(--color-surface-2)] p-4 text-[var(--color-gray-700)]">
           <p className="font-semibold text-[var(--color-gray-900)]">{company}</p>
           <p className="mt-1">CNPJ 68.427.775/0001-81</p>
@@ -366,14 +435,100 @@ const termsSections: Section[] = [
   },
 ];
 
+const deletionSections: Section[] = [
+  {
+    id: "quem-pode-pedir",
+    title: "Quem pode pedir",
+    content: (
+      <>
+        <p>
+          Qualquer pessoa pode pedir a exclusão dos dados pessoais que o Its
+          Time CRM trata sobre ela:
+        </p>
+        <BulletList
+          items={[
+            "usuários das empresas clientes, sobre seus dados de cadastro e acesso; e",
+            "clientes e contatos atendidos pelas empresas que usam o Its Time CRM, inclusive por WhatsApp, Instagram ou Messenger.",
+          ]}
+        />
+        <p className="mt-4">
+          Quando os dados pertencem a uma empresa cliente (por exemplo, uma
+          conversa com uma ótica ou clínica), encaminhamos o pedido a ela, que é
+          a Controladora, e acompanhamos a execução.
+        </p>
+      </>
+    ),
+  },
+  {
+    id: "como-pedir",
+    title: "Como pedir",
+    content: (
+      <>
+        <p>Você pode fazer o pedido de duas formas:</p>
+        <BulletList
+          items={[
+            "pelo Facebook ou Instagram: em Configurações, abra Apps e sites, remova o app Its Time CRM e escolha excluir as informações. Você recebe um código de confirmação;",
+            "por e-mail: escreva para " + companyEmail + " com o assunto Exclusão de dados, informando o nome e o telefone ou perfil usado no atendimento.",
+          ]}
+        />
+        <p className="mt-4">
+          Podemos pedir informações para confirmar a sua identidade antes de
+          excluir os dados.
+        </p>
+      </>
+    ),
+  },
+  {
+    id: "prazos",
+    title: "Prazos e o que é excluído",
+    content: (
+      <>
+        <p>
+          Atendemos o pedido em até 15 dias. São excluídos os dados de cadastro,
+          as conversas e os registros de atendimento ligados a você.
+        </p>
+        <p className="mt-4">
+          Dados que a lei obriga a guardar, como registros fiscais ou de
+          acesso, são mantidos apenas pelo prazo legal e com acesso restrito.
+          Cópias de segurança são substituídas no seu ciclo normal de rotação.
+        </p>
+      </>
+    ),
+  },
+  {
+    id: "status",
+    title: "Acompanhar o pedido",
+    content: (
+      <>
+        <p>
+          Se você recebeu um código de confirmação, use o campo abaixo para ver
+          a situação do pedido.
+        </p>
+        <DeletionStatus />
+        <p className="mt-4">
+          Dúvidas: <EmailLink />.
+        </p>
+      </>
+    ),
+  },
+];
+
 const documentConfig: Record<
   DocumentKind,
-  { title: string; eyebrow: string; description: string; sections: Section[]; icon: typeof ShieldCheck }
+  {
+    title: string;
+    eyebrow: string;
+    description: string;
+    version: string;
+    sections: Section[];
+    icon: typeof ShieldCheck;
+  }
 > = {
   privacy: {
     title: "Política de Privacidade",
     eyebrow: "TRANSPARÊNCIA E DADOS",
     description: "Como a Its Time trata dados pessoais no CRM, nos canais de atendimento e nas integrações.",
+    version: "Versão 1.2 · Última atualização: 22 de outubro de 2026",
     sections: privacySections,
     icon: ShieldCheck,
   },
@@ -381,8 +536,17 @@ const documentConfig: Record<
     title: "Termos de Serviço",
     eyebrow: "CONTRATAÇÃO E USO",
     description: "Regras gerais para contratação e uso da plataforma Its Time CRM por empresas.",
+    version: "Versão 1.2 · Última atualização: 22 de outubro de 2026",
     sections: termsSections,
     icon: FileText,
+  },
+  deletion: {
+    title: "Exclusão de dados",
+    eyebrow: "SEUS DIREITOS",
+    description: "Como pedir a exclusão dos seus dados pessoais do Its Time CRM e acompanhar o pedido.",
+    version: "Versão 1.0 · Última atualização: 22 de outubro de 2026",
+    sections: deletionSections,
+    icon: Trash2,
   },
 };
 
@@ -399,7 +563,7 @@ export default function LegalDocument({ document: documentKind }: { document: Do
         <div className="mx-auto flex min-h-14 max-w-6xl items-center justify-between gap-4 px-4 sm:px-6 lg:px-8">
           <Link href="/" className="group inline-flex items-center gap-2 text-sm font-medium text-[var(--color-gray-600)] transition-colors hover:text-[var(--color-gray-900)] focus-visible:shadow-focus">
             <ArrowLeft className="h-4 w-4 transition-transform group-hover:-translate-x-0.5" aria-hidden="true" />
-            <span>Voltar para o acesso</span>
+            <span>Voltar para o site</span>
           </Link>
           <div className="flex items-center gap-2">
             <div className="flex h-7 w-7 items-center justify-center rounded-md bg-[var(--color-bg-inverse)] shadow-sm" aria-hidden="true">
@@ -421,7 +585,7 @@ export default function LegalDocument({ document: documentKind }: { document: Do
               <p className="font-mono text-xs font-semibold uppercase tracking-wider text-[var(--color-primary-600)]">{config.eyebrow}</p>
               <h1 className="mt-3 text-3xl font-extrabold tracking-tight text-[var(--color-gray-900)] sm:text-5xl">{config.title}</h1>
               <p className="mt-4 max-w-2xl text-base leading-relaxed text-[var(--color-gray-600)]">{config.description}</p>
-              <p className="mt-6 font-mono text-xs uppercase tracking-wider text-[var(--color-gray-500)]">Versão 1.1 · Última atualização: 25 de agosto de 2026</p>
+              <p className="mt-6 font-mono text-xs uppercase tracking-wider text-[var(--color-gray-500)]">{config.version}</p>
             </div>
           </div>
         </section>

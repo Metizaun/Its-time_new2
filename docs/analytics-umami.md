@@ -10,6 +10,7 @@ As duas variáveis são públicas e entram no bundle na hora do build. Sem elas,
 docker build --build-arg SHOW_FULL_SITE=true \
   --build-arg NEXT_PUBLIC_UMAMI_SRC=https://stats.itstime.pro/script.js \
   --build-arg NEXT_PUBLIC_UMAMI_WEBSITE_ID=<id do site no painel> \
+  --build-arg NEXT_PUBLIC_GA_MEASUREMENT_ID=G-X5CM9ZYZ5Q \
   -t itstime-site:<sha> .
 ```
 
@@ -35,3 +36,7 @@ Nomes de seção ficam em `ZONES` no tracker. Ao criar uma seção nova, acresce
 ## Mapa de calor e gravação de sessão
 
 O Umami não faz isso. Se quiser ver o mapa de cliques desenhado em cima da página e gravações, a opção grátis é o Microsoft Clarity (um script extra).
+
+## Google Analytics 4
+
+ID de medição: `G-X5CM9ZYZ5Q`. O gtag começa com Consent Mode v2 negado e só grava cookies depois do Aceitar no banner (`CookieConsent`). Os eventos de `track()` vão para a Umami e para o GA4.

@@ -538,7 +538,7 @@ export function CustomerJourney() {
             >
               <span className="jr-hub-ring" aria-hidden="true" />
               <span className="jr-hub-core">
-                <Image src="/assets/brand/its-time-mark-transparent-clean.png" alt="Its Time IA" width={48} height={50} sizes="48px" />
+                <Image src="/assets/brand/its-time-mark-transparent-clean.png" alt="Its Time CRM" width={48} height={50} sizes="48px" />
               </span>
             </motion.div>
           </div>

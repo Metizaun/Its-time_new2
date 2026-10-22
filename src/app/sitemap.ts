@@ -20,5 +20,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${SITE}/updates`, changeFrequency: "monthly", priority: 0.5 },
     { url: `${SITE}/politica-de-privacidade`, changeFrequency: "yearly", priority: 0.2 },
     { url: `${SITE}/termos-de-uso`, changeFrequency: "yearly", priority: 0.2 },
+    { url: `${SITE}/exclusao-de-dados`, changeFrequency: "yearly", priority: 0.2 },
   ];
 }

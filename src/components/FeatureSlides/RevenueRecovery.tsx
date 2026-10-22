@@ -681,7 +681,7 @@ export function RevenueRecovery() {
           <span className="rr-hub-ring" aria-hidden="true" />
           <Image
             src="/assets/brand/its-time-mark-transparent-clean.png"
-            alt="Its Time IA"
+            alt="Its Time CRM"
             width={48}
             height={50}
             sizes="40px"
