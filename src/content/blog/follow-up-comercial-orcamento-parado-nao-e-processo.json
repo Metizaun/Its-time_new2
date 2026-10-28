@@ -1,0 +1,120 @@
+{
+  "slug": "follow-up-comercial-orcamento-parado-nao-e-processo",
+  "title": "Follow-up comercial: orçamento parado não é processo",
+  "excerpt": "Orçamento enviado sem retorno marcado depende da memória do vendedor. Veja como transformar o follow-up em regra: lembrança em 2 horas, reforço em 4 e nenhum cliente esquecido.",
+  "category": "Acompanhamento",
+  "date": "2026-10-28",
+  "author": "Livia",
+  "art": "journey",
+  "takeaway": "Follow-up que depende da memória do vendedor falha na semana mais cheia; vira regra quando cada orçamento tem uma sequência de mensagens com motivo.",
+  "cover": {
+    "src": "/blog/follow-up-comercial-orcamento-parado-nao-e-processo/cover-aa35140f.webp",
+    "alt": "Mão afastando uma pasta de uma pilha esquecida numa gaveta de balcão de ótica",
+    "caption": ""
+  },
+  "blocks": [
+    {
+      "type": "text",
+      "id": "orcamento-esquecido",
+      "title": "O orçamento de sexta, na gaveta de segunda",
+      "paragraphs": [
+        "O vendedor enviou o orçamento da lente multifocal na sexta, às 17h. Na segunda, a loja abre com fila e ninguém lembra de perguntar se a cliente viu. Na terça, a cliente já visitou outra ótica.",
+        "Esse cenário não tem culpado. Follow-up que depende da memória de quem também atende, cobra e conserta falha justamente na semana mais cheia. A solução é tirar a lembrança da cabeça da equipe e colocá-la numa regra.",
+        "A regra é simples. A cliente do exemplo recebe a primeira lembrança na sexta, às 19h, 2 horas depois do orçamento. Se responde, a sequência para. Se não responde, a segunda mensagem sai às 23h, com uma informação nova."
+      ]
+    },
+    {
+      "type": "steps",
+      "id": "roteiro-de-follow-up",
+      "title": "Um roteiro de três mensagens para o orçamento enviado",
+      "items": [
+        {
+          "title": "Mensagem 1, 2 horas sem resposta",
+          "text": "Um lembrete curto, com o nome do cliente: “Oi, Marina, o orçamento da lente ficou com você? Qualquer dúvida, é só falar”. A mensagem leva a foto do modelo ou o PDF do orçamento."
+        },
+        {
+          "title": "Mensagem 2, 4 horas depois",
+          "text": "O reforço traz algo novo: prazo de entrega, parcelamento ou um horário livre para o exame de vista. Informação nova responde melhor que a mesma pergunta repetida."
+        },
+        {
+          "title": "Mensagem 3, do vendedor",
+          "text": "Se o cliente continua em silêncio, a próxima é uma ligação ou uma conversa de uma pessoa. O vendedor decide se insiste ou se encerra, com o histórico à mão."
+        }
+      ]
+    },
+    {
+      "type": "callout",
+      "title": "O que o follow-up não faz",
+      "text": "Nenhuma mensagem de retomada oferece desconto que ninguém autorizou, nem confirma estoque sem conferir. A sequência para quando o cliente responde, e a conversa passa a ser do vendedor.",
+      "tone": "note"
+    },
+    {
+      "type": "text",
+      "id": "cada-cliente-a-sequencia-certa",
+      "title": "Cada cliente recebe a sequência que faz sentido",
+      "paragraphs": [
+        "Quem veio do Instagram não precisa da mesma mensagem de quem veio do site, e o cliente de uma loja não recebe a lembrança da outra. As mensagens levam o nome do cliente e aceitam foto, PDF, áudio e planilha. O envio respeita pausas e horários: de manhã, em volume baixo, para não parecer disparo.",
+        "Na segunda de manhã, o gerente já sabe quem retomar primeiro: os orçamentos de sexta sem resposta."
+      ]
+    },
+    {
+      "type": "checklist",
+      "id": "checklist-retomada-comercial",
+      "title": "Checklist de retomada comercial",
+      "items": [
+        "Todo orçamento enviado tem uma data de retorno.",
+        "A primeira lembrança sai 2 horas depois e a segunda 4 horas depois da primeira.",
+        "A segunda mensagem traz informação nova: prazo, parcelamento ou horário de exame.",
+        "A sequência para quando o cliente responde, e o vendedor assume.",
+        "Quem continua em silêncio recebe uma ligação, sem insistência diária."
+      ]
+    },
+    {
+      "type": "text",
+      "id": "a-rotina-que-roda-sozinha",
+      "title": "A rotina que roda sozinha",
+      "paragraphs": [
+        "É isso que a Its Time faz: a sequência de 2 e 4 horas dispara sozinha, com o nome do cliente, e para quando ele responde. O vendedor passa a semana atendendo quem está na loja, e nenhum orçamento fica esquecido na gaveta."
+      ]
+    },
+    {
+      "type": "cta",
+      "title": "Nenhum orçamento esquecido",
+      "text": "Converse com a Its Time pelo WhatsApp e veja como o follow-up da sua ótica rodaria sem depender de lembrança.",
+      "label": "Conversar no WhatsApp"
+    },
+    {
+      "type": "faq",
+      "id": "duvidas",
+      "title": "Dúvidas sobre follow-up comercial",
+      "items": [
+        {
+          "question": "A mensagem pode sair de madrugada?",
+          "answer": "O melhor horário é de manhã, em volume baixo. O envio com pausas e digitação simulada deixa a conversa natural."
+        },
+        {
+          "question": "O vendedor perde o controle da conversa?",
+          "answer": "Não. Assim que o cliente responde, a sequência para e a conversa volta para a equipe."
+        }
+      ]
+    }
+  ],
+  "authorProfile": {
+    "name": "Livia",
+    "role": "Redatora",
+    "bio": "Redação da Its Time sobre atendimento, CRM e jornadas comerciais.",
+    "kind": "Person",
+    "url": "/"
+  },
+  "archetype": "guia-pratico",
+  "tags": [
+    "follow-up",
+    "orcamento",
+    "automacao"
+  ],
+  "relatedSlugs": [
+    "follow-up-com-ia-o-funil-que-se-atualiza-lendo-a-conversa",
+    "black-friday-para-otica-retome-orcamentos-com-motivo"
+  ],
+  "editorialNote": "Texto montado a partir do banco de funcionalidades do produto, sem dados de clientes. Os exemplos são ilustrativos."
+}
