@@ -9,10 +9,15 @@ export function CookieConsent() {
   const [open, setOpen] = useState(false);
 
   useEffect(() => {
-    if (!readConsent()) setOpen(true);
+    const frame = window.requestAnimationFrame(() => {
+      if (!readConsent()) setOpen(true);
+    });
     const reopen = () => setOpen(true);
     window.addEventListener(OPEN_COOKIE_PREFERENCES, reopen);
-    return () => window.removeEventListener(OPEN_COOKIE_PREFERENCES, reopen);
+    return () => {
+      window.cancelAnimationFrame(frame);
+      window.removeEventListener(OPEN_COOKIE_PREFERENCES, reopen);
+    };
   }, []);
 
   if (!open) return null;

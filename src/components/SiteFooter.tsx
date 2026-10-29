@@ -48,6 +48,7 @@ export function SiteFooter() {
               <li><Link href="/blog">Blog</Link></li>
               <li><Link href="/updates">Atualizações</Link></li>
               <li><Link href="/tutoriais/whatsapp-oficial">Tutoriais</Link></li>
+              <li><Link href="/tutoriais/whatsapp-boas-praticas">Boas práticas no WhatsApp</Link></li>
             </ul>
           </nav>
         </div>

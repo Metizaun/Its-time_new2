@@ -55,8 +55,11 @@ export function DeletionStatus() {
   useEffect(() => {
     const fromUrl = new URLSearchParams(window.location.search).get("codigo");
     if (fromUrl) {
-      setCode(fromUrl);
-      void lookup(fromUrl);
+      const frame = window.requestAnimationFrame(() => {
+        setCode(fromUrl);
+        void lookup(fromUrl);
+      });
+      return () => window.cancelAnimationFrame(frame);
     }
   }, []);
 

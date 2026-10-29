@@ -119,6 +119,7 @@ export default function OfficialWhatsAppTutorialPage() {
           </Section>
 
           <Section id="pagamento" title="Número conectado e pagamento">
+            <Note title="Antes de começar os envios">Confira o guia de <Link href="/tutoriais/whatsapp-boas-praticas" className="font-semibold text-[var(--color-primary-700)] underline underline-offset-4">boas práticas no WhatsApp</Link> para orientar sua equipe sobre autorização, templates e qualidade do atendimento.</Note>
             <p>Quando a janela da Meta fecha, o CRM conclui a conexão sozinho e mostra <strong>Número conectado</strong>. As mensagens dos clientes já passam a chegar no CRM.</p>
             <Screenshot src="05-conectado.png" alt="Confirmação Número conectado com o botão Abrir pagamento" width={1008} height={656} caption="Último passo · número conectado." />
             <p>Clique em <strong>Abrir pagamento</strong> e cadastre o cartão da empresa na Meta. A Meta cobra as conversas direto no seu cartão: o valor não passa pela Its Time.</p>

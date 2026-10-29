@@ -9,7 +9,10 @@ type DocumentationSidebarProps = {
 const linkGroups = [
   {
     label: "Tutoriais",
-    links: [{ href: "/tutoriais/whatsapp-oficial", label: "WhatsApp oficial", meta: "Conexão" }],
+    links: [
+      { href: "/tutoriais/whatsapp-oficial", label: "WhatsApp oficial", meta: "Conexão" },
+      { href: "/tutoriais/whatsapp-boas-praticas", label: "Boas práticas no WhatsApp", meta: "Guia" },
+    ],
   },
   {
     label: "Documentação",
