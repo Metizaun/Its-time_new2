@@ -26,6 +26,8 @@ export function BlogHeader() {
         <Link href="/blog" aria-current="page">
           Blog
         </Link>
+        <Link href="/blog#tutoriais">Tutoriais</Link>
+        <Link href="/blog#dev">Área dev</Link>
         <a
           className="blog-button"
           {...whatsappLinkProps()}
@@ -229,6 +231,8 @@ export function BlogFooter() {
       </Link>
       <span>Inteligência que opera. Estratégia que escala.</span>
       <nav aria-label="Links institucionais">
+        <Link href="/blog#tutoriais">Tutoriais</Link>
+        <Link href="/blog#dev">Área dev</Link>
         <Link href="/privacidade">Privacidade</Link>
         <Link href="/termos">Termos de uso</Link>
       </nav>

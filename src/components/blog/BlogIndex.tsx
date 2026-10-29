@@ -4,6 +4,7 @@ import { useState, useSyncExternalStore } from "react";
 import Link from "next/link";
 import { ArrowUpRight, Search, ArrowRight } from "lucide-react";
 import { BlogVisual } from "./BlogShell";
+import { BlogContentNavigation } from "./BlogResources";
 import { postDate, type BlogPost } from "@/lib/blog";
 
 export type BlogSummary = Pick<
@@ -53,6 +54,7 @@ export function BlogIndex({ posts }: { posts: BlogSummary[] }) {
             O BLOG DA ITS TIME <ArrowRight size={16} />
           </span>
         </div>
+        <BlogContentNavigation />
       </section>
       {featured && (
         <Link href={`/blog/${featured.slug}`} className="blog-featured">
@@ -72,7 +74,7 @@ export function BlogIndex({ posts }: { posts: BlogSummary[] }) {
           </div>
         </Link>
       )}
-      <section className="blog-library" aria-labelledby="library-title">
+      <section id="artigos" className="blog-library" aria-labelledby="library-title">
         <div className="blog-library-heading">
           <div>
             <span className="blog-kicker">CONTINUE EXPLORANDO</span>

@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { resourceGroups } from "@/lib/resources";
 
 type DocumentationSidebarProps = {
   currentPath: string;
@@ -6,28 +7,12 @@ type DocumentationSidebarProps = {
 };
 
 // Tutoriais são para quem usa o CRM; Documentação é para quem integra sistemas.
-const linkGroups = [
-  {
-    label: "Tutoriais",
-    links: [
-      { href: "/tutoriais/whatsapp-oficial", label: "WhatsApp oficial", meta: "Conexão" },
-      { href: "/tutoriais/whatsapp-boas-praticas", label: "Boas práticas no WhatsApp", meta: "Guia" },
-    ],
-  },
-  {
-    label: "Documentação",
-    links: [
-      { href: "/dev/documentacao/agenda", label: "Agenda Universal", meta: "Sincronização" },
-      { href: "/dev/documentacao/webhook-leads", label: "Webhook de leads", meta: "Entrada CRM" },
-      { href: "/dev/documentacao/webhook-cobranca", label: "Webhook de cobrança", meta: "Coleções" },
-      { href: "/dev/documentacao/jornadas-rb", label: "Jornadas RB", meta: "Automações" },
-    ],
-  },
-] as const;
+const linkGroups = resourceGroups.map(group => ({ label: group.sidebarLabel, links: group.links }));
 
 export function DocumentationSidebar({ currentPath, sections }: DocumentationSidebarProps) {
   return (
     <aside className="space-y-4 lg:sticky lg:top-24">
+      <Link href="/blog" className="inline-flex min-h-11 items-center rounded-lg px-2 text-sm font-semibold text-[var(--color-primary-700)] underline underline-offset-4 focus-visible:shadow-focus">Voltar ao blog e conteúdos</Link>
       {linkGroups.map((group) => (
       <nav
         key={group.label}

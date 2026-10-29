@@ -1,4 +1,5 @@
 import { expect, test } from "@playwright/test";
+import { getAllPosts } from "../src/lib/blog-posts";
 
 test.beforeEach(async ({ page }) => {
   // Isolate the site's own blog from the external chat service.
@@ -15,16 +16,16 @@ test("reader finds an article and reaches a qualified commercial CTA", async ({
   await page
     .getByRole("button", { name: "Acompanhamento", exact: true })
     .click();
-  await expect(page.locator(".blog-card")).toHaveCount(1);
+  await expect(page.locator(".blog-card")).toHaveCount(getAllPosts().filter(post => post.category === "Acompanhamento").length);
   await page
     .getByRole("searchbox", { name: "Buscar artigos" })
     .fill("assunto inexistente");
   await expect(page.getByText("Nenhum artigo por aqui ainda.")).toBeVisible();
   await page.getByRole("button", { name: "Ver todos os artigos" }).click();
-  await expect(page.locator(".blog-card")).toHaveCount(3);
+  await expect(page.locator(".blog-card")).toHaveCount(getAllPosts().length);
   await page
     .getByRole("searchbox", { name: "Buscar artigos" })
-    .fill("orcamento");
+    .fill("Orçamento enviado. Conversa em movimento.");
   await expect(page.locator(".blog-card")).toHaveCount(1);
   await page.locator(".blog-card").click();
   await expect(page).toHaveURL(/acompanhamento-de-orcamentos/);
@@ -49,6 +50,43 @@ test("reader finds an article and reaches a qualified commercial CTA", async ({
     "href",
     "https://itstime.pro/blog/acompanhamento-de-orcamentos",
   );
+});
+
+test("blog exposes both tutorials and the developer library with a return path", async ({ page }) => {
+  await page.goto("/blog");
+  const header = page.getByRole("navigation", { name: "Navegação principal", exact: true });
+  await header.getByRole("link", { name: "Tutoriais", exact: true }).click();
+  await expect(page).toHaveURL(/\/blog#tutoriais$/);
+  await expect(page.locator("#tutoriais h2")).toBeInViewport();
+  await expect(page.locator("#tutoriais .blog-resource-card")).toHaveCount(2);
+  await expect(page.locator("#dev .blog-resource-card")).toHaveCount(4);
+
+  const paths = await page.locator(".blog-resource-card").evaluateAll(links => links.map(link => link.getAttribute("href")!));
+  expect(new Set(paths).size).toBe(6);
+  for (const path of paths) {
+    const response = await page.goto(path);
+    expect(response?.status()).toBe(200);
+    await expect(page.getByRole("heading", { level: 1 })).toBeVisible();
+    await expect(page.locator('a[aria-current="page"]')).toHaveAttribute("href", path);
+    await page.getByRole("link", { name: "Voltar ao blog e conteúdos" }).click();
+    await expect(page).toHaveURL(/\/blog$/);
+  }
+
+  await page.goto("/blog/acompanhamento-de-orcamentos");
+  await header.getByRole("link", { name: "Área dev", exact: true }).click();
+  await expect(page).toHaveURL(/\/blog#dev$/);
+  await expect(page.locator("#dev h2")).toBeInViewport();
+});
+
+test("content navigation remains visible and fits a small phone", async ({ page }) => {
+  await page.setViewportSize({ width: 320, height: 800 });
+  await page.goto("/blog");
+  const navigation = page.getByRole("navigation", { name: "Navegação principal", exact: true });
+  await expect(navigation.getByRole("link", { name: "Tutoriais", exact: true })).toBeVisible();
+  await expect(navigation.getByRole("link", { name: "Área dev", exact: true })).toBeVisible();
+  await page.getByRole("navigation", { name: "Explorar conteúdos" }).getByRole("link", { name: /Área dev/ }).click();
+  await expect(page.locator("#dev h2")).toBeInViewport();
+  expect(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth)).toBe(true);
 });
 
 test("article FAQ, share and related reading work", async ({

@@ -1,5 +1,6 @@
 import type { MetadataRoute } from "next";
 import { getAllPosts } from "@/lib/blog-posts";
+import { resourceGroups } from "@/lib/resources";
 
 const SITE = "https://itstime.pro";
 
@@ -18,8 +19,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.7,
     })),
     { url: `${SITE}/updates`, changeFrequency: "monthly", priority: 0.5 },
-    { url: `${SITE}/tutoriais/whatsapp-oficial`, changeFrequency: "monthly", priority: 0.5 },
-    { url: `${SITE}/tutoriais/whatsapp-boas-praticas`, lastModified: new Date("2026-10-29"), changeFrequency: "monthly", priority: 0.5 },
+    ...resourceGroups.flatMap(group => group.links.map(item => ({
+      url: `${SITE}${item.href}`,
+      lastModified: item.updated ? new Date(item.updated) : undefined,
+      changeFrequency: "monthly" as const,
+      priority: 0.5,
+    }))),
     { url: `${SITE}/politica-de-privacidade`, changeFrequency: "yearly", priority: 0.2 },
     { url: `${SITE}/termos-de-uso`, changeFrequency: "yearly", priority: 0.2 },
     { url: `${SITE}/exclusao-de-dados`, changeFrequency: "yearly", priority: 0.2 },

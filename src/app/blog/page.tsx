@@ -3,11 +3,12 @@ import { BlogIndex } from "@/components/blog/BlogIndex";
 import { BlogCTA } from "@/components/blog/BlogShell";
 import { getAllPosts } from "@/lib/blog-posts";
 import { readingMinutes } from "@/lib/blog";
+import { BlogResources } from "@/components/blog/BlogResources";
 
 export const metadata: Metadata = {
   title: "Blog Its Time — Ideias que movem negócios",
   description:
-    "Estratégias de atendimento com IA, acompanhamento e organização comercial para transformar conversas em oportunidades.",
+    "Artigos sobre atendimento e vendas, tutoriais do Its Time CRM e documentação para desenvolvedores em um só lugar.",
   alternates: { canonical: "/blog" },
   openGraph: {
     title: "Blog Its Time — Ideias que movem negócios",
@@ -32,6 +33,7 @@ export default function BlogPage() {
           minutes: readingMinutes(post),
         }))}
       />
+      <BlogResources />
       <BlogCTA />
     </>
   );
