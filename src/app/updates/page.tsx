@@ -63,6 +63,91 @@ const releaseItems = [
   },
 ] as const;
 
+const novemberItems = [
+  {
+    category: "Melhoria",
+    tag: "NOVO VISUAL",
+    icon: "/update-icons/improvement.png",
+    title: "Novo visual e Dashboard",
+    paragraphs: ["Dashboard, Chat, Leads, Pipeline e Agenda ganharam um novo visual. Acompanhe origem dos leads, conversão, receita e leads finalizados com indicadores reorganizados."],
+  },
+  {
+    category: "Melhoria",
+    tag: "GUIAS DA NYA",
+    icon: "/update-icons/improvement.png",
+    title: "Guias da Nya",
+    paragraphs: ["Abra a ajuda dentro do CRM para seguir orientações passo a passo nas telas que você usa."],
+  },
+  {
+    category: "Melhoria",
+    tag: "CHAT",
+    icon: "/update-icons/improvement.png",
+    title: "Chat mais fácil de acompanhar",
+    paragraphs: ["Filtre conversas por funil e etapa, acompanhe mídias no histórico e ajuste os sons de notificação."],
+  },
+  {
+    category: "Melhoria",
+    tag: "AGENDA",
+    icon: "/update-icons/improvement.png",
+    title: "Agenda por unidade",
+    paragraphs: ["Configure horários e capacidade, agende familiares e acompanhe a etapa do lead quando houver um agendamento."],
+  },
+  {
+    category: "Melhoria",
+    tag: "PIPELINE",
+    icon: "/update-icons/improvement.png",
+    title: "Mais contexto no Pipeline",
+    paragraphs: ["Consulte o histórico de movimentações, acompanhe orçamentos por jornada e abra a conversa pelos detalhes do lead."],
+  },
+  {
+    category: "Melhoria",
+    tag: "ATENDIMENTO NO SITE",
+    icon: "/update-icons/improvement.png",
+    title: "Atendimento por IA no seu site",
+    paragraphs: ["Incorpore o widget ao site da sua empresa e configure catálogos, produtos e mídias que seus agentes podem usar durante as conversas."],
+  },
+] as const;
+
+function ReleaseItems({ items }: { items: readonly (typeof releaseItems[number] | typeof novemberItems[number])[] }) {
+  return (
+    <div className="release-items">
+      {items.map((item) => (
+        <section className="release-item" key={item.tag}>
+          <Image
+            className="release-item-icon"
+            src={item.icon}
+            alt=""
+            width={64}
+            height={64}
+          />
+
+          <div className="release-item-content">
+            <div className="release-item-meta">
+              <span
+                className={
+                  item.category === "Novidade"
+                    ? "release-badge release-badge-feature"
+                    : "release-badge release-badge-improvement"
+                }
+              >
+                {item.category}
+              </span>
+              <span className="release-item-tag">{item.tag}</span>
+            </div>
+
+            <h2>{item.title}</h2>
+            <div className="release-item-copy">
+              {item.paragraphs.map((paragraph) => (
+                <p key={paragraph}>{paragraph}</p>
+              ))}
+            </div>
+          </div>
+        </section>
+      ))}
+    </div>
+  );
+}
+
 export default function UpdatesPage() {
   return (
     <div className="release-page">
@@ -94,77 +179,74 @@ export default function UpdatesPage() {
           <span>Its Time CRM</span>
         </div>
 
-        <article className="release-entry" aria-labelledby="release-title">
+        <article className="release-entry" aria-labelledby="november-release-title">
           <aside className="release-meta" aria-label="Informações da versão">
             <div className="release-version-row">
-                <strong>v2.7.0</strong>
+              <strong>v2.9.0</strong>
               <span className="release-current">Atual</span>
             </div>
-              <time dateTime="2026-09-15">15 de Setembro, 2026</time>
+            <time dateTime="2026-11-10">10 de Novembro, 2026</time>
             <span className="release-type">Minor update</span>
           </aside>
 
           <div className="release-content">
             <header className="release-heading">
-              <h1 id="release-title">Três fluxos. Uma operação mais coordenada.</h1>
+              <h1 id="november-release-title">Novo visual e mais clareza para acompanhar o atendimento</h1>
               <p>
-                Quando conversa, cobrança e agenda funcionam separadamente, o time perde
-                contexto antes de perder tempo. Desde 02 de setembro, o Its Time avançou em
-                três frentes centrais: comunicação interna, operação financeira e integração
-                de agendas — agora sustentadas por uma estrutura mais segura, organizada e
-                rastreável.
+                Veja as novidades do Its Time CRM desde 15 de setembro. A disponibilidade de
+                alguns recursos depende das permissões e integrações de cada conta.
               </p>
             </header>
 
-            <div className="release-items">
-              {releaseItems.map((item) => (
-                <section className="release-item" key={item.tag}>
-                  <Image
-                    className="release-item-icon"
-                    src={item.icon}
-                    alt=""
-                    width={64}
-                    height={64}
-                  />
+            <ReleaseItems items={novemberItems} />
 
-                  <div className="release-item-content">
-                    <div className="release-item-meta">
-                      <span
-                        className={
-                          item.category === "Novidade"
-                            ? "release-badge release-badge-feature"
-                            : "release-badge release-badge-improvement"
-                        }
-                      >
-                        {item.category}
-                      </span>
-                      <span className="release-item-tag">{item.tag}</span>
-                    </div>
-
-                    <h2>{item.title}</h2>
-                    <div className="release-item-copy">
-                      {item.paragraphs.map((paragraph) => (
-                        <p key={paragraph}>{paragraph}</p>
-                      ))}
-                    </div>
-                  </div>
-                </section>
-              ))}
-            </div>
-
-            <section className="release-closing" aria-labelledby="release-closing-title">
-              <span>Em resumo</span>
-              <h2 id="release-closing-title">
-                Mais recursos não precisam produzir mais complexidade.
-              </h2>
-              <p>
-                Esta atualização organiza três fluxos essenciais em torno da mesma lógica:
-                contexto para a equipe, autonomia para a cobrança e interoperabilidade para a
-                agenda. A tecnologia cresce, mas a operação fica mais clara.
-              </p>
+            <section className="release-closing" aria-labelledby="november-closing-title">
+              <h2 id="november-closing-title">Conheça as novidades na sua conta</h2>
+              <p>Abra o CRM para conferir os guias da Nya e os recursos disponíveis para sua equipe.</p>
+              <a href="https://app.itstime.pro/">Abrir o CRM</a>
             </section>
           </div>
         </article>
+
+        <details>
+          <summary>Atualização anterior · v2.7.0 · 15 de setembro de 2026</summary>
+          <article className="release-entry" aria-labelledby="release-title">
+            <aside className="release-meta" aria-label="Informações da versão">
+              <div className="release-version-row">
+                  <strong>v2.7.0</strong>
+              </div>
+                <time dateTime="2026-09-15">15 de Setembro, 2026</time>
+              <span className="release-type">Minor update</span>
+            </aside>
+
+            <div className="release-content">
+              <header className="release-heading">
+                <h2 id="release-title">Três fluxos. Uma operação mais coordenada.</h2>
+                <p>
+                  Quando conversa, cobrança e agenda funcionam separadamente, o time perde
+                  contexto antes de perder tempo. Desde 02 de setembro, o Its Time avançou em
+                  três frentes centrais: comunicação interna, operação financeira e integração
+                  de agendas — agora sustentadas por uma estrutura mais segura, organizada e
+                  rastreável.
+                </p>
+              </header>
+
+              <ReleaseItems items={releaseItems} />
+
+              <section className="release-closing" aria-labelledby="release-closing-title">
+                <span>Em resumo</span>
+                <h2 id="release-closing-title">
+                  Mais recursos não precisam produzir mais complexidade.
+                </h2>
+                <p>
+                  Esta atualização organiza três fluxos essenciais em torno da mesma lógica:
+                  contexto para a equipe, autonomia para a cobrança e interoperabilidade para a
+                  agenda. A tecnologia cresce, mas a operação fica mais clara.
+                </p>
+              </section>
+            </div>
+          </article>
+        </details>
 
         <footer className="release-footer">
           <p>© 2026 Its Time CRM. Todos os direitos reservados.</p>

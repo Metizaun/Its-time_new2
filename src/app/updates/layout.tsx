@@ -1,9 +1,9 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Três fluxos. Uma operação mais coordenada. · Its Time",
+  title: "Novidades de novembro no Its Time CRM · Its Time",
   description:
-    "Conheça os novos fluxos de chat interno, cobrança independente, sincronização de agenda e segurança operacional do Its Time.",
+    "Confira o novo visual do CRM, os guias da Nya e as melhorias no Chat, na Agenda e no Pipeline.",
 };
 
 export default function UpdatesLayout({
