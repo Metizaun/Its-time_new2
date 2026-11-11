@@ -205,6 +205,12 @@ export default function UpdatesPage() {
               <p>Abra o CRM para conferir os guias da Nya e os recursos disponíveis para sua equipe.</p>
               <a href="https://app.itstime.pro/">Abrir o CRM</a>
             </section>
+
+            {/* Easter egg do fim da v2.9.0 */}
+            <p className="release-easter-egg">
+              <Image src="/updates/dev-cafe.webp" alt="" width={36} height={36} />
+              <span><strong>Atualização:</strong> o dev bebeu muito café</span>
+            </p>
           </div>
         </article>
 

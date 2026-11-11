@@ -3160,6 +3160,41 @@ a {
   line-height: 1.7;
 }
 
+.release-easter-egg {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: var(--space-3);
+  margin: var(--space-4) 0 0;
+  color: var(--color-gray-500);
+  font-size: var(--text-xs);
+}
+
+.release-easter-egg img {
+  flex: none;
+  width: 36px;
+  height: 36px;
+  border-radius: 9999px;
+  object-fit: cover;
+  box-shadow: 0 0 0 1px color-mix(in srgb, var(--color-primary-500) 45%, transparent);
+  transition: transform 300ms ease;
+}
+
+.release-easter-egg:hover img {
+  transform: rotate(-8deg) scale(1.08);
+}
+
+.release-easter-egg strong {
+  color: var(--color-gray-700);
+  font-weight: 650;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .release-easter-egg img {
+    transition: none;
+  }
+}
+
 .release-footer {
   display: flex;
   flex-wrap: wrap;
