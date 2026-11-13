@@ -22,7 +22,7 @@ export function BlogHeader() {
         <span className="brand-word">Its Time</span>
       </Link>
       <nav aria-label="Navegação principal">
-        <Link href="/#como-funciona">Soluções</Link>
+        <Link href="/clinicas">Clínicas</Link>
         <Link href="/blog" aria-current="page">
           Blog
         </Link>
@@ -231,6 +231,8 @@ export function BlogFooter() {
       </Link>
       <span>Inteligência que opera. Estratégia que escala.</span>
       <nav aria-label="Links institucionais">
+        <Link href="/clinicas">Para clínicas</Link>
+        <Link href="/oticas">Para óticas</Link>
         <Link href="/blog#tutoriais">Tutoriais</Link>
         <Link href="/blog#dev">Área dev</Link>
         <Link href="/politica-de-privacidade">Privacidade</Link>

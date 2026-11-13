@@ -45,6 +45,8 @@ export function SiteFooter() {
               <li><Link href="/politica-de-privacidade">Política de privacidade</Link></li>
               <li><Link href="/exclusao-de-dados">Exclusão de dados</Link></li>
               <li><CookiePreferencesButton /></li>
+              <li><Link href="/clinicas">Para clínicas</Link></li>
+              <li><Link href="/oticas">Para óticas</Link></li>
               <li><Link href="/blog">Blog</Link></li>
               <li><Link href="/updates">Atualizações</Link></li>
               <li><Link href="/blog#tutoriais">Tutoriais</Link></li>

@@ -7,6 +7,8 @@ Empresa: ITS TIME TECH LTDA, CNPJ 68.427.775/0001-81, Porto Alegre/RS, Brasil. C
 ## Produto
 
 - [Página inicial](https://itstime.pro/): o que o Its Time CRM faz, com a demonstração de cada etapa do atendimento
+- [Para clínicas](https://itstime.pro/clinicas): atendimento, agendamento e acompanhamento de pacientes com IA
+- [Para óticas](https://itstime.pro/oticas): da pergunta de preço ao orçamento, receita, armação e várias lojas
 - [Novidades](https://itstime.pro/updates): notas de versão do CRM
 
 ## Blog

@@ -10,6 +10,7 @@ const PAGE_UPDATED = {
   home: "2026-10-20",
   updates: "2026-11-11",
   legal: "2026-10-22", // the "Última atualização" shown on the three legal pages
+  solutions: "2026-11-13", // /clinicas and /oticas
 } as const;
 
 const day = (value: string) => new Date(`${value}T00:00:00-03:00`);
@@ -26,6 +27,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   return [
     { url: SITE, lastModified: day(PAGE_UPDATED.home) },
+    { url: `${SITE}/clinicas`, lastModified: day(PAGE_UPDATED.solutions) },
+    { url: `${SITE}/oticas`, lastModified: day(PAGE_UPDATED.solutions) },
     { url: `${SITE}/blog`, lastModified: newestPost },
     ...posts.map((post) => ({
       url: `${SITE}/blog/${post.slug}`,

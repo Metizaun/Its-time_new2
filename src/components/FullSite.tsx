@@ -15,7 +15,8 @@ import {
 } from "lucide-react";
 
 const navItems = [
-  { label: "Soluções", href: "#como-funciona" }, // the animated section
+  { label: "Clínicas", href: "/clinicas" },
+  { label: "Óticas", href: "/oticas" },
   { label: "Blog", href: "/blog" },
   { label: "Login", href: "https://app.itstime.pro" },
 ] as const;
