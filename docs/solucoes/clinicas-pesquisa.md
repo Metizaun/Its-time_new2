@@ -76,7 +76,9 @@ Volume real não medido (sem Search Console/Keyword Planner); revisar no ciclo 2
   socialhub.pro/blog/whatsapp-clinica-estetica-2026, itforum.com.br/?p=9618632
 - Autocompletar do Google (pt-BR, BR), consultado em 13/11/2026
 
-## Pendente com o usuário
+## Número publicado
 
-- "30% de conversão em agendamento com clínica": **não publicado**. Só entra se for resultado medido da Its Time,
-  com definição (ex.: conversas novas no WhatsApp → consulta marcada, em qual período e base de clínicas).
+- **30% dos leads atendidos pela IA agendaram um horário.** Confirmado pelo usuário em 13/11/2026: resultado medido
+  da Its Time, média das clínicas clientes nos últimos 30 dias, estável na janela de 90 dias. Conta o horário
+  marcado, não o comparecimento. Na página fica em `clinicResult` (`src/lib/solutions/clinicas.ts`), sempre com a
+  definição logo abaixo. Atualizar o período quando o número for medido de novo.

@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { ArrowUpRight, Check, ChevronDown, Menu, MoveRight, UserRound } from "lucide-react";
 import { AgentBotGlyph } from "@/components/FeatureSlides/AgentIcons";
-import { clinicJourney, clinicLimits, clinicSegments, clinicSolution as copy } from "@/lib/solutions/clinicas";
+import { clinicJourney, clinicLimits, clinicResult, clinicSegments, clinicSolution as copy } from "@/lib/solutions/clinicas";
 import { whatsappLinkProps } from "@/lib/whatsapp";
 import { HoursRing } from "./HoursRing";
 import { JourneyStage, JourneyStepVisual } from "./JourneyStage";
@@ -20,6 +20,7 @@ export function ClinicPage() {
       <Header />
       <Hero />
       <Journey />
+      <Result />
       <Limits />
       <Segments />
       <Start />
@@ -139,6 +140,26 @@ function Journey() {
         </ol>
         <JourneyStage count={clinicJourney.length} />
       </div>
+    </section>
+  );
+}
+
+/** The one published number. Its definition and period sit right under it, never apart. */
+function Result() {
+  return (
+    <section className="cl-section cl-result" aria-labelledby="cl-result-title">
+      <figure>
+        <p className="cl-kicker">Resultado medido</p>
+        <h2 id="cl-result-title" className="cl-result-value">
+          {clinicResult.value}
+        </h2>
+        <p className="cl-result-label">{clinicResult.label}</p>
+        <figcaption>{clinicResult.source}</figcaption>
+      </figure>
+      <a className="cl-button" {...cta()}>
+        Ver como fica na minha clínica
+        <ArrowUpRight size={18} strokeWidth={2.2} aria-hidden="true" />
+      </a>
     </section>
   );
 }

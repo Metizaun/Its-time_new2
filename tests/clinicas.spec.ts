@@ -46,6 +46,15 @@ test.describe("/clinicas", () => {
     expect(html).toContain("A recepção vê tudo no CRM");
   });
 
+  test("o número publicado vem com a definição e o período", async ({ page }) => {
+    await page.goto("/clinicas");
+    const result = page.locator(".cl-result figure");
+    await expect(result.locator("h2")).toHaveText("30%");
+    await expect(result).toContainText("leads atendidos pela IA agendaram");
+    await expect(result.locator("figcaption")).toContainText("Média das clínicas clientes");
+    await expect(result.locator("figcaption")).toContainText("30 dias");
+  });
+
   for (const reducedMotion of ["no-preference", "reduce"] as const) {
     test(`sem rolagem horizontal em 390 px (${reducedMotion})`, async ({ browser }) => {
       const context = await browser.newContext({ viewport: { width: 390, height: 844 }, reducedMotion });

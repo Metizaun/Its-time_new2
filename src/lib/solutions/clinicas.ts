@@ -219,3 +219,15 @@ export const clinicSegments = [
   { name: "Psicologia", question: "A consulta pode ser online?" },
   { name: "Nutrição", question: "O retorno já está incluído no valor?" },
 ];
+
+/**
+ * Measured result confirmed by the owner on 13/11/2026: leads served by the AI that booked an appointment, average of
+ * the client clinics over the last 30 days, steady over 90 days. Booked, not attended. Update the period when it is
+ * measured again; never round it up.
+ */
+export const clinicResult = {
+  value: "30%",
+  label: "dos leads atendidos pela IA agendaram um horário",
+  source:
+    "Média das clínicas clientes da Its Time nos 30 dias até 13/11/2026. O resultado se mantém na janela de 90 dias. Conta o horário marcado, não o comparecimento.",
+};
