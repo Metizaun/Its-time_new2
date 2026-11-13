@@ -297,9 +297,15 @@ export function BlogArticle({
   related: BlogPost[];
   allPosts: BlogPost[];
 }) {
-  const sections = post.blocks.flatMap((block) =>
-    "id" in block ? [{ id: block.id, title: block.title }] : [],
+  const anchored = post.blocks.flatMap((block) =>
+    "id" in block ? [{ id: block.id, title: block.title, type: block.type }] : [],
   );
+  // Long guides (merged posts) would list every table and checklist; there the summary keeps the main sections.
+  const sections = (
+    anchored.length > 10
+      ? anchored.filter((section) => section.type === "text" || section.type === "faq")
+      : anchored
+  ).map(({ id, title }) => ({ id, title }));
   const author = post.authorProfile ?? { name: post.author };
   const showToc = sections.length > 1 && post.archetype !== "noticia";
   return (

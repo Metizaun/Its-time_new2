@@ -25,12 +25,12 @@ test("reader finds an article and reaches a qualified commercial CTA", async ({
   await expect(page.locator(".blog-card")).toHaveCount(getAllPosts().length);
   await page
     .getByRole("searchbox", { name: "Buscar artigos" })
-    .fill("Orçamento enviado. Conversa em movimento.");
+    .fill("Da intenção ao horário marcado.");
   await expect(page.locator(".blog-card")).toHaveCount(1);
   await page.locator(".blog-card").click();
-  await expect(page).toHaveURL(/acompanhamento-de-orcamentos/);
+  await expect(page).toHaveURL(/agendamento-com-ia/);
   await expect(page.getByRole("heading", { level: 1 })).toHaveText(
-    "Orçamento enviado. Conversa em movimento.",
+    "Da intenção ao horário marcado.",
   );
   const cta = page.locator(".blog-cta--compact .blog-button");
   const url = new URL((await cta.getAttribute("href"))!);
@@ -38,17 +38,17 @@ test("reader finds an article and reaches a qualified commercial CTA", async ({
   expect(url.pathname).toBe("/554196081781");
   expect(url.searchParams.get("text")).toContain("Meu negócio");
   expect(url.searchParams.get("text")).toContain(
-    "Orçamento enviado. Conversa em movimento.",
+    "Da intenção ao horário marcado.",
   );
   await page
     .getByRole("navigation", { name: "Sumário do artigo" })
     .getByRole("link")
     .nth(1)
     .click();
-  await expect(page).toHaveURL(/#organizar$/);
+  await expect(page).toHaveURL(/#fluxo$/);
   await expect(page.locator('link[rel="canonical"]')).toHaveAttribute(
     "href",
-    "https://itstime.pro/blog/acompanhamento-de-orcamentos",
+    "https://itstime.pro/blog/agendamento-com-ia",
   );
 });
 
@@ -72,7 +72,7 @@ test("blog exposes both tutorials and the developer library with a return path",
     await expect(page).toHaveURL(/\/blog$/);
   }
 
-  await page.goto("/blog/acompanhamento-de-orcamentos");
+  await page.goto("/blog/agendamento-com-ia");
   await header.getByRole("link", { name: "Área dev", exact: true }).click();
   await expect(page).toHaveURL(/\/blog#dev$/);
   await expect(page.locator("#dev h2")).toBeInViewport();
@@ -108,7 +108,7 @@ test("article FAQ, share and related reading work", async ({
     page.getByRole("button", { name: "Link copiado" }),
   ).toBeVisible();
   await page.locator(".blog-related a").first().click();
-  await expect(page).toHaveURL(/acompanhamento-de-orcamentos/);
+  await expect(page).toHaveURL(/follow-up-comercial-orcamento-parado-nao-e-processo/);
   const missing = await page.goto("/blog/artigo-inexistente");
   expect(missing?.status()).toBe(404);
   await expect(

@@ -44,7 +44,7 @@ const fixture: BlogPost = {
       id: "inicio",
       title: "Conteúdo com referências",
       paragraphs: [
-        "Consulte a [referência externa](https://example.com/reference) e o [guia de acompanhamento](/blog/acompanhamento-de-orcamentos). <script>alert(1)</script>",
+        "Consulte a [referência externa](https://example.com/reference) e o [guia de agendamento](/blog/agendamento-com-ia). <script>alert(1)</script>",
       ],
       subsections: [
         {
@@ -89,7 +89,7 @@ const fixture: BlogPost = {
       cons: ["Exige critérios de encaminhamento"],
       recommendation: "Defina as responsabilidades antes de ampliar a jornada.",
     },
-    { type: "related", slugs: ["acompanhamento-de-orcamentos"] },
+    { type: "related", slugs: ["agendamento-com-ia"] },
     {
       type: "cta",
       title: "Veja o processo",
@@ -175,7 +175,6 @@ test("import rejects unsafe or inconsistent posts while style suggestions stay a
   expect(parsePost(advisory)).toHaveProperty("post");
   expect(editorialWarnings(advisory).length).toBeGreaterThan(0);
   expect(relatedPosts(posts[0], posts).map((post) => post.slug)).toEqual([
-    "acompanhamento-de-orcamentos",
     "agendamento-com-ia",
   ]);
 });
@@ -219,7 +218,7 @@ test("reader sees references, authorship, update date and all editorial modules"
   await expect(page.locator(".blog-verdict")).toContainText("Exige critérios");
   await expect(page.locator(".blog-inline-related a")).toHaveAttribute(
     "href",
-    "/blog/acompanhamento-de-orcamentos",
+    "/blog/agendamento-com-ia",
   );
   const jsonLd = JSON.parse(
     (await page.locator('script[type="application/ld+json"]').allTextContents()).find((json) => json.includes('"BlogPosting"'))!,

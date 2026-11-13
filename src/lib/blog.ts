@@ -119,7 +119,7 @@ export const posts: BlogPost[] = [
     updated: "2026-10-16",
     archetype: "guia-pratico",
     tags: ["crm", "atendimento", "acompanhamento"],
-    relatedSlugs: ["acompanhamento-de-orcamentos", "agendamento-com-ia"],
+    relatedSlugs: ["follow-up-comercial-orcamento-parado-nao-e-processo", "agendamento-com-ia"],
     editorialNote:
       "Este guia propõe uma estrutura de operação. As funções citadas estão apresentadas na demonstração do produto; os critérios de atendimento devem ser definidos pelo seu negócio.",
     sources: [
@@ -255,7 +255,7 @@ export const posts: BlogPost[] = [
       {
         type: "related",
         title: "Aprofunde o acompanhamento",
-        slugs: ["acompanhamento-de-orcamentos"],
+        slugs: ["follow-up-comercial-orcamento-parado-nao-e-processo"],
       },
       {
         type: "faq",
@@ -277,72 +277,6 @@ export const posts: BlogPost[] = [
             answer:
               "Observe de onde vêm os contatos, como avançam entre etapas e quais ações resultam em agendamentos ou vendas. Use os dados da sua operação para orientar os ajustes.",
           },
-        ],
-      },
-    ],
-  },
-  {
-    slug: "acompanhamento-de-orcamentos",
-    tags: ["crm", "acompanhamento"],
-    archetype: "guia-pratico",
-    finalCta: {
-      title: "Organize a próxima etapa dos seus orçamentos.",
-      text: "Conheça o acompanhamento por etapa, status e última mensagem em uma demonstração da Its Time.",
-      label: "Ver o acompanhamento na prática",
-    },
-    title: "Orçamento enviado. Conversa em movimento.",
-    excerpt:
-      "Como estruturar o acompanhamento de orçamentos com contexto e um próximo passo que faça sentido para o cliente.",
-    category: "Acompanhamento",
-    date: "2026-10-15",
-    author: "Equipe Its Time",
-    art: "journey",
-    takeaway:
-      "Um orçamento é uma etapa da conversa. O acompanhamento ajuda o cliente a tomar a próxima decisão.",
-    blocks: [
-      {
-        type: "text",
-        id: "contexto",
-        title: "Comece pelo que o cliente precisa decidir.",
-        paragraphs: [
-          "Depois de receber um orçamento, o cliente pode precisar comparar opções, esclarecer uma condição ou combinar uma data. Um acompanhamento útil parte dessa necessidade, em vez de repetir a mesma mensagem para todos.",
-          "Registre o produto ou serviço de interesse, o que já foi explicado e o próximo passo combinado. Esse contexto ajuda tanto a automação quanto a equipe a manter uma conversa coerente.",
-        ],
-      },
-      {
-        type: "steps",
-        id: "organizar",
-        title: "Três movimentos para dar continuidade.",
-        items: [
-          {
-            title: "Organize a etapa",
-            text: "Mantenha os orçamentos em uma etapa identificável do CRM e defina quem acompanha cada oportunidade.",
-          },
-          {
-            title: "Defina o momento",
-            text: "Use o tempo na etapa, o status e a última mensagem para configurar a jornada de acompanhamento.",
-          },
-          {
-            title: "Abra espaço para uma resposta",
-            text: "Pergunte se há alguma dúvida específica e ofereça um próximo passo possível, como conversar com a equipe.",
-          },
-        ],
-      },
-      {
-        type: "cta",
-        title: "Dê continuidade às suas oportunidades.",
-        text: "Veja como organizar o acompanhamento de orçamentos na Its Time.",
-        label: "Conhecer o acompanhamento",
-      },
-      {
-        type: "checklist",
-        id: "revisao",
-        title: "Antes de ativar sua jornada.",
-        items: [
-          "Confirme a etapa que inicia o acompanhamento.",
-          "Revise os intervalos e o contexto das mensagens.",
-          "Defina quando encerrar a jornada ou encaminhar para a equipe.",
-          "Acompanhe respostas e avanços no CRM.",
         ],
       },
     ],

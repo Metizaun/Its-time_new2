@@ -1,5 +1,22 @@
 import type { NextConfig } from "next";
 
+// Blog posts merged into guides (SEO cycle 1, 2026-11-13): the old addresses point to the guide that absorbed them.
+const mergedPosts: Record<string, string> = {
+  "black-friday-para-otica-o-que-medir-antes-de-27-de-novembro": "black-friday-para-oticas",
+  "black-friday-para-otica-oferta-que-respeita-o-estoque": "black-friday-para-oticas",
+  "black-friday-na-otica-o-que-o-vendedor-pode-prometer": "black-friday-para-oticas",
+  "black-friday-para-otica-como-explicar-a-ia-e-os-dados": "black-friday-para-oticas",
+  "black-friday-para-otica-retome-orcamentos-com-motivo": "black-friday-para-oticas",
+  "atendimento-na-black-friday-a-conversa-nao-acaba-na-venda": "black-friday-para-oticas",
+  "o-que-esperar-de-uma-ia-de-atendimento-numa-otica": "ia-de-atendimento-para-oticas",
+  "ia-de-atendimento-para-oticas-da-pergunta-ao-orcamento": "ia-de-atendimento-para-oticas",
+  "atendimento-fora-do-horario-a-mensagem-das-22h-na-otica": "ia-de-atendimento-para-oticas",
+  "atendimento-em-varios-canais-a-ia-absorve-o-volume-da-otica": "ia-de-atendimento-para-oticas",
+  "atendimento-com-ia-quando-a-voz-explica-melhor": "ia-de-atendimento-para-oticas",
+  "ia-de-atendimento-curiosos-nao-viram-clientes-no-escuro": "ia-de-atendimento-para-oticas",
+  "acompanhamento-de-orcamentos": "follow-up-comercial-orcamento-parado-nao-e-processo",
+};
+
 // Sent on every response. A Content-Security-Policy is left out on purpose: the site loads the chat widget,
 // Umami and GA4 from other hosts, and a policy needs that list checked first.
 const securityHeaders = [
@@ -23,6 +40,11 @@ const nextConfig: NextConfig = {
       { source: "/privacidade", destination: "/politica-de-privacidade", permanent: true },
       { source: "/termos", destination: "/termos-de-uso", permanent: true },
       { source: "/dev", destination: "/dev/documentacao", permanent: true },
+      ...Object.entries(mergedPosts).map(([from, to]) => ({
+        source: `/blog/${from}`,
+        destination: `/blog/${to}`,
+        permanent: true,
+      })),
     ];
   },
   async headers() {

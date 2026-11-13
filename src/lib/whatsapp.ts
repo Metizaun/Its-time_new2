@@ -25,6 +25,10 @@ export const DAY_MESSAGE = build(
   "Olá! Vi no site a Its Time cuidando de um dia inteiro da operação e quero ver isso funcionando no meu negócio.",
 );
 
+/** Used by the solution pages, so the team already knows the segment. */
+export const CLINIC_MESSAGE = build("Olá! Vim pela página de clínicas da Its Time e quero ver a IA atendendo os pacientes da minha clínica.");
+export const OPTICS_MESSAGE = build("Olá! Vim pela página de óticas da Its Time e quero ver a IA atendendo os clientes da minha ótica.");
+
 export const whatsappLink = (message: string = DEMO_MESSAGE) =>
   `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(message)}`;
 

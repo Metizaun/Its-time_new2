@@ -1,0 +1,495 @@
+{
+  "slug": "black-friday-para-oticas",
+  "title": "Black Friday para óticas: oferta, atendimento e retomada",
+  "excerpt": "Guia de Black Friday para óticas: o que medir, como montar a oferta pelo estoque, o que a equipe pode prometer e como retomar orçamentos.",
+  "category": "Estratégia comercial",
+  "date": "2026-10-16",
+  "updated": "2026-11-13",
+  "author": "Equipe Its Time",
+  "authorProfile": {
+    "name": "Equipe Its Time",
+    "kind": "Organization",
+    "role": "Conteúdo de produto e operação comercial",
+    "bio": "Conteúdo produzido pela Its Time com apoio de IA, a partir das funcionalidades do produto e das fontes citadas.",
+    "url": "/"
+  },
+  "archetype": "guia-pratico",
+  "tags": [
+    "black-friday",
+    "otica",
+    "oferta",
+    "orcamento"
+  ],
+  "relatedSlugs": [
+    "ia-de-atendimento-para-oticas",
+    "follow-up-comercial-orcamento-parado-nao-e-processo"
+  ],
+  "editorialNote": "Guia que reúne seis artigos publicados entre 16 e 22 de outubro de 2026 (edição 2026, atualizada a cada ano). Montado com apoio de IA a partir das pesquisas citadas nas fontes e das funcionalidades do produto; os exemplos são ilustrativos.",
+  "finalCta": {
+    "title": "Uma Black Friday sem fila de mensagens.",
+    "text": "Veja como a Its Time atende, registra e retoma cada conversa da campanha, do primeiro contato ao pós-venda.",
+    "label": "Agendar demonstração"
+  },
+  "art": "journey",
+  "takeaway": "Na ótica, a Black Friday começa semanas antes da sexta e continua depois dela: oferta limitada pelo estoque, respostas iguais em todos os canais e orçamentos retomados com motivo.",
+  "blocks": [
+    {
+      "type": "text",
+      "id": "medir",
+      "title": "Antes da campanha: o que medir",
+      "paragraphs": [
+        "Faltam 42 dias para a Black Friday de 2026, que cai em 27 de novembro. A ótica ainda tem tempo de ajustar a oferta. O que não dá para ajustar depois é a pergunta que a campanha deveria responder.",
+        "O Google e a Offerwise apontam que 48% dos consumidores já têm a lista de compras pronta antes da data, de acordo com o [Comunique-se](https://portal.comunique-se.com.br/339081-black-friday-comeca-antes-e-a-gestao-da-loja-cabe-no-celular/). Parte da decisão acontece em outubro, na conversa que a ótica teve com o cliente ou deixou de ter.",
+        "O mesmo texto traz o retrato de quem atende: no Radar Mercado Digital 2026, do Sebrae com a E-Commerce Brasil, 3.081 empresários responderam e 59,2% dos pequenos negócios digitais são tocados por uma única pessoa. Na ótica independente é parecido. Quem faz tudo precisa de uma pergunta só, escolhida antes de a oferta ir ao ar, para não passar novembro olhando dez números que não levam a nenhuma decisão."
+      ],
+      "subsections": [
+        {
+          "title": "Medir sem depender de planilha",
+          "paragraphs": [
+            "A contagem se perde na semana cheia, quando o dono atende, conserta e ainda posta. Esse é o ponto em que a Its Time entra: [as conversas do WhatsApp, do site, do Instagram e do Messenger](/blog/ia-de-atendimento-para-oticas#canais) já chegam separadas em conversas, orçamentos e vendas, sem planilha e sem ninguém lembrar de anotar."
+          ]
+        }
+      ]
+    },
+    {
+      "type": "steps",
+      "id": "medir-tres-decisoes",
+      "title": "Uma pergunta, um número e uma data",
+      "items": [
+        {
+          "title": "1. Escolha uma pergunta por campanha",
+          "text": "Troque “fazer uma Black Friday boa” por algo que mude uma decisão: qual condição gera mais pedidos de orçamento? O post do Instagram traz conversa ou só curtida? Uma pergunta cabe em duas semanas de acompanhamento. Cinco viram ruído."
+        },
+        {
+          "title": "2. Conte a etapa certa do funil",
+          "text": "Conversa nova, orçamento enviado e venda fechada são três resultados diferentes. Se a pergunta é sobre procura, conte conversas novas por dia. Se é sobre a oferta, conte orçamentos abertos. Misturar os três faz uma campanha movimentada parecer uma campanha vendedora."
+        },
+        {
+          "title": "3. Marque a revisão entre 10 e 15 de novembro",
+          "text": "Olhar o número só em 28 de novembro não corrige nada. No meio do mês dá para notar que muita gente pergunta a mesma coisa e reescrever a mensagem. Se há conversa e poucos orçamentos, olhe a condição antes de mexer no preço."
+        }
+      ]
+    },
+    {
+      "type": "callout",
+      "title": "O que o número não diz",
+      "text": "Mais conversas em novembro não mostram qual publicação trouxe cada cliente. Anote a origem de cada contato (Instagram, Facebook, indicação) e a leitura por canal fica possível depois. E qualquer receita estimada por painel é tendência: ela não considera os ajustes feitos no balcão e não fecha caixa.",
+      "tone": "attention"
+    },
+    {
+      "type": "checklist",
+      "id": "medir-antes-de-anunciar",
+      "title": "Antes de divulgar a oferta",
+      "items": [
+        "A campanha tem uma pergunta escrita em uma linha, como “qual condição gera mais orçamentos?”.",
+        "O número escolhido corresponde à etapa que a pergunta quer observar.",
+        "Conversas, orçamentos e vendas aparecem separados.",
+        "Existe uma data de revisão entre 10 e 15 de novembro, com o nome de quem olha.",
+        "A origem do cliente está anotada nos contatos de outubro."
+      ]
+    },
+    {
+      "type": "text",
+      "id": "estoque",
+      "title": "Uma oferta que respeita o estoque",
+      "paragraphs": [
+        "O varejo óptico brasileiro movimentou R$ 2,15 bilhões em julho de 2026, uma queda de 11% sobre julho de 2025, segundo reportagem da [Conecta Info](https://conectainfo.net/2026/10/08/335461-black-friday-no-varejo-optico-o-que-esperar-em-2026/) de 8 de outubro. A Abióptica reduziu a previsão de alta anual: de 5,2%, passou para 2,9% (cenário-base).",
+        "Nesse quadro, a Black Friday de 27 de novembro é uma janela de recuperação e também um risco. A ótica que entra na data sem planejar troca faturamento por prejuízo: desconta o que não tem margem e promete o que não tem em prateleira.",
+        "A mesma reportagem lembra a pesquisa da LWSA com 1.044 consumidores: 50% pesquisam ofertas mais de um mês antes. A ótica tem tempo de montar a oferta pelo que tem em estoque, e não o contrário."
+      ],
+      "subsections": [
+        {
+          "title": "Estoque e atendimento precisam dizer a mesma coisa",
+          "paragraphs": [
+            "A loja precisa de uma única fonte para o que está disponível. Se o estoque está em dois cadernos e uma planilha, o vendedor e o cliente recebem respostas diferentes. Com várias lojas, [um número de WhatsApp por unidade](/tutoriais/whatsapp-oficial) mantém cada resposta ligada ao estoque certo.",
+            "O atendimento responde o que está cadastrado, como endereço e horário, e deixa estoque e preço fechado com quem tem a informação: o vendedor. Uma resposta errada sobre estoque, depois do pagamento, custa mais que o desconto."
+          ]
+        },
+        {
+          "title": "Uma oferta que nunca passa do teto",
+          "paragraphs": [
+            "Pense numa campanha em que nenhuma resposta, em nenhum horário, oferece mais do que o teto aprovado ou confirma o que não está na prateleira. É o que a Its Time faz no atendimento: segue o desconto autorizado e só confirma estoque de fonte válida."
+          ]
+        }
+      ]
+    },
+    {
+      "type": "table",
+      "id": "estoque-oferta-por-giro",
+      "title": "Como cada tipo de produto entra na oferta",
+      "columns": [
+        "Tipo de produto",
+        "Giro",
+        "Margem",
+        "Como entra na campanha"
+      ],
+      "rows": [
+        [
+          "Armação de sucesso, vende rápido",
+          "Alto",
+          "Boa",
+          "Desconto com teto aprovado e quantidade conferida"
+        ],
+        [
+          "Lente de linha, venda recorrente",
+          "Médio",
+          "Boa",
+          "Benefício além do preço, com custo conhecido"
+        ],
+        [
+          "Armação parada há meses",
+          "Baixo",
+          "Variável",
+          "Oferta de escoamento, com limite e sem destaque"
+        ],
+        [
+          "Produto de entrada, comparado por preço",
+          "Alto",
+          "Apertada",
+          "Fora da campanha, ou desconto mínimo"
+        ]
+      ],
+      "caption": "Exemplo de classificação: cada ótica preenche com os próprios produtos, antes de divulgar, e revisa a tabela quando o estoque mudar."
+    },
+    {
+      "type": "callout",
+      "title": "O que a oferta não deve prometer",
+      "text": "Ainda não vale prometer quantidade que a loja não tem, prazo que a reposição não cumpre e desconto acima do teto aprovado. Quando a quantidade é limitada de verdade, ela entra na divulgação com o número real, e a conta fecha com o estoque. Quando não é, escassez inventada derruba a confiança.",
+      "tone": "attention"
+    },
+    {
+      "type": "checklist",
+      "id": "estoque-checagem-de-estoque",
+      "title": "Checagem de estoque antes da divulgação",
+      "items": [
+        "Cada modelo anunciado tem a quantidade em prateleira e o prazo de reposição anotados.",
+        "O desconto máximo por item está aprovado por escrito.",
+        "A equipe sabe quem confirma estoque quando o cliente pergunta.",
+        "Cada loja tem o seu estoque de oferta, sem soma imaginária.",
+        "A divulgação cita a data real, 27 de novembro."
+      ]
+    },
+    {
+      "type": "cta",
+      "title": "Veja a campanha com clareza",
+      "text": "Converse com a Its Time pelo WhatsApp e veja como seria acompanhar conversas, orçamentos e vendas da sua ótica sem planilha.",
+      "label": "Conversar no WhatsApp"
+    },
+    {
+      "type": "text",
+      "id": "promessas",
+      "title": "O que o vendedor pode prometer",
+      "paragraphs": [
+        "O ticket médio da Black Friday sobe até 23% quando a oferta traz uma vantagem além do desconto simples, segundo levantamento do Google reproduzido pelo [Estado de Minas](https://www.em.com.br/mundo-corporativo/2026/10/7517381-black-friday-no-varejo-optico-o-que-esperar-em-2026.html). A mesma matéria cita a pesquisa da LWSA: 44% dos consumidores esperam gastar acima de R$ 1 mil na data.",
+        "Numa ótica, a vantagem seria o ajuste da armação incluso ou a limpeza gratuita das lentes. São exemplos, sem promessa de resultado.",
+        "O problema aparece no balcão. A cliente pergunta se o ajuste vale em outra loja e o vendedor não sabe responder. Ele confirma por conta própria ou pede para esperar. A cliente vai comparar em outro lugar."
+      ],
+      "subsections": [
+        {
+          "title": "O que o vendedor pode confirmar?",
+          "paragraphs": [
+            "Três respostas precisam existir antes de a campanha ir ao ar, cada uma aprovada por quem responde pelo preço."
+          ]
+        },
+        {
+          "title": "O que está incluído na oferta?",
+          "paragraphs": [
+            "A frase diz se a condição vale para armação, lente ou os dois juntos e quais marcas a vantagem extra cobre. O vendedor repete essa frase, sem improviso."
+          ]
+        },
+        {
+          "title": "O que muda de uma loja para outra?",
+          "paragraphs": [
+            "Cada unidade tem equipe, agenda e estoque próprios. Se o ajuste só existe na loja do centro, a mensagem informa isso antes de o cliente sair de casa."
+          ]
+        },
+        {
+          "title": "Quem aprova a exceção?",
+          "paragraphs": [
+            "O pedido fora da regra (desconto maior, prazo diferente) sobe para uma pessoa com nome. O vendedor explica a oferta aprovada e encaminha o resto."
+          ]
+        },
+        {
+          "title": "A mesma resposta, em qualquer dia",
+          "paragraphs": [
+            "O mesmo texto do [Estado de Minas](https://www.em.com.br/mundo-corporativo/2026/10/7517381-black-friday-no-varejo-optico-o-que-esperar-em-2026.html) cita que 54% dos consumidores vão distribuir as compras ao longo de novembro. A cliente fala com dois vendedores em semanas diferentes, às vezes com duas lojas. As duas respostas precisam coincidir, porque a cliente vai comparar uma com a outra no WhatsApp e na loja.",
+            "Imagine esse balcão afinado: a condição está escrita, cada loja confirma só o que entrega e o desconto nunca passa do teto aprovado, nem às 22h de um domingo, nem quando o vendedor de Campinas está de folga e o de Santos assume a conversa. A Its Time foi desenhada para atender assim, com as condições cadastradas e sem desconto que ninguém autorizou."
+          ]
+        }
+      ]
+    },
+    {
+      "type": "callout",
+      "title": "O que o número de 23% não significa",
+      "text": "O levantamento do Google retrata o varejo em geral e ainda não separa as óticas. Em cada loja, o resultado depende do custo da vantagem e do que ela consegue entregar. Escolha um benefício com custo conhecido.",
+      "tone": "note"
+    },
+    {
+      "type": "text",
+      "id": "ia-e-dados",
+      "title": "Como explicar a IA e o uso dos dados",
+      "paragraphs": [
+        "Para 78% dos brasileiros, a IA vai tornar as compras mais fáceis. Para 52,3%, privacidade e uso de dados são a principal preocupação com a tecnologia. Os dois números saíram na mesma pesquisa, noticiada pelo [TI Inside](https://tiinside.com.br/15/10/2026/ia-na-black-friday-78-dos-brasileiros-esperam-compras-mais-faceis-mas-privacidade-preocupa/) em 15 de outubro.",
+        "A conclusão que o texto tira vale para a ótica: a conveniência abre a porta e a transparência decide se o cliente entra. A pesquisa mede o consumidor brasileiro em geral, não o de ótica, mas o padrão é fácil de reconhecer no balcão.",
+        "Quem manda [a foto da receita](/blog/ia-de-atendimento-para-oticas#orcamento) pelo WhatsApp está entregando um dado pessoal. Quer saber para onde ele vai antes de a oferta de Black Friday aparecer."
+      ],
+      "subsections": [
+        {
+          "title": "O que o cliente precisa saber antes da oferta?",
+          "paragraphs": [
+            "Três avisos, todos curtos, antes de qualquer promoção."
+          ]
+        },
+        {
+          "title": "Quem responde é uma IA?",
+          "paragraphs": [
+            "A primeira mensagem diz isso em uma linha, em qualquer canal: WhatsApp, site, Instagram ou Messenger. A IA se apresenta como assistente da loja. Ninguém descobre depois que conversou com uma máquina."
+          ]
+        },
+        {
+          "title": "Que dados ela pede e por quê?",
+          "paragraphs": [
+            "Nome, telefone e, se o cliente quiser orçamento de lente, a foto da receita para ler esférico, cilíndrico e eixo. A mensagem diz para que o dado serve: montar o resumo que a equipe e o cliente vão consultar."
+          ]
+        },
+        {
+          "title": "Quem vê a conversa depois?",
+          "paragraphs": [
+            "Só quem precisa. O vendedor enxerga os números e as lojas que o administrador liberou, e a conversa de uma loja não aparece na outra."
+          ]
+        },
+        {
+          "title": "Confiança como padrão, não como aviso",
+          "paragraphs": [
+            "A Its Time foi desenhada com essa ordem: a IA se apresenta, pede só o que serve ao orçamento e cada vendedor enxerga apenas as lojas liberadas. O cliente ganha o atendimento rápido do WhatsApp ao Instagram sem abrir mão de saber com quem fala."
+          ]
+        }
+      ]
+    },
+    {
+      "type": "table",
+      "id": "ia-e-dados-quem-ve-o-que",
+      "title": "Quem vê cada dado depois",
+      "columns": [
+        "Dado",
+        "Para que serve",
+        "Quem vê"
+      ],
+      "rows": [
+        [
+          "Nome e telefone",
+          "Identificar o cliente na conversa",
+          "Vendedores com acesso àquela loja"
+        ],
+        [
+          "Foto da receita",
+          "Resumo com esférico, cilíndrico e eixo",
+          "A equipe da conversa e o próprio cliente"
+        ],
+        [
+          "Histórico da conversa",
+          "Evitar que o cliente repita tudo a cada contato",
+          "Quem atende aquele número de WhatsApp"
+        ]
+      ],
+      "caption": "A conta de cada empresa é isolada das outras."
+    },
+    {
+      "type": "callout",
+      "title": "O que a pesquisa não mostra",
+      "text": "A pesquisa do TI Inside ainda não mostra se explicar a IA aumenta as vendas, e este texto não afirma isso. Ela mostra que a preocupação com dados existe. Quem a ignora perde a confiança antes de perder a venda.",
+      "tone": "note"
+    },
+    {
+      "type": "checklist",
+      "id": "ia-e-dados-checagem",
+      "title": "Checagem antes de 27 de novembro",
+      "items": [
+        "A primeira mensagem de cada canal avisa que a IA atende.",
+        "Há uma frase pronta dizendo que dados a IA pede e para que servem.",
+        "O administrador conferiu quais vendedores veem quais números e lojas.",
+        "Ninguém promete o que a IA não promete: desconto sem aprovação e estoque sem consulta."
+      ]
+    },
+    {
+      "type": "text",
+      "id": "retomada",
+      "title": "Retomar orçamentos com motivo",
+      "paragraphs": [
+        "O orçamento foi enviado numa sexta, às 17h, e na segunda de manhã continua parado. O cliente leu e sumiu. Na Black Friday, que cai em 27 de novembro, esse cliente tem várias promoções para comparar.",
+        "O [Bizcommunity](https://www.bizcommunity.com/article/why-customer-service-could-matter-as-much-as-the-discount-969624a) descreve o risco do atendimento por WhatsApp na Black Friday: cada pergunta sem resposta é um ponto em que a venda se perde, e [uma resposta errada sobre estoque](#estoque), depois de o pedido pago, cria um problema maior.",
+        "Retomar é parte da venda. Mas “oi, viu meu orçamento?” não é um motivo. O cliente responde quando a mensagem traz uma informação nova. Pense em como você mesmo responde: uma mensagem que traz prazo, foto ou horário ganha resposta; a que só cobra vai para o fim da fila."
+      ],
+      "subsections": [
+        {
+          "title": "A rotina que não depende de ninguém lembrar",
+          "paragraphs": [
+            "O ponto fraco desse método é humano: na semana cheia, ninguém lembra de mandar a segunda mensagem. A Its Time executa a sequência de 2 e 4 horas sozinha, com o nome do cliente, e para quando ele responde. O vendedor entra só quando já há conversa, e passa o dia atendendo quem está na loja em vez de caçar quem sumiu no WhatsApp."
+          ]
+        }
+      ]
+    },
+    {
+      "type": "steps",
+      "id": "retomada-tres-retomadas",
+      "title": "Três retomadas, com o motivo de cada uma",
+      "items": [
+        {
+          "title": "1. Prazo da condição, 2 horas depois",
+          "text": "Se o orçamento tem uma condição com data, a primeira lembrança cita a data: “a condição de parcelamento vale até quinta, 22 de outubro”. É o único tipo de urgência que a loja usa sem inventar."
+        },
+        {
+          "title": "2. Informação nova, 4 horas depois",
+          "text": "O reforço traz algo que o orçamento não tinha: prazo de entrega da lente, foto do modelo em estoque, horário disponível para o exame. Se o cliente responde, a sequência para na hora. Exemplo: “a lente multifocal fica pronta em 5 dias úteis, e há horário de exame na terça, às 10h”."
+        },
+        {
+          "title": "3. Pergunta com saída, depois de 7 dias",
+          "text": "Essa é do vendedor. Ele pergunta o que pesou: preço, prazo ou dúvida. O cliente que diz “vou pensar” recebe um próximo passo claro. Quem não responde sai da lista ativa, sem insistência diária. O motivo anotado vira aprendizado para a próxima campanha."
+        }
+      ]
+    },
+    {
+      "type": "callout",
+      "title": "O que a retomada não faz",
+      "text": "O [checklist da Omnisend](https://www.omnisend.com/blog/black-friday-checklist/) manda confirmar estoque promocional e prazos de reposição antes de divulgar. A retomada herda essa regra: oferecer a armação que acabou é pior que não retomar. Também não promete desconto que ninguém autorizou, nem uma data de entrega que a reposição não cumpre. Se a loja não tem certeza, a mensagem não sai.",
+      "tone": "attention"
+    },
+    {
+      "type": "checklist",
+      "id": "retomada-revise-os-orcamentos",
+      "title": "Revise os orçamentos antes de 27 de novembro",
+      "items": [
+        "Todo orçamento aberto tem um responsável e uma data de retorno anotada.",
+        "A primeira retomada cita a data de validade da condição, com a data real.",
+        "A segunda traz uma informação nova: prazo, foto ou horário de exame.",
+        "O estoque dos produtos citados foi conferido na semana da mensagem.",
+        "Quem respondeu “vou pensar” tem um próximo passo combinado."
+      ]
+    },
+    {
+      "type": "text",
+      "id": "pos-venda",
+      "title": "Depois da venda, a conversa continua",
+      "paragraphs": [
+        "A Black Friday de 2026 cai em 27 de novembro, mas só 20% dos consumidores planejam concentrar as compras nesse dia. A conta vem da pesquisa da LWSA com a Opinion Box, que ouviu 1.044 pessoas e foi citada pelo [O Globo](https://oglobo.globo.com/patrocinado/dino/noticia/2026/10/14/black-friday-amplia-demanda-no-varejo-e-exige-planejamento-1.ghtml) em 14 de outubro.",
+        "Os outros números da mesma pesquisa apontam para um mês inteiro de conversa: 50% começam a pesquisar ofertas mais de 30 dias antes e 54% distribuem as compras por novembro. A pesquisa é do consumidor em geral, não de ótica, mas o balcão sente o mesmo.",
+        "Uma ótica que prepara só o dia 27 deixa sem plano as quatro semanas em que as perguntas chegam."
+      ],
+      "subsections": [
+        {
+          "title": "Quatro regras antes do pico",
+          "paragraphs": [
+            "Primeira regra: quem responde o quê. Pergunta de preço fechado vai para o vendedor. Pergunta de endereço e horário tem resposta pronta, com os dados reais da loja.",
+            "Segunda: as respostas padrão ficam escritas no começo da campanha, em vez de na cabeça de cada vendedor. Terceira: o histórico acompanha o cliente em todos os canais, e a conversa de sexta continua na terça sem recomeçar. Quarta: cada vendedor responde só pelas lojas dele."
+          ]
+        },
+        {
+          "title": "Um mês inteiro de conversa, sem fila",
+          "paragraphs": [
+            "É esse o desenho que a Its Time executa: a IA responde nos quatro canais em segundos, qualifica cada conversa e deixa o vendedor com tempo para fechar. A Black Friday deixa de ser uma corrida contra o celular."
+          ]
+        }
+      ]
+    },
+    {
+      "type": "table",
+      "id": "pos-venda-tres-fases",
+      "title": "Três fases, uma conversa só",
+      "columns": [
+        "Fase",
+        "Período",
+        "O que o cliente precisa",
+        "O que a ótica entrega"
+      ],
+      "rows": [
+        [
+          "Antes",
+          "16 de outubro a 26 de novembro",
+          "Resposta rápida sobre preço, grau e prazo, a qualquer hora",
+          "Conversa qualificada esperando o vendedor de manhã"
+        ],
+        [
+          "Durante",
+          "27 de novembro",
+          "Resposta em segundos, mesmo com a fila cheia",
+          "Nenhuma pergunta esperando enquanto o vendedor fecha valores"
+        ],
+        [
+          "Depois",
+          "A partir de 28 de novembro",
+          "Retorno do orçamento e lembrete do exame de vista",
+          "Lista de retorno com dono e data, lembrete 1 hora antes do exame"
+        ]
+      ],
+      "caption": "Todo o volume de perguntas precisa de resposta; o tempo do vendedor vai para fechar."
+    },
+    {
+      "type": "callout",
+      "title": "O que o preço fechado exige",
+      "text": "Desconto e estoque pedem uma decisão de quem conhece a margem. Uma resposta padrão nunca oferece desconto que ninguém autorizou e nunca confirma estoque sem consultar uma fonte válida. O vendedor fecha o preço e valida o pagamento.",
+      "tone": "note"
+    },
+    {
+      "type": "checklist",
+      "id": "pos-venda-plano-de-continuidade",
+      "title": "Plano de continuidade, de 16 de outubro a dezembro",
+      "items": [
+        "As respostas padrão da loja (prazo, parcelamento, endereço) estão escritas.",
+        "O atendimento responde fora do horário, nos quatro canais.",
+        "Alguém olha as conversas que chegaram à noite às 9h e às 18h na semana do dia 27.",
+        "O lembrete do exame de vista sai 1 hora antes, e a falta vira motivo para nova chamada.",
+        "Os orçamentos de sexta têm um responsável e uma data de retorno na segunda-feira."
+      ]
+    },
+    {
+      "type": "faq",
+      "id": "duvidas",
+      "title": "Perguntas frequentes",
+      "items": [
+        {
+          "question": "O vendedor precisa ter autonomia para mudar a oferta?",
+          "answer": "Não. Ele precisa de uma resposta clara para as perguntas previsíveis e de um caminho rápido para as imprevisíveis."
+        },
+        {
+          "question": "As condições têm de ser iguais em todas as lojas?",
+          "answer": "Não necessariamente. Se agenda ou serviço variam, a diferença aparece na divulgação e cada equipe sabe o que confirma."
+        }
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "label": "Comunique-se: Black Friday começa antes e a gestão da loja cabe no celular",
+      "url": "https://portal.comunique-se.com.br/339081-black-friday-comeca-antes-e-a-gestao-da-loja-cabe-no-celular/"
+    },
+    {
+      "label": "Conecta Info: Black Friday no varejo óptico, o que esperar em 2026",
+      "url": "https://conectainfo.net/2026/10/08/335461-black-friday-no-varejo-optico-o-que-esperar-em-2026/"
+    },
+    {
+      "label": "Estado de Minas: Black Friday no varejo óptico, o que esperar em 2026",
+      "url": "https://www.em.com.br/mundo-corporativo/2026/10/7517381-black-friday-no-varejo-optico-o-que-esperar-em-2026.html"
+    },
+    {
+      "label": "TI Inside: IA na Black Friday, 78% esperam compras mais fáceis, mas privacidade preocupa",
+      "url": "https://tiinside.com.br/15/10/2026/ia-na-black-friday-78-dos-brasileiros-esperam-compras-mais-faceis-mas-privacidade-preocupa/"
+    },
+    {
+      "label": "Bizcommunity: atendimento pode valer tanto quanto o desconto",
+      "url": "https://www.bizcommunity.com/article/why-customer-service-could-matter-as-much-as-the-discount-969624a"
+    },
+    {
+      "label": "Omnisend: checklist de Black Friday",
+      "url": "https://www.omnisend.com/blog/black-friday-checklist/"
+    },
+    {
+      "label": "O Globo: Black Friday amplia demanda no varejo e exige planejamento",
+      "url": "https://oglobo.globo.com/patrocinado/dino/noticia/2026/10/14/black-friday-amplia-demanda-no-varejo-e-exige-planejamento-1.ghtml"
+    }
+  ],
+  "cover": {
+    "src": "/blog/black-friday-para-otica-o-que-medir-antes-de-27-de-novembro/cover-6e4f175f.webp",
+    "alt": "Mãos de uma pessoa sobre o balcão de uma ótica, ao lado de uma prancheta em branco e armações alinhadas",
+    "caption": ""
+  }
+}
