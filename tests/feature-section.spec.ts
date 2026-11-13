@@ -183,7 +183,7 @@ test("crescer section appears after features with background, copy, and CTA", as
   }
 });
 
-test("trusted strip shows only its line of text while the client logos are hidden", async ({ page }) => {
+test("hero has no client strip and no horizontal overflow", async ({ page }) => {
   for (const viewport of [
     { width: 470, height: 980 },
     { width: 1440, height: 900 },
@@ -192,8 +192,8 @@ test("trusted strip shows only its line of text while the client logos are hidde
     await gotoHome(page);
     await expectNoHorizontalOverflow(page);
 
-    await expect(page.locator(".trusted-strip p")).toHaveText("EMPRESAS QUE ESCALAM CONTAM COM A ITS TIME.");
-    await expect(page.locator(".trusted-strip .company-row")).toHaveCount(0);
+    // the "empresas que escalam" strip was removed until there are client logos to show
+    await expect(page.locator(".trusted-strip")).toHaveCount(0);
   }
 });
 
