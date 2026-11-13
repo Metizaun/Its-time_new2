@@ -7,6 +7,7 @@ import { whatsappLinkProps } from "@/lib/whatsapp";
 import {
   ArrowUpRight,
   Bot,
+  Menu,
   Play,
   Sparkles,
   Target,
@@ -122,7 +123,7 @@ export function FullSite() {
           src="/assets/hero/background.png"
           alt=""
           fill
-          priority
+          preload
           sizes="100vw"
         />
 
@@ -164,10 +165,25 @@ export function FullSite() {
             </a>
           ))}
           <a className="demo-button demo-button-header" {...whatsappLinkProps()}>
-            Agendar Demo
+            <span className="demo-label-full">Agendar Demo</span>
+            <span className="demo-label-short" aria-hidden="true">Demo</span>
             <ArrowUpRight size={17} strokeWidth={2.2} />
           </a>
         </nav>
+
+        {/* Below 820px the nav links are hidden; this menu brings them back without any client-side JS. */}
+        <details className="mobile-nav">
+          <summary aria-label="Abrir menu">
+            <Menu size={22} strokeWidth={2.2} aria-hidden="true" />
+          </summary>
+          <nav className="mobile-nav-panel" aria-label="Menu">
+            {navItems.map((item) => (
+              <a href={item.href} key={item.label}>
+                {item.label}
+              </a>
+            ))}
+          </nav>
+        </details>
       </header>
 
       <section className="hero-grid" aria-label="Automacao de SDR com IA">
@@ -268,7 +284,7 @@ export function FullSite() {
               alt="Mockup de conversa com agente SDR IA"
               width={622}
               height={1203}
-              priority
+              loading="eager"
               sizes="(max-width: 768px) 78vw, 36vw"
             />
             <div className="phone-shadow" aria-hidden="true" />
@@ -401,8 +417,9 @@ export function FullSite() {
 
 function CardHeading({ title, subtitle }: { title: string; subtitle: string }) {
   return (
+    // Labels of a mock dashboard, not page sections: kept out of the heading outline.
     <div className="card-heading">
-      <h2>{title}</h2>
+      <strong className="card-title">{title}</strong>
       <p>{subtitle}</p>
     </div>
   );

@@ -302,7 +302,7 @@ a {
   flex: 0 0 48px;
   width: 48px;
   height: 48px;
-  background-image: url("/assets/brand/its-time-mark-transparent-clean.png");
+  background-image: url("/assets/brand/its-time-mark-96.webp");
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
@@ -380,6 +380,14 @@ a {
   color: #fff;
   background: linear-gradient(135deg, var(--accent), #ff3f16);
   box-shadow: 0 14px 30px rgba(255, 90, 31, 0.18);
+}
+
+.demo-label-short {
+  display: none;
+}
+
+.mobile-nav {
+  display: none;
 }
 
 .demo-button-header:hover,
@@ -759,7 +767,8 @@ a {
   flex-direction: column;
 }
 
-.card-heading h2 {
+.card-heading .card-title {
+  display: block;
   margin: 0;
   color: #111;
   font-size: 13px;
@@ -1317,6 +1326,70 @@ a {
     font-size: 13px;
   }
 
+  /* the open menu hangs over the hero, which shares the header's z-index and comes later in the page */
+  .site-header {
+    z-index: 20;
+  }
+
+  .mobile-nav {
+    position: relative;
+    display: block;
+    flex: 0 0 auto;
+  }
+
+  .mobile-nav summary {
+    display: grid;
+    place-items: center;
+    width: 44px;
+    height: 44px;
+    border: 1px solid rgba(10, 10, 10, 0.16);
+    border-radius: 4px;
+    background: rgba(255, 255, 255, 0.72);
+    color: #111;
+    cursor: pointer;
+    list-style: none;
+  }
+
+  .mobile-nav summary::-webkit-details-marker {
+    display: none;
+  }
+
+  .mobile-nav[open] summary {
+    border-color: var(--accent);
+    color: var(--accent);
+  }
+
+  .mobile-nav-panel {
+    position: absolute;
+    top: calc(100% + 8px);
+    right: 0;
+    z-index: 30;
+    display: grid;
+    min-width: 200px;
+    padding: 6px;
+    border: 1px solid rgba(10, 10, 10, 0.1);
+    border-radius: 6px;
+    background: #fff;
+    box-shadow: 0 18px 40px rgba(10, 10, 10, 0.14);
+  }
+
+  .mobile-nav-panel a {
+    display: flex;
+    align-items: center;
+    min-height: 48px;
+    padding-inline: 14px;
+    border-radius: 4px;
+    color: #111;
+    font-size: 15px;
+    font-weight: 600;
+  }
+
+  .mobile-nav-panel a:hover,
+  .mobile-nav-panel a:focus-visible {
+    background: rgba(255, 90, 31, 0.08);
+    color: var(--accent);
+  }
+
   .hero-grid {
     padding-top: 54px;
   }
@@ -1457,7 +1530,7 @@ a {
     padding: 17px;
   }
 
-  .card-heading h2 {
+  .card-heading .card-title {
     font-size: 13px;
   }
 
@@ -1561,18 +1634,22 @@ a {
   }
 
   .demo-button-header {
-    width: 44px;
-    padding: 0;
-    gap: 0;
-    overflow: hidden;
-    /* the label collapses to nothing (it stays readable for screen readers); the arrow is centred in the square */
-    font-size: 0;
-    color: transparent;
+    padding-inline: 14px;
+    gap: 6px;
   }
 
-  .demo-button-header svg {
-    color: white;
-    flex: 0 0 auto;
+  /* the full label does not fit next to the logo and the menu; the short one keeps the button readable */
+  .demo-label-full {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    white-space: nowrap;
+  }
+
+  .demo-label-short {
+    display: inline;
   }
 
   .hero-copy h1 {

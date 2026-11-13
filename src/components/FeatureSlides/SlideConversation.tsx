@@ -4,7 +4,7 @@ import { FeatureSlideFrame } from "./shared";
 import { StagePlaceholder } from "./StagePlaceholder";
 
 // Loaded after hydration so the pinned scroll section stays light on first load.
-const ChatJourney = dynamic(() => import("./ChatJourney").then((module) => module.ChatJourney), {
+const ChatJourney = dynamic(() => import("./scenes").then((module) => module.ChatJourney), {
   ssr: false,
   loading: () => <StagePlaceholder ratio="760 / 660" />,
 });

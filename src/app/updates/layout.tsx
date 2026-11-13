@@ -4,6 +4,7 @@ export const metadata: Metadata = {
   title: "Novidades de novembro no Its Time CRM · Its Time",
   description:
     "Confira o novo visual do CRM, os guias da Nya e as melhorias no Chat, na Agenda e no Pipeline.",
+  alternates: { canonical: "/updates" },
 };
 
 export default function UpdatesLayout({

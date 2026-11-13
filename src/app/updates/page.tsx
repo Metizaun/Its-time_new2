@@ -164,7 +164,7 @@ export default function UpdatesPage() {
               alt=""
               width={48}
               height={48}
-              priority
+              preload
             />
             <span>Its Time</span>
           </Link>

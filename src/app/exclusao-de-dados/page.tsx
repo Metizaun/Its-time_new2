@@ -5,6 +5,7 @@ export const metadata: Metadata = {
   title: "Exclusão de dados · Its Time CRM",
   description:
     "Como pedir a exclusão dos seus dados pessoais do Its Time CRM e acompanhar o pedido.",
+  alternates: { canonical: "/exclusao-de-dados" },
 };
 
 export default function DataDeletionPage() {

@@ -109,9 +109,10 @@ test("article FAQ, share and related reading work", async ({
   ).toBeVisible();
   await page.locator(".blog-related a").first().click();
   await expect(page).toHaveURL(/acompanhamento-de-orcamentos/);
-  await page.goto("/blog/artigo-inexistente");
+  const missing = await page.goto("/blog/artigo-inexistente");
+  expect(missing?.status()).toBe(404);
   await expect(
-    page.getByRole("heading", { name: "404", exact: true }),
+    page.getByRole("heading", { name: "Página não encontrada." }),
   ).toBeVisible();
 });
 

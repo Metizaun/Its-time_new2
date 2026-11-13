@@ -4,7 +4,7 @@ import { FeatureSlideFrame } from "./shared";
 import { StagePlaceholder } from "./StagePlaceholder";
 
 // Loaded after hydration so the pinned scroll section stays light on first load.
-const PerformancePanel = dynamic(() => import("./PerformancePanel").then((module) => module.PerformancePanel), {
+const PerformancePanel = dynamic(() => import("./scenes").then((module) => module.PerformancePanel), {
   ssr: false,
   loading: () => <StagePlaceholder ratio="760 / 660" />,
 });

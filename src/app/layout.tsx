@@ -4,6 +4,7 @@ import Script from "next/script";
 import { AnalyticsTracker } from "@/components/AnalyticsTracker";
 import { CookieConsent } from "@/components/CookieConsent";
 import { GA_MEASUREMENT_ID, UMAMI_SRC, UMAMI_WEBSITE_ID } from "@/lib/analytics";
+import { JsonLd, organizationGraph } from "@/lib/structured-data";
 import "./globals.css";
 import "../styles/feature-section.css";
 import "../styles/crescer-section.css";
@@ -61,6 +62,7 @@ export default function RootLayout({
       className={`${geistSans.variable} ${geistMono.variable} ${display.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col">
+        <JsonLd data={organizationGraph} />
         {children}
         {UMAMI_SRC && UMAMI_WEBSITE_ID ? (
           <Script

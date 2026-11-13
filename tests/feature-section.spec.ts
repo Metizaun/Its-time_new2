@@ -202,9 +202,10 @@ test("hero menu and every demo button point to the right places", async ({ page 
   await gotoHome(page);
 
   const nav = page.locator(".main-nav a:not(.demo-button)");
-  await expect(nav).toHaveText(["Soluções", "Login"]);
+  await expect(nav).toHaveText(["Soluções", "Blog", "Login"]);
   await expect(nav.nth(0)).toHaveAttribute("href", "#como-funciona");
-  await expect(nav.nth(1)).toHaveAttribute("href", "https://app.itstime.pro");
+  await expect(nav.nth(1)).toHaveAttribute("href", "/blog");
+  await expect(nav.nth(2)).toHaveAttribute("href", "https://app.itstime.pro");
 
   // every "agendar demonstração" opens the commercial WhatsApp with the message already written
   for (const selector of [".demo-button-header", ".primary-cta", ".crescer-cta", ".od-cta"]) {

@@ -222,9 +222,9 @@ test("reader sees references, authorship, update date and all editorial modules"
     "/blog/acompanhamento-de-orcamentos",
   );
   const jsonLd = JSON.parse(
-    (await page.locator('script[type="application/ld+json"]').textContent())!,
+    (await page.locator('script[type="application/ld+json"]').allTextContents()).find((json) => json.includes('"BlogPosting"'))!,
   );
-  expect(jsonLd.dateModified).toBe("2026-10-16");
+  expect(jsonLd.dateModified).toBe("2026-10-16T00:00:00-03:00");
   expect(jsonLd.author["@type"]).toBe("Person");
   await expect(
     page.getByRole("button", { name: "Copiar link do artigo" }),

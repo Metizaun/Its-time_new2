@@ -5,6 +5,7 @@ export type ContentResource = {
   title: string;
   description: string;
   meta: string;
+  /** Last content change (YYYY-MM-DD); feeds the sitemap. Update it when the page changes. */
   updated?: string;
 };
 
@@ -29,6 +30,7 @@ export const resourceGroups: {
         title: "Conectar o WhatsApp oficial",
         description: "Prepare seu número, conclua a conexão com a Meta e configure o canal no CRM.",
         meta: "Conexão",
+        updated: "2026-10-29",
       },
       {
         href: "/tutoriais/whatsapp-boas-praticas",
@@ -53,6 +55,7 @@ export const resourceGroups: {
         title: "Agenda Universal",
         description: "Integre agendas de sistemas parceiros por webhooks e acompanhe a sincronização.",
         meta: "Sincronização",
+        updated: "2026-10-20",
       },
       {
         href: "/dev/documentacao/webhook-leads",
@@ -60,6 +63,7 @@ export const resourceGroups: {
         title: "Webhook de leads",
         description: "Envie novos contatos do seu sistema para a operação comercial no CRM.",
         meta: "Entrada CRM",
+        updated: "2026-09-18",
       },
       {
         href: "/dev/documentacao/webhook-cobranca",
@@ -67,6 +71,7 @@ export const resourceGroups: {
         title: "Webhook de cobrança",
         description: "Consulte o contrato de integração para enviar títulos financeiros ao Its Time.",
         meta: "Coleções",
+        updated: "2026-10-20",
       },
       {
         href: "/dev/documentacao/jornadas-rb",
@@ -74,6 +79,7 @@ export const resourceGroups: {
         title: "Jornadas RB",
         description: "Entenda os eventos e as regras das jornadas conectadas à integração RB.",
         meta: "Automações",
+        updated: "2026-10-20",
       },
     ],
   },

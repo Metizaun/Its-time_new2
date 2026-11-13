@@ -233,8 +233,8 @@ export function BlogFooter() {
       <nav aria-label="Links institucionais">
         <Link href="/blog#tutoriais">Tutoriais</Link>
         <Link href="/blog#dev">Área dev</Link>
-        <Link href="/privacidade">Privacidade</Link>
-        <Link href="/termos">Termos de uso</Link>
+        <Link href="/politica-de-privacidade">Privacidade</Link>
+        <Link href="/termos-de-uso">Termos de uso</Link>
       </nav>
     </footer>
   );

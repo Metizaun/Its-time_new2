@@ -13,3 +13,8 @@ Icon
 System rules
 design_rules_swiss_editorial_ai_system.md
 ChatGPT Image *.png
+
+# SEO tooling kept next to the repo (not part of the site)
+claude-seo-main
+*-audit
+.claude

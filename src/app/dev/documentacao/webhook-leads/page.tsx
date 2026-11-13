@@ -21,7 +21,7 @@ import { LeadSectionTracker } from "./LeadSectionTracker";
 
 export const metadata: Metadata = {
   title: "Webhook de leads · Documentação Its Time",
-  description: "Estrutura editorial para receber leads por webhook no CRM Its Time.",
+  description: "Guia técnico para enviar leads do seu sistema ao CRM Its Time por webhook, com a origem e o contexto de cada contato.",
   alternates: { canonical: "/dev/documentacao/webhook-leads" },
 };
 

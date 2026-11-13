@@ -1,6 +1,12 @@
 import { FullSite } from "@/components/FullSite";
 import { MaintenancePage } from "@/components/MaintenancePage";
+import type { Metadata } from "next";
 import { SiteFooter } from "@/components/SiteFooter";
+import { JsonLd, softwareApplication } from "@/lib/structured-data";
+
+export const metadata: Metadata = {
+  alternates: { canonical: "/" },
+};
 
 // SHOW_FULL_SITE é lido na hora do build (esta rota é estática), então é uma chave de build, não de runtime.
 // Local/preview: defina SHOW_FULL_SITE=true em .env.local para ver o site completo.
@@ -9,6 +15,7 @@ import { SiteFooter } from "@/components/SiteFooter";
 export default function Home() {
   return (
     <>
+      <JsonLd data={softwareApplication} />
       {process.env.SHOW_FULL_SITE === "true" ? <FullSite /> : <MaintenancePage />}
       <SiteFooter />
     </>

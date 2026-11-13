@@ -428,6 +428,7 @@
 .blog-resource-card .blog-kicker::before {
   background: var(--color-primary-500);
 }
+.blog-resource-card h2,
 .blog-resource-card h3 {
   font-size: var(--text-2xl);
   line-height: 1.2;
@@ -596,9 +597,28 @@
 }
 .blog-footer nav {
   display: flex;
+  flex-wrap: wrap;
   gap: var(--space-6);
   font-size: 12px;
   color: var(--color-gray-600);
+}
+/* Small text links keep their look but get a finger-sized hit area (48px tall) on touch screens. */
+@media (pointer: coarse) {
+  .blog-header nav > a:not(.blog-button),
+  .blog-footer nav a {
+    position: relative;
+  }
+  .blog-header nav > a:not(.blog-button)::after,
+  .blog-footer nav a::after {
+    content: "";
+    position: absolute;
+    inset: 50% -4px auto;
+    height: 48px;
+    transform: translateY(-50%);
+  }
+  .blog-filters button {
+    min-height: 44px;
+  }
 }
 .blog-empty {
   padding: var(--space-12) var(--space-4);

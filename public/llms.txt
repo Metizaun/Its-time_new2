@@ -1,0 +1,38 @@
+# Its Time
+
+> Its Time CRM: atendimento com IA, CRM e automações para conectar conversas, organizar a operação comercial e gerar novas oportunidades de negócio. A IA atende por WhatsApp, site, Instagram e Messenger, registra cada informação no CRM, agenda, faz o acompanhamento de orçamentos e encaminha para a equipe quando precisa. Site em português do Brasil.
+
+Empresa: ITS TIME TECH LTDA, CNPJ 68.427.775/0001-81, Porto Alegre/RS, Brasil. Contato comercial pelo WhatsApp indicado em https://itstime.pro.
+
+## Produto
+
+- [Página inicial](https://itstime.pro/): o que o Its Time CRM faz, com a demonstração de cada etapa do atendimento
+- [Novidades](https://itstime.pro/updates): notas de versão do CRM
+
+## Blog
+
+- [Blog Its Time](https://itstime.pro/blog): artigos sobre atendimento, vendas e uso de IA, com foco em óticas
+- [IA de atendimento para óticas: da pergunta ao orçamento](https://itstime.pro/blog/ia-de-atendimento-para-oticas-da-pergunta-ao-orcamento)
+- [O que esperar de uma IA de atendimento numa ótica](https://itstime.pro/blog/o-que-esperar-de-uma-ia-de-atendimento-numa-otica)
+- [Follow-up comercial: orçamento parado não é processo](https://itstime.pro/blog/follow-up-comercial-orcamento-parado-nao-e-processo)
+- [Atendimento em vários canais](https://itstime.pro/blog/atendimento-em-varios-canais-a-ia-absorve-o-volume-da-otica)
+
+## Tutoriais
+
+- [Tutoriais](https://itstime.pro/tutoriais): guias para quem usa o CRM
+- [Conectar o WhatsApp oficial](https://itstime.pro/tutoriais/whatsapp-oficial)
+- [Boas práticas no WhatsApp](https://itstime.pro/tutoriais/whatsapp-boas-praticas)
+
+## Documentação para desenvolvedores
+
+- [Documentação](https://itstime.pro/dev/documentacao): integrações por webhook
+- [Agenda Universal](https://itstime.pro/dev/documentacao/agenda)
+- [Webhook de leads](https://itstime.pro/dev/documentacao/webhook-leads)
+- [Webhook de cobrança](https://itstime.pro/dev/documentacao/webhook-cobranca)
+- [Jornadas RB](https://itstime.pro/dev/documentacao/jornadas-rb)
+
+## Institucional
+
+- [Política de privacidade](https://itstime.pro/politica-de-privacidade)
+- [Termos de uso](https://itstime.pro/termos-de-uso)
+- [Exclusão de dados](https://itstime.pro/exclusao-de-dados)

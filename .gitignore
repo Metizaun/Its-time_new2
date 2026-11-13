@@ -44,3 +44,7 @@ next-env.d.ts
 /Site_itstime/
 /Site_itstime - Copia/
 /itstime-site-nj/
+
+# claude-seo plugin (local source) and its audit output
+/claude-seo-main/
+/*-audit/

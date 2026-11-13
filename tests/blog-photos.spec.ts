@@ -101,7 +101,7 @@ test("article shows the cover on top, the body photo with its caption and expose
   expect(bodyLoaded).toBe(true);
 
   await expect(page.locator('meta[property="og:image"]')).toHaveAttribute("content", /assets\/hero\/background\.png$/);
-  const jsonLd = JSON.parse((await page.locator('script[type="application/ld+json"]').textContent()) ?? "{}");
+  const jsonLd = JSON.parse((await page.locator('script[type="application/ld+json"]').allTextContents()).find((json) => json.includes('"BlogPosting"')) ?? "{}");
   expect(jsonLd.image).toBe(`https://itstime.pro${photo}`);
   // a foto do corpo nao entra no sumario (nao tem id)
   await expect(page.locator(".blog-toc")).not.toContainText("Foto de teste no corpo");

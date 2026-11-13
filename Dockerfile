@@ -21,6 +21,13 @@ ARG NEXT_PUBLIC_GA_MEASUREMENT_ID=""
 ENV NEXT_PUBLIC_GA_MEASUREMENT_ID=$NEXT_PUBLIC_GA_MEASUREMENT_ID
 RUN npm run build
 RUN npm prune --omit=dev
+# package-lock.json is written on Windows, so it only lists sharp's Windows binary and `npm ci` skips the Linux one.
+# Without it next/image cannot resize or convert and serves every image at full size.
+# Installed after the prune, which would otherwise remove it, and checked so a missing binary fails the build.
+RUN ARCH="$(node -p process.arch)" \
+  && npm install --no-save --omit=dev --no-audit --no-fund \
+     "@img/sharp-linux-${ARCH}@0.34.5" "@img/sharp-libvips-linux-${ARCH}@1.2.4" \
+  && node -e "require('sharp')"
 
 FROM node:20-bookworm-slim AS runner
 

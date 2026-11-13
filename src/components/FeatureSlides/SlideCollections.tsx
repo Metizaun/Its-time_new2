@@ -4,7 +4,7 @@ import { FeatureSlideFrame } from "./shared";
 import { StagePlaceholder } from "./StagePlaceholder";
 
 // Loaded after hydration so the pinned scroll section stays light on first load.
-const CashFlow = dynamic(() => import("./CashFlow").then((module) => module.CashFlow), {
+const CashFlow = dynamic(() => import("./scenes").then((module) => module.CashFlow), {
   ssr: false,
   loading: () => <StagePlaceholder ratio="2.35 / 1" />,
 });

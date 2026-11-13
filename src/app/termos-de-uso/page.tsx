@@ -5,6 +5,7 @@ export const metadata: Metadata = {
   title: "Termos de Uso · Its Time CRM",
   description:
     "Regras gerais para contratação e uso da plataforma Its Time CRM por empresas.",
+  alternates: { canonical: "/termos-de-uso" },
 };
 
 export default function TermsPage() {
