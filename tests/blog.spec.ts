@@ -108,7 +108,7 @@ test("article FAQ, share and related reading work", async ({
     page.getByRole("button", { name: "Link copiado" }),
   ).toBeVisible();
   await page.locator(".blog-related a").first().click();
-  await expect(page).toHaveURL(/follow-up-comercial-orcamento-parado-nao-e-processo/);
+  await expect(page).toHaveURL(/agendamento-com-ia/);
   const missing = await page.goto("/blog/artigo-inexistente");
   expect(missing?.status()).toBe(404);
   await expect(

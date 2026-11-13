@@ -1,6 +1,6 @@
 # Its Time
 
-> Its Time CRM: atendimento com IA, CRM e automações para conectar conversas, organizar a operação comercial e gerar novas oportunidades de negócio. A IA atende por WhatsApp, site, Instagram e Messenger, registra cada informação no CRM, agenda, faz o acompanhamento de orçamentos e encaminha para a equipe quando precisa. Site em português do Brasil.
+> Its Time CRM: atendimento com IA, CRM e automações para conectar conversas, organizar a operação comercial e gerar novas oportunidades de negócio. A IA atende por WhatsApp, site, Instagram e Messenger, registra cada informação no CRM, agenda, faz o acompanhamento de orçamentos e encaminha para a equipe quando precisa. Atende principalmente clínicas e óticas, e serve a qualquer negócio que vende pela conversa. Site em português do Brasil.
 
 Empresa: ITS TIME TECH LTDA, CNPJ 68.427.775/0001-81, Porto Alegre/RS, Brasil. Contato comercial pelo WhatsApp indicado em https://itstime.pro.
 
@@ -11,11 +11,11 @@ Empresa: ITS TIME TECH LTDA, CNPJ 68.427.775/0001-81, Porto Alegre/RS, Brasil. C
 
 ## Blog
 
-- [Blog Its Time](https://itstime.pro/blog): artigos sobre atendimento, vendas e uso de IA, com foco em óticas
-- [IA de atendimento para óticas: da pergunta ao orçamento](https://itstime.pro/blog/ia-de-atendimento-para-oticas-da-pergunta-ao-orcamento)
-- [O que esperar de uma IA de atendimento numa ótica](https://itstime.pro/blog/o-que-esperar-de-uma-ia-de-atendimento-numa-otica)
+- [Blog Its Time](https://itstime.pro/blog): artigos sobre atendimento, vendas e uso de IA
+- [IA de atendimento para óticas: guia completo](https://itstime.pro/blog/ia-de-atendimento-para-oticas)
+- [Black Friday para óticas: oferta, atendimento e retomada](https://itstime.pro/blog/black-friday-para-oticas)
 - [Follow-up comercial: orçamento parado não é processo](https://itstime.pro/blog/follow-up-comercial-orcamento-parado-nao-e-processo)
-- [Atendimento em vários canais](https://itstime.pro/blog/atendimento-em-varios-canais-a-ia-absorve-o-volume-da-otica)
+- [Agendamento com IA](https://itstime.pro/blog/agendamento-com-ia)
 
 ## Tutoriais
 

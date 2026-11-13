@@ -48,40 +48,11 @@ const leftEvents = [
   },
 ] as const;
 
-// The carousel of client logos is hidden for now; flip this to bring it back (the logos and styles are kept).
-const showClientLogos = false;
-
 const bottomMetrics = [
   { value: "+2.8M", label: "Conversas automatizadas" },
   { value: "+380K", label: "Reuniões agendadas" },
   { value: "+97%", label: "Aumento de pipeline" },
 ] as const;
-
-const companyLogos = [
-  {
-    name: "Arquem",
-    src: "/assets/hero/Brands/Logo-Arquem.png",
-    width: 1024,
-    height: 1024,
-    className: "company-logo--arquem",
-  },
-  {
-    name: "Thais Kislim",
-    src: "/assets/hero/Brands/Thais%20Kislim.png",
-    width: 1024,
-    height: 1024,
-    className: "company-logo--thais-kislim",
-  },
-  {
-    name: "Lumiar",
-    src: "/assets/hero/Brands/Lumiar.png",
-    width: 2149,
-    height: 732,
-    className: "company-logo--lumiar",
-  },
-] as const;
-
-const companyLogoLoopCount = 4;
 
 const agents = [
   { name: "Agente Qualificador", icon: Target },
@@ -186,11 +157,11 @@ export function FullSite() {
         </details>
       </header>
 
-      <section className="hero-grid" aria-label="Automacao de SDR com IA">
+      <section className="hero-grid" aria-label="Atendimento e vendas com IA">
         <div className="hero-copy">
           <div className="eyebrow">
             <span />
-            AUTOMAÇÃO DE SDR COM IA
+            ATENDIMENTO E VENDAS COM IA
           </div>
 
           <h1>
@@ -202,8 +173,9 @@ export function FullSite() {
           </h1>
 
           <p className="hero-subtitle">
-            Agentes de IA, funis inteligentes e automações que constroem
-            pipeline, geram reuniões e multiplicam resultados.
+            Agentes de IA que atendem, agendam e acompanham cada cliente no
+            WhatsApp, com tudo organizado no CRM. Para clínicas, óticas e todo
+            negócio que vende pela conversa.
           </p>
 
           <div className="hero-actions">
@@ -380,34 +352,6 @@ export function FullSite() {
         </div>
       </section>
 
-      <section className="trusted-strip" aria-label="Empresas que escalam com a Its Time">
-        <p>EMPRESAS QUE ESCALAM CONTAM COM A ITS TIME.</p>
-        {showClientLogos ? (
-        <div className="company-row">
-          <div className="company-track">
-            {Array.from({ length: companyLogoLoopCount }).map((_, groupIndex) => (
-              <div
-                className="company-set"
-                key={`company-set-${groupIndex}`}
-                aria-hidden={groupIndex > 0 ? true : undefined}
-              >
-                {companyLogos.map((logo) => (
-                  <span className="company-logo-slot" key={`${groupIndex}-${logo.name}`}>
-                    <Image
-                      className={`company-logo ${logo.className}`}
-                      src={logo.src}
-                      alt={groupIndex === 0 ? logo.name : ""}
-                      width={logo.width}
-                      height={logo.height}
-                    />
-                  </span>
-                ))}
-              </div>
-            ))}
-          </div>
-        </div>
-        ) : null}
-      </section>
       </section>
       <FeatureSection />
       <CrescerSection />

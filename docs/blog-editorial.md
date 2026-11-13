@@ -101,3 +101,15 @@ Ao clicar numa CTA do blog, a página emite `window` CustomEvent `its-time:blog-
 Execute `npm run test:blog` para validar formato, links, autoria, datas, blocos, compatibilidade, CTAs e responsividade. Revisão editorial não exige inserir número, preço, imagem ou CTA intermediária em toda seção: escolha os elementos que ajudam a responder à dúvida do leitor.
 
 Os testes usam a porta 3000 por padrão. `PLAYWRIGHT_BASE_URL` permite validar um servidor local existente em outra porta, sem interrompê-lo. As imagens do corpo podem ser abertas em tamanho original pelo leitor.
+
+## Regras do ciclo de SEO — 2026-11-13
+
+A auditoria de 13/11/2026 encontrou posts escalados no mesmo molde (13 em 14 dias, ~550 palavras cada) disputando as mesmas buscas. Os 12 posts de óticas foram fundidos em dois guias (`black-friday-para-oticas`, `ia-de-atendimento-para-oticas`), com redirect 308 dos endereços antigos em `next.config.ts`. A partir daqui:
+
+- **Sem produção em massa.** Antes de um post novo, confira se o assunto já tem guia. Se tiver, atualize o guia (e o campo `updated`) em vez de abrir outro endereço. Um tema, uma URL.
+- **Guia primeiro.** Post novo só para uma intenção de busca que nenhum guia atende, com título e slug claramente diferentes dos existentes.
+- **Autoria honesta.** O conteúdo é produzido com IA: assine como organização (`authorProfile: { name: "Equipe Its Time", kind: "Organization" }`) e diga isso no `editorialNote`. Não crie pessoas fictícias.
+- **Foco comercial.** Clínicas são o segmento principal, óticas o segundo; os posts devem levar às páginas `/clinicas` e `/oticas` quando elas existirem.
+- **Ao fundir posts**, adicione o redirect em `mergedPosts` (`next.config.ts`) e troque os links internos para o novo endereço.
+
+O produtor externo de conteúdo precisa seguir essas regras; ele fica fora deste repositório.
